@@ -12,8 +12,10 @@ export function SiteHeader({ className, transparent = false }: { className?: str
   return (
     <header
       className={cn(
-        'sticky top-0 z-40 border-b',
-        transparent ? 'border-transparent bg-background/30 backdrop-blur-md' : 'bg-background/80 backdrop-blur',
+        // No background: the bar scrolls away with the page instead of staying pinned,
+        // so content never runs underneath it.
+        'relative z-40 border-b bg-transparent',
+        transparent && 'border-transparent',
         className,
       )}
     >

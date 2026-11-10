@@ -4,6 +4,7 @@ import { ClientOnly } from '@/components/docs/client-only'
 import { CommunityCta } from '@/components/landing/community-cta'
 import { FAQ } from '@/components/landing/home-content'
 import { WhySection } from '@/components/landing/why-section'
+import { CategoryIcon } from '@/components/site/category-icon'
 import { JsonLd } from '@/components/site/json-ld'
 import { Reveal } from '@/components/site/reveal'
 import { HeroShowcase } from '@/components/landing/hero-showcase'
@@ -161,10 +162,11 @@ export default function Home() {
             <Reveal key={g.category} delay={(i % 3) * 80}>
             <Link
               href={`/docs/${g.entries[0].slug}`}
-              className="block h-full rounded-2xl border bg-card p-5 transition-colors hover:bg-muted"
+              className="group block h-full rounded-2xl border bg-card p-5 transition-colors hover:bg-muted"
             >
-              <div className="flex items-baseline justify-between">
-                <h3 className="font-heading text-xl">{g.label}</h3>
+              <div className="flex items-center gap-3">
+                <CategoryIcon category={g.category} />
+                <h3 className="flex-1 font-heading text-xl">{g.label}</h3>
                 <span className="text-sm text-muted-foreground tabular-nums">{g.entries.length}</span>
               </div>
               <p className="mt-2 line-clamp-2 text-sm text-muted-foreground">{g.entries.map((e) => e.title).join(', ')}</p>

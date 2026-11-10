@@ -39,7 +39,7 @@ export function ShimmerButton({
       }
       className={cn(
         'relative inline-flex h-11 items-center justify-center rounded-full px-6 font-medium',
-        'bg-[linear-gradient(110deg,var(--c),45%,var(--shine),55%,var(--c))] bg-[length:200%_100%] animate-shimmer',
+        'bg-[linear-gradient(110deg,var(--c),45%,var(--shine),55%,var(--c))] bg-[length:200%_100%] animate-kr-shimmer',
         'transition-transform hover:scale-105 active:scale-95',
         className,
       )}

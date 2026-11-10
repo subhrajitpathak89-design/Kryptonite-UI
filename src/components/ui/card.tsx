@@ -1,102 +1,252 @@
+"use client"
+
 import * as React from "react"
+import { mergeProps } from "@base-ui/react/merge-props"
+import { useRender } from "@base-ui/react/use-render"
+import { cva, type VariantProps } from "class-variance-authority"
 import { cn } from "cn"
+
+function dataAttributes(slot: string, extra?: Record<string, string>) {
+  return { "data-slot": slot, ...extra } as Record<string, string>
+}
+
+const CardLinkContext = React.createContext<React.Dispatch<
+  React.SetStateAction<number>
+> | null>(null)
+
+const cardVariants = cva(
+  "group/card relative flex flex-col gap-(--card-spacing) overflow-hidden rounded-(--card-radius) py-(--card-spacing) text-sm text-card-foreground transition-[box-shadow,background-color] duration-150 ease-out-quint in-data-[slot=card-content]:[--card-radius:max(var(--radius-md),calc(var(--card-parent-radius)-var(--card-parent-spacing)))] has-[>:is(img,video,picture,[data-slot=aspect-ratio]):first-child]:pt-0 has-[>:is(img,video,picture,[data-slot=aspect-ratio]):last-child]:pb-0 data-link:has-[[data-slot=card-link]:focus-visible]:ring-3 data-link:has-[[data-slot=card-link]:focus-visible]:inset-ring-1 data-link:has-[[data-slot=card-link]:focus-visible]:ring-focus-ring data-link:has-[[data-slot=card-link]:focus-visible]:inset-ring-ring data-link:[&_:where(a[href],button,input,select,textarea,summary,label,[role=button],[tabindex]):not([data-slot=card-link])]:relative data-link:[&_:where(a[href],button,input,select,textarea,summary,label,[role=button],[tabindex]):not([data-slot=card-link])]:z-2",
+  {
+    variants: {
+      variant: {
+        default:
+          "bg-card ring-(length:--hairline) ring-foreground/10 data-link:hover:ring-foreground/15 forced-colors:border",
+        outline:
+          "bg-transparent ring-(length:--hairline) ring-foreground/10 data-link:hover:bg-muted/50 forced-colors:border",
+        muted:
+          "bg-muted text-foreground data-link:hover:bg-[color-mix(in_oklch,var(--color-muted),var(--color-foreground)_4%)]",
+      },
+      size: {
+        default:
+          "[--card-radius:var(--radius-xl)] [--card-spacing:--spacing(6)] [--card-title-size:var(--text-base)]",
+        sm: "[--card-radius:var(--radius-lg)] [--card-spacing:--spacing(4)] [--card-title-size:var(--text-sm)]",
+        flush:
+          "[--card-radius:var(--radius-lg)] [--card-spacing:--spacing(0)] [--card-title-size:var(--text-sm)]",
+      },
+    },
+    defaultVariants: {
+      variant: "default",
+      size: "default",
+    },
+  }
+)
+
+type CardVariant = NonNullable<VariantProps<typeof cardVariants>["variant"]>
+type CardSize = NonNullable<VariantProps<typeof cardVariants>["size"]>
+
+type CardProps = useRender.ComponentProps<"div"> & {
+  variant?: CardVariant
+  size?: CardSize
+}
 
 function Card({
   className,
+  variant = "default",
   size = "default",
+  render,
   ...props
-}: React.ComponentProps<"div"> & { size?: "default" | "sm" }) {
+}: CardProps) {
+  const [links, setLinks] = React.useState(0)
+
+  const element = useRender({
+    defaultTagName: "div",
+    render,
+    props: mergeProps<"div">(
+      { className: cn(cardVariants({ variant, size }), className) },
+      props,
+      dataAttributes("card", {
+        "data-variant": variant,
+        "data-size": size,
+        ...(links > 0 ? { "data-link": "" } : {}),
+      })
+    ),
+  })
+
   return (
-    <div
-      data-slot="card"
-      data-size={size}
-      className={cn(
-        "group/card flex flex-col gap-(--card-spacing) overflow-hidden rounded-xl bg-card py-(--card-spacing) text-sm text-card-foreground ring-1 ring-foreground/10 [--card-spacing:--spacing(4)] has-data-[slot=card-footer]:pb-0 has-[>img:first-child]:pt-0 data-[size=sm]:[--card-spacing:--spacing(3)] data-[size=sm]:has-data-[slot=card-footer]:pb-0 *:[img:first-child]:rounded-t-xl *:[img:last-child]:rounded-b-xl",
-        className
-      )}
-      {...props}
-    />
+    <CardLinkContext.Provider value={setLinks}>
+      {element}
+    </CardLinkContext.Provider>
   )
 }
 
-function CardHeader({ className, ...props }: React.ComponentProps<"div">) {
-  return (
-    <div
-      data-slot="card-header"
-      className={cn(
-        "group/card-header @container/card-header grid auto-rows-min items-start gap-1 rounded-t-xl px-(--card-spacing) has-data-[slot=card-action]:grid-cols-[1fr_auto] has-data-[slot=card-description]:grid-rows-[auto_auto] [.border-b]:pb-(--card-spacing)",
-        className
-      )}
-      {...props}
-    />
-  )
+function CardHeader({
+  className,
+  render,
+  ...props
+}: useRender.ComponentProps<"div">) {
+  return useRender({
+    defaultTagName: "div",
+    render,
+    props: mergeProps<"div">(
+      {
+        className: cn(
+          "group/card-header grid auto-rows-min items-start gap-1 px-(--card-spacing) has-[>[data-slot=card-action]]:grid-cols-[minmax(0,1fr)_auto] has-[>[data-slot=card-description]]:grid-rows-[auto_auto] [.border-b]:pb-(--card-spacing)",
+          className
+        ),
+      },
+      props,
+      dataAttributes("card-header")
+    ),
+  })
 }
 
-function CardTitle({ className, ...props }: React.ComponentProps<"div">) {
-  return (
-    <div
-      data-slot="card-title"
-      className={cn(
-        "font-heading text-base leading-snug font-medium group-data-[size=sm]/card:text-sm",
-        className
-      )}
-      {...props}
-    />
-  )
+function CardTitle({
+  className,
+  render,
+  ...props
+}: useRender.ComponentProps<"div">) {
+  return useRender({
+    defaultTagName: "div",
+    render,
+    props: mergeProps<"div">(
+      {
+        className: cn(
+          "min-w-0 font-heading text-(length:--card-title-size) leading-normal font-medium text-pretty wrap-anywhere",
+          className
+        ),
+      },
+      props,
+      dataAttributes("card-title")
+    ),
+  })
 }
 
-function CardDescription({ className, ...props }: React.ComponentProps<"div">) {
-  return (
-    <div
-      data-slot="card-description"
-      className={cn("text-sm text-muted-foreground", className)}
-      {...props}
-    />
-  )
+function CardDescription({
+  className,
+  render,
+  ...props
+}: useRender.ComponentProps<"div">) {
+  return useRender({
+    defaultTagName: "div",
+    render,
+    props: mergeProps<"div">(
+      {
+        className: cn(
+          "min-w-0 text-sm text-pretty wrap-anywhere text-muted-foreground",
+          className
+        ),
+      },
+      props,
+      dataAttributes("card-description")
+    ),
+  })
 }
 
-function CardAction({ className, ...props }: React.ComponentProps<"div">) {
-  return (
-    <div
-      data-slot="card-action"
-      className={cn(
-        "col-start-2 row-span-2 row-start-1 self-start justify-self-end",
-        className
-      )}
-      {...props}
-    />
-  )
+function CardAction({
+  className,
+  render,
+  ...props
+}: useRender.ComponentProps<"div">) {
+  return useRender({
+    defaultTagName: "div",
+    render,
+    props: mergeProps<"div">(
+      {
+        className: cn(
+          "relative z-2 col-start-2 row-span-2 row-start-1 self-start justify-self-end",
+          className
+        ),
+      },
+      props,
+      dataAttributes("card-action")
+    ),
+  })
 }
 
-function CardContent({ className, ...props }: React.ComponentProps<"div">) {
-  return (
-    <div
-      data-slot="card-content"
-      className={cn("px-(--card-spacing)", className)}
-      {...props}
-    />
-  )
+function CardContent({
+  className,
+  render,
+  ...props
+}: useRender.ComponentProps<"div">) {
+  return useRender({
+    defaultTagName: "div",
+    render,
+    props: mergeProps<"div">(
+      {
+        className: cn(
+          "flex min-w-0 flex-col gap-3 px-(--card-spacing) [--card-parent-radius:var(--card-radius)] [--card-parent-spacing:var(--card-spacing)]",
+          className
+        ),
+      },
+      props,
+      dataAttributes("card-content")
+    ),
+  })
 }
 
-function CardFooter({ className, ...props }: React.ComponentProps<"div">) {
-  return (
-    <div
-      data-slot="card-footer"
-      className={cn(
-        "flex items-center rounded-b-xl border-t bg-muted/50 p-(--card-spacing)",
-        className
-      )}
-      {...props}
-    />
-  )
+function CardFooter({
+  className,
+  render,
+  ...props
+}: useRender.ComponentProps<"div">) {
+  return useRender({
+    defaultTagName: "div",
+    render,
+    props: mergeProps<"div">(
+      {
+        className: cn(
+          "flex min-w-0 items-center gap-2 px-(--card-spacing) [.border-t]:pt-(--card-spacing)",
+          className
+        ),
+      },
+      props,
+      dataAttributes("card-footer")
+    ),
+  })
+}
+
+function CardLink({
+  className,
+  render,
+  ...props
+}: useRender.ComponentProps<"a">) {
+  const setLinks = React.useContext(CardLinkContext)
+
+  React.useLayoutEffect(() => {
+    if (!setLinks) {
+      return
+    }
+
+    setLinks((count) => count + 1)
+
+    return () => setLinks((count) => count - 1)
+  }, [setLinks])
+
+  return useRender({
+    defaultTagName: "a",
+    render,
+    props: mergeProps<"a">(
+      {
+        className: cn(
+          "outline-none [-webkit-tap-highlight-color:transparent] after:absolute after:inset-0 after:z-1 focus-visible:outline-hidden",
+          className
+        ),
+      },
+      props,
+      dataAttributes("card-link")
+    ),
+  })
 }
 
 export {
   Card,
-  CardHeader,
-  CardFooter,
-  CardTitle,
   CardAction,
-  CardDescription,
   CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardLink,
+  CardTitle,
+  cardVariants,
 }
+export type { CardProps, CardSize, CardVariant }

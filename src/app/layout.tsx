@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Geist_Mono, Instrument_Serif, Poppins } from "next/font/google";
+import { Toaster } from "@/components/ui/toast";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import "./globals.css";
 
@@ -24,7 +25,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Kryptonite UI",
-  description: "Modern, animated React + Tailwind components you can copy into your project.",
+  description: "Modern, animated React components built on shadcn/ui and Base UI. Copy them into your project.",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
@@ -32,6 +33,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
     <html lang="en" className={`dark scroll-smooth ${poppins.variable} ${instrumentSerif.variable} ${geistMono.variable} h-full antialiased`}>
       <body className="flex min-h-full flex-col">
         <TooltipProvider>{children}</TooltipProvider>
+        <Toaster />
       </body>
     </html>
   );

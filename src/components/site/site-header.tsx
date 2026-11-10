@@ -1,0 +1,42 @@
+import Image from 'next/image'
+import Link from 'next/link'
+import { IconBrandGithub } from '@tabler/icons-react'
+import { cn } from '@/lib/utils'
+
+export const REPO = 'https://github.com/subhrajitpathak89-design/Kryptonite-UI'
+
+export function SiteHeader({ className, transparent = false }: { className?: string; transparent?: boolean }) {
+  return (
+    <header
+      className={cn(
+        'sticky top-0 z-40 border-b',
+        transparent ? 'border-transparent bg-transparent' : 'bg-background/80 backdrop-blur',
+        className,
+      )}
+    >
+      <div className="mx-auto flex h-14 w-full max-w-screen-2xl items-center justify-between gap-4 px-4 sm:px-6">
+        <Link href="/" className="flex items-center gap-2 font-heading text-lg">
+          <Image src="/logo.webp" alt="" width={28} height={28} priority />
+          Kryptonite UI
+        </Link>
+        <nav className="flex items-center gap-1 text-sm">
+          <Link href="/docs" className="rounded-md px-3 py-1.5 text-muted-foreground transition-colors hover:text-foreground">
+            Docs
+          </Link>
+          <Link href="/docs/button" className="rounded-md px-3 py-1.5 text-muted-foreground transition-colors hover:text-foreground">
+            Components
+          </Link>
+          <a
+            href={REPO}
+            target="_blank"
+            rel="noreferrer"
+            aria-label="GitHub"
+            className="rounded-md p-1.5 text-muted-foreground transition-colors hover:text-foreground"
+          >
+            <IconBrandGithub className="size-5" />
+          </a>
+        </nav>
+      </div>
+    </header>
+  )
+}

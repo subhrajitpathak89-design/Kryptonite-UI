@@ -1,0 +1,10 @@
+[
+  { "name": "shimmer-button", "title": "Shimmer Button", "file": "ShimmerButton", "description": "A neon pill with a light sweep that loops across its surface. Colors, speed and glow are all props." },
+  { "name": "glow-border-button", "title": "Glow Border Button", "file": "GlowBorderButton", "description": "A rotating conic-gradient border that orbits the button." },
+  { "name": "magnetic-button", "title": "Magnetic Button", "file": "MagneticButton", "description": "A button that pulls toward the cursor while you hover over it." },
+  { "name": "spotlight-card", "title": "Spotlight Card", "file": "SpotlightCard", "description": "A card with a soft radial light that follows the cursor." },
+  { "name": "tilt-card", "title": "Tilt Card", "file": "TiltCard", "description": "A card with a 3D perspective tilt and glare driven by the cursor position." },
+  { "name": "gradient-text", "title": "Gradient Text", "file": "GradientText", "description": "Text filled with a gradient that flows continuously." },
+  { "name": "aurora-background", "title": "Aurora Background", "file": "AuroraBackground", "description": "Slow-drifting blurred color fields for hero sections." },
+  { "name": "marquee", "title": "Marquee", "file": "Marquee", "description": "An infinite horizontal scroller that pauses on hover." }
+]

@@ -21,7 +21,7 @@ export function CategoriesSection({ groups, total, sources }: { groups: Group[];
 
   return (
     <section aria-labelledby="catalog-heading" className="mx-auto w-full max-w-6xl px-4 pb-28">
-      <div className="grid gap-10 lg:grid-cols-[minmax(0,5fr)_minmax(0,9fr)] lg:gap-14">
+      <div className="grid grid-cols-1 gap-10 lg:grid-cols-[minmax(0,5fr)_minmax(0,9fr)] lg:gap-14">
         {/* Intro: sticks while the list scrolls past on large screens */}
         <Reveal className="lg:sticky lg:top-24 lg:self-start">
           <p className="mb-3 text-sm font-medium text-primary">The catalog</p>
@@ -49,7 +49,7 @@ export function CategoriesSection({ groups, total, sources }: { groups: Group[];
 
         {/* Category list */}
         <Reveal delay={100}>
-          <ul className="grid overflow-hidden rounded-2xl border bg-card/40 sm:grid-cols-2">
+          <ul className="grid grid-cols-1 overflow-hidden rounded-2xl border bg-card/40 sm:grid-cols-2">
             {groups.map((g) => {
               const Glyph = CATEGORY_ICONS[g.category] ?? IconLayoutGrid
               const preview = g.entries

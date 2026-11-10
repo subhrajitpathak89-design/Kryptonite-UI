@@ -134,7 +134,7 @@ export default function Home() {
         <h2 id="featured-heading" className="sr-only">
           Featured components
         </h2>
-        <Reveal className="grid gap-px overflow-hidden rounded-2xl border bg-border sm:grid-cols-2 lg:grid-cols-4">
+        <Reveal className="grid grid-cols-1 gap-px overflow-hidden rounded-2xl border bg-border sm:grid-cols-2 lg:grid-cols-4">
           {showcase.map(({ slug, title, Demo, href }) => (
             <div key={slug} className="group relative flex min-h-56 flex-col bg-card">
               <div className="flex flex-1 items-center justify-center overflow-hidden p-6">

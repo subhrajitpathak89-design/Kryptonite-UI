@@ -39,7 +39,7 @@ function CopyVisual() {
     return () => clearInterval(id)
   }, [])
   return (
-    <div className="grid w-full max-w-lg gap-3 sm:grid-cols-[1fr_1.2fr]">
+    <div className="grid w-full max-w-lg grid-cols-1 gap-3 sm:grid-cols-[minmax(0,1fr)_minmax(0,1.2fr)]">
       <div className="rounded-xl border bg-background p-3 font-mono text-xs">
         <p className="mb-2 text-muted-foreground">your-app</p>
         <div className="space-y-1.5 pl-1">
@@ -170,7 +170,7 @@ export function WhySection({ componentCount }: { componentCount: number }) {
         </div>
       </Reveal>
 
-      <div className="grid gap-4 md:grid-cols-3">
+      <div className="grid grid-cols-1 gap-4 md:grid-cols-3">
         <Reveal className="flex md:col-span-2">
           <Card className="flex-1" title={copy.title} body={copy.body} visual={<CopyVisual />} />
         </Reveal>

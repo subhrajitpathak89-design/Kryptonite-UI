@@ -1,11 +1,16 @@
 'use client'
 
-import { useRef, type ButtonHTMLAttributes, type MouseEvent } from 'react'
+import { useRef, type ButtonHTMLAttributes, type CSSProperties, type MouseEvent } from 'react'
 import { cn } from '@/lib/utils'
 
-type Props = ButtonHTMLAttributes<HTMLButtonElement> & { strength?: number }
+export type MagneticButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
+  /** Accent color for text, border and fill */
+  color?: string
+  /** How strongly it follows the cursor (0 to 1) */
+  strength?: number
+}
 
-export function MagneticButton({ className, children, strength = 0.35, ...props }: Props) {
+export function MagneticButton({ color = '#39ff8f', strength = 0.35, className, style, children, ...props }: MagneticButtonProps) {
   const ref = useRef<HTMLButtonElement>(null)
   const onMove = (e: MouseEvent) => {
     const el = ref.current
@@ -23,8 +28,9 @@ export function MagneticButton({ className, children, strength = 0.35, ...props 
       ref={ref}
       onMouseMove={onMove}
       onMouseLeave={reset}
+      style={{ '--c': color, color, ...style } as CSSProperties}
       className={cn(
-        'h-11 rounded-full border border-kr-green/40 bg-kr-green/10 px-6 font-medium text-kr-green transition-transform duration-200 ease-out hover:bg-kr-green/20',
+        'h-11 rounded-full border border-[color-mix(in_oklab,var(--c)_40%,transparent)] bg-[color-mix(in_oklab,var(--c)_10%,transparent)] px-6 font-medium transition-[transform,background-color] duration-200 ease-out hover:bg-[color-mix(in_oklab,var(--c)_20%,transparent)]',
         className,
       )}
       {...props}

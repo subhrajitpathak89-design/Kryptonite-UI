@@ -38,9 +38,10 @@ Then open http://localhost:3000.
 
 ## Using a component
 
-1. On the site, pick a component and click **Copy**.
-2. Paste it into your project (for example `components/ShimmerButton.tsx`).
-3. Make sure you have a `cn` helper (shadcn projects already have one at `@/lib/utils`). Also copy the "Kryptonite brand tokens" `@theme` block from `src/app/globals.css`, which holds the colors and keyframes the components use.
+1. On the site, pick a component. Click **Customize** to change its colors, speed and other options; the preview updates live.
+2. Open the **Code** tab. **Usage** shows the code for your customized version (only the options you changed), and below it is the component's source.
+3. Paste the source into your project (for example `components/kryptonite/ShimmerButton.tsx`) and use it as shown in **Usage**.
+4. Make sure you have a `cn` helper (shadcn projects already have one at `@/lib/utils`). Also copy the "Kryptonite brand tokens" `@theme` block from `src/app/globals.css`, which holds the colors and keyframes the components use.
 
 Requires React 18+ and Tailwind CSS v4.
 
@@ -48,7 +49,9 @@ Requires React 18+ and Tailwind CSS v4.
 
 1. Create `src/components/kryptonite/MyComponent.tsx` and export it from `src/components/kryptonite/index.ts`.
 2. Add an entry to `src/registry/meta.ts` (name, slug, file, category, description).
-3. Add its preview to `src/registry/previews.tsx`.
+3. Add a playground to `src/registry/playground.tsx`: its customize controls, a `render` function for the preview, and a `usage` function for the code snippet.
+
+Give every customizable option a prop with a sensible default, so the component works with no props at all.
 
 The Code tab reads the source file automatically.
 
@@ -60,7 +63,7 @@ src/
   components/kryptonite/  the Kryptonite components (one file each)
   components/site/        the showcase UI (gallery, component card)
   components/ui/          shadcn/ui primitives
-  registry/               component list, previews and source loader
+  registry/               component list, customize controls and source loader
   lib/utils.ts            cn() class helper
 ```
 

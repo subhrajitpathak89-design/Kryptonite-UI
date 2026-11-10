@@ -20,7 +20,7 @@ export function ComponentCard({ entry, code }: { entry: EntryMeta; code: string 
   }
 
   return (
-    <Card id={entry.slug} className="gap-0 overflow-hidden py-0">
+    <Card id={entry.slug} className="scroll-mt-20 gap-0 overflow-hidden py-0">
       <CardHeader className="flex flex-row items-start justify-between gap-4 border-b py-4">
         <div>
           <CardTitle className="font-heading text-xl font-normal">{entry.name}</CardTitle>

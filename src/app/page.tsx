@@ -5,6 +5,7 @@ import { CommunityCta } from '@/components/landing/community-cta'
 import { FAQ } from '@/components/landing/home-content'
 import { WhySection } from '@/components/landing/why-section'
 import { JsonLd } from '@/components/site/json-ld'
+import { Reveal } from '@/components/site/reveal'
 import { HeroShowcase } from '@/components/landing/hero-showcase'
 import { LINKEDIN_URL, REPO, SiteHeader } from '@/components/site/site-header'
 import { catalog, componentCount, groupedCatalog } from '@/docs/catalog'
@@ -82,7 +83,7 @@ export default function Home() {
       <section aria-labelledby="hero-heading" className="mx-auto w-full max-w-screen-2xl px-4 pt-8 pb-16 sm:px-6 sm:pt-12">
         <Link
           href="/community"
-          className="inline-flex items-center gap-2 rounded-lg border bg-card/60 py-1 pr-3 pl-1 text-sm text-muted-foreground transition-colors hover:text-foreground"
+          className="animate-in fade-in slide-in-from-bottom-3 duration-700 ease-out fill-mode-both motion-reduce:animate-none inline-flex items-center gap-2 rounded-lg border bg-card/60 py-1 pr-3 pl-1 text-sm text-muted-foreground transition-colors hover:text-foreground"
         >
           <span className="rounded-md bg-foreground px-2 py-0.5 text-xs font-semibold text-background">New</span>
           Light mode and community threads
@@ -91,12 +92,13 @@ export default function Home() {
 
         <h1
           id="hero-heading"
-          className="mt-6 max-w-5xl font-heading text-4xl leading-[1.08] font-medium tracking-tight sm:text-5xl lg:text-6xl"
+          style={{ animationDelay: '80ms' }}
+          className="animate-in fade-in slide-in-from-bottom-3 duration-700 ease-out fill-mode-both motion-reduce:animate-none mt-6 max-w-5xl font-heading text-4xl leading-[1.08] font-medium tracking-tight sm:text-5xl lg:text-6xl"
         >
           Modern, flashy React UI components for your next project
         </h1>
 
-        <div className="mt-8 flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
+        <div style={{ animationDelay: '160ms' }} className="animate-in fade-in slide-in-from-bottom-3 duration-700 ease-out fill-mode-both motion-reduce:animate-none mt-8 flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
           <div className="flex flex-wrap gap-3">
             <Link
               href="/docs"
@@ -119,7 +121,7 @@ export default function Home() {
           </p>
         </div>
 
-        <div className="mt-10">
+        <div style={{ animationDelay: '260ms' }} className="animate-in fade-in slide-in-from-bottom-6 duration-700 ease-out fill-mode-both motion-reduce:animate-none mt-10">
           <HeroShowcase />
         </div>
       </section>
@@ -128,7 +130,7 @@ export default function Home() {
         <h2 id="featured-heading" className="sr-only">
           Featured components
         </h2>
-        <div className="grid gap-px overflow-hidden rounded-2xl border bg-border sm:grid-cols-2 lg:grid-cols-4">
+        <Reveal className="grid gap-px overflow-hidden rounded-2xl border bg-border sm:grid-cols-2 lg:grid-cols-4">
           {showcase.map(({ slug, title, Demo }) => (
             <div key={slug} className="group relative flex min-h-56 flex-col bg-card">
               <div className="flex flex-1 items-center justify-center overflow-hidden p-6">
@@ -144,18 +146,20 @@ export default function Home() {
               </Link>
             </div>
           ))}
-        </div>
+        </Reveal>
       </section>
 
       <section className="mx-auto w-full max-w-6xl px-4 pb-24">
+        <Reveal>
         <h2 className="font-heading text-3xl tracking-tight sm:text-4xl">Everything you need to build an interface</h2>
         <p className="mt-2 text-muted-foreground">{catalog.length} components, hooks and utilities, grouped the way you look for them.</p>
+        </Reveal>
         <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {groups.map((g) => (
+          {groups.map((g, i) => (
+            <Reveal key={g.category} delay={(i % 3) * 80}>
             <Link
-              key={g.category}
               href={`/docs/${g.entries[0].slug}`}
-              className="rounded-2xl border bg-card p-5 transition-colors hover:bg-muted"
+              className="block h-full rounded-2xl border bg-card p-5 transition-colors hover:bg-muted"
             >
               <div className="flex items-baseline justify-between">
                 <h3 className="font-heading text-xl">{g.label}</h3>
@@ -163,6 +167,7 @@ export default function Home() {
               </div>
               <p className="mt-2 line-clamp-2 text-sm text-muted-foreground">{g.entries.map((e) => e.title).join(', ')}</p>
             </Link>
+            </Reveal>
           ))}
         </div>
       </section>
@@ -170,6 +175,7 @@ export default function Home() {
       <WhySection componentCount={componentCount} />
 
       <section aria-labelledby="faq-heading" className="mx-auto w-full max-w-3xl px-4 pb-24">
+        <Reveal>
         <h2 id="faq-heading" className="text-center font-heading text-3xl tracking-tight sm:text-4xl">
           Frequently asked questions
         </h2>
@@ -184,10 +190,13 @@ export default function Home() {
             </details>
           ))}
         </div>
+        </Reveal>
       </section>
 
       <section className="mx-auto w-full max-w-6xl px-4 pb-24">
-        <CommunityCta />
+        <Reveal>
+          <CommunityCta />
+        </Reveal>
       </section>
       </main>
 

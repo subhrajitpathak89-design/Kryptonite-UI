@@ -1,8 +1,8 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { IconArrowRight, IconBrandGithub } from '@tabler/icons-react'
-import { cn } from '@/lib/utils'
 import { formatStars, getGithubStars } from './github-stars'
+import { HeaderShell } from './header-shell'
 import { MobileNav, type NavLink } from './mobile-nav'
 import { ThemeToggle } from './theme-toggle'
 
@@ -21,9 +21,8 @@ export async function SiteHeader({ className }: { className?: string; transparen
   const stars = await getGithubStars('subhrajitpathak89-design/Kryptonite-UI')
 
   return (
-    // No background: the bar scrolls away with the page instead of staying pinned.
-    <header className={cn('relative z-40 bg-transparent', className)}>
-      <div className="mx-auto flex h-16 w-full max-w-screen-2xl items-center justify-between gap-4 px-4 sm:px-6">
+    <HeaderShell className={className}>
+      <div className="mx-auto flex h-16 w-full max-w-screen-2xl items-center justify-between gap-4 px-4 transition-[height] duration-300 group-data-[scrolled]/header:h-14 sm:px-6">
         <div className="flex items-center gap-3">
           <Link href="/" className="flex items-center gap-2 font-heading text-[17px] font-medium">
             <Image src="/kryptonite-logo.webp" alt="" width={26} height={26} priority />
@@ -69,6 +68,6 @@ export async function SiteHeader({ className }: { className?: string; transparen
           <MobileNav links={LINKS} />
         </div>
       </div>
-    </header>
+    </HeaderShell>
   )
 }

@@ -14,6 +14,7 @@ import {
 } from '@tabler/icons-react'
 import { Button } from '@/components/ui/button'
 import { cn } from '@/lib/utils'
+import { Reveal } from '@/components/site/reveal'
 import { FEATURES } from './home-content'
 
 function Card({ title, body, visual, className }: { title: string; body: string; visual: ReactNode; className?: string }) {
@@ -153,7 +154,7 @@ export function WhySection({ componentCount }: { componentCount: number }) {
   const [copy, a11y, states, stack] = FEATURES
   return (
     <section aria-labelledby="why-heading" className="mx-auto w-full max-w-6xl px-4 pb-24">
-      <div className="mb-10 flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
+      <Reveal className="mb-10 flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
         <div>
           <p className="mb-2 text-sm font-medium text-primary">Why Kryptonite UI</p>
           <h2 id="why-heading" className="max-w-xl font-heading text-3xl font-medium tracking-tight text-balance sm:text-4xl">
@@ -167,13 +168,21 @@ export function WhySection({ componentCount }: { componentCount: number }) {
             <br className="hidden md:block" /> all free and open source
           </span>
         </div>
-      </div>
+      </Reveal>
 
       <div className="grid gap-4 md:grid-cols-3">
-        <Card className="md:col-span-2" title={copy.title} body={copy.body} visual={<CopyVisual />} />
-        <Card title={a11y.title} body={a11y.body} visual={<KeyboardVisual />} />
-        <Card title={states.title} body={states.body} visual={<StatesVisual />} />
-        <Card className="md:col-span-2" title={stack.title} body={stack.body} visual={<StackVisual />} />
+        <Reveal className="flex md:col-span-2">
+          <Card className="flex-1" title={copy.title} body={copy.body} visual={<CopyVisual />} />
+        </Reveal>
+        <Reveal delay={100} className="flex">
+          <Card className="flex-1" title={a11y.title} body={a11y.body} visual={<KeyboardVisual />} />
+        </Reveal>
+        <Reveal className="flex">
+          <Card className="flex-1" title={states.title} body={states.body} visual={<StatesVisual />} />
+        </Reveal>
+        <Reveal delay={100} className="flex md:col-span-2">
+          <Card className="flex-1" title={stack.title} body={stack.body} visual={<StackVisual />} />
+        </Reveal>
       </div>
 
       <a href="/docs" className="mt-6 inline-flex items-center gap-1.5 text-sm font-medium text-primary hover:underline">

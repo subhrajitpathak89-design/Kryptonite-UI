@@ -33,7 +33,7 @@ export default async function Home() {
             {registry.length} components · copy, paste, ship
           </Badge>
           <h1 className="font-heading text-5xl leading-[1.05] font-normal tracking-tight text-balance sm:text-7xl">
-            Modern, flashy UI components <span className="text-muted-foreground italic">for your next project</span>
+            Modern, flashy UI components <span className="text-muted-foreground">for your next project</span>
           </h1>
           <p className="mx-auto mt-5 max-w-xl text-muted-foreground">
             Animated React + Tailwind components built on shadcn/ui. No package to install: copy the code into your project and make it yours.

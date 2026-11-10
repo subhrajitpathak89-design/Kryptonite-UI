@@ -14,7 +14,7 @@ export default async function Home() {
     <div className="flex min-h-screen flex-col">
       <nav className="sticky top-0 z-20 border-b bg-background/80 backdrop-blur">
         <div className="mx-auto flex h-14 w-full max-w-6xl items-center justify-between px-4">
-          <a href="#" className="flex items-center gap-2 font-semibold">
+          <a href="#" className="flex items-center gap-2 font-heading text-lg">
             <span className="size-3 rotate-45 rounded-sm bg-kr-green shadow-[0_0_12px_#39ff8f]" />
             Kryptonite UI
           </a>
@@ -29,8 +29,8 @@ export default async function Home() {
           <Badge variant="outline" className="mb-5 bg-background/50">
             {registry.length} components · copy, paste, ship
           </Badge>
-          <h1 className="text-4xl font-bold tracking-tight text-balance sm:text-6xl">
-            Modern, flashy UI components <GradientText>for your next project</GradientText>
+          <h1 className="font-heading text-5xl leading-[1.05] font-normal tracking-tight text-balance sm:text-7xl">
+            Modern, flashy UI components <GradientText className="italic">for your next project</GradientText>
           </h1>
           <p className="mx-auto mt-5 max-w-xl text-muted-foreground">
             Animated React + Tailwind components built on shadcn/ui. No package to install: copy the code into your project and make it yours.

@@ -23,7 +23,7 @@ export function ComponentCard({ entry, code }: { entry: EntryMeta; code: string 
     <Card id={entry.slug} className="gap-0 overflow-hidden py-0">
       <CardHeader className="flex flex-row items-start justify-between gap-4 border-b py-4">
         <div>
-          <CardTitle>{entry.name}</CardTitle>
+          <CardTitle className="font-heading text-xl font-normal">{entry.name}</CardTitle>
           <CardDescription className="mt-1">{entry.description}</CardDescription>
         </div>
         <Badge variant="secondary">{entry.category}</Badge>

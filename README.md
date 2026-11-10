@@ -2,7 +2,17 @@
 
 Modern, animated React + Tailwind CSS components. Copy them into your project and adapt them. There's no package to install.
 
-The showcase site is built with **Next.js** (App Router), **shadcn/ui** and **Tailwind CSS v4**. It uses a charcoal-black theme.
+The showcase site is built with **Next.js** (App Router), **shadcn/ui** and **Tailwind CSS v4**. It uses a charcoal-black theme, with **Calendas Plus** for headings and **Poppins** for body text.
+
+### Heading font
+
+Calendas Plus is a free font from Atipo Foundry and isn't on Google Fonts. Download it from Atipo Foundry and put the files in `public/fonts/` with these names:
+
+- `CalendasPlus-Regular.woff2` (or `.otf`)
+- `CalendasPlus-Italic.woff2` (or `.otf`)
+- `CalendasPlus-Bold.woff2` (or `.otf`)
+
+Until those files are added, headings use Instrument Serif instead.
 
 ## Components
 

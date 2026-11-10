@@ -25,6 +25,20 @@ Then open http://localhost:3000.
 2. Follow **Installation**: install the npm dependencies, copy any components it builds on, then copy its file.
 3. Add the `cn` helper (`src/lib/utils.ts`) and the theme tokens from `src/app/globals.css` if your project doesn't have them yet.
 
+## SEO and deployment
+
+When you deploy, set the environment variable `NEXT_PUBLIC_SITE_URL` to the site's public address, for example `https://kryptonite-ui.vercel.app`. Search engines and social share cards need full URLs, and the sitemap, robots.txt, canonical links and Open Graph tags are all built from it. Without it they point at `http://localhost:3000`.
+
+The site generates:
+
+- `/sitemap.xml` with the home page, docs, community and every component page.
+- `/robots.txt`, which allows all crawlers and links to the sitemap.
+- `/opengraph-image` and `/twitter-image`, the social share card.
+- `/manifest.webmanifest`.
+- Page titles, descriptions, canonical links and Open Graph/Twitter tags for every page, plus JSON-LD structured data on the home page (WebSite, SoftwareSourceCode, ItemList of components, FAQPage).
+
+Site-wide SEO text (title, description, keywords, author) lives in `src/lib/site.ts`. The home page features and FAQ live in `src/components/landing/home-content.ts`.
+
 ## Community threads
 
 The `/community` page (Feedback, Component requests, Show and tell) and the Feedback section at the bottom of every component page use [Giscus](https://giscus.app). Every post and reply is stored as a GitHub Discussion in this repo, and people sign in with GitHub to post. To turn it on:

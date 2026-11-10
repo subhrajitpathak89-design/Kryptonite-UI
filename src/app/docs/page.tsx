@@ -3,7 +3,12 @@ import { CodeBlock } from '@/components/docs/code-block'
 import { DocsMobileNav } from '@/components/docs/docs-mobile-nav'
 import { catalog, componentCount, groupedCatalog } from '@/docs/catalog'
 
-export const metadata = { title: 'Introduction · Kryptonite UI' }
+export const metadata = {
+  title: 'Introduction',
+  description:
+    'Get started with Kryptonite UI: copy-paste React components for Next.js, built with Tailwind CSS, shadcn/ui and Base UI. Browse every component, hook and utility.',
+  alternates: { canonical: '/docs' },
+}
 
 const utilsCode = `// src/lib/utils.ts
 export { cn } from "cn"`

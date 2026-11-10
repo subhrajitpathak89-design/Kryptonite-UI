@@ -17,7 +17,16 @@ export function generateStaticParams() {
 
 export async function generateMetadata({ params }: PageProps<'/docs/[slug]'>): Promise<Metadata> {
   const entry = getEntry((await params).slug)
-  return entry ? { title: `${entry.title} · Kryptonite UI`, description: entry.description } : {}
+  if (!entry) return {}
+  const kind = entry.category === 'hooks' ? 'React hook' : 'React component'
+  const title = `${entry.title} ${kind} for Next.js and Tailwind CSS`
+  return {
+    title,
+    description: entry.description,
+    alternates: { canonical: `/docs/${entry.slug}` },
+    openGraph: { title: `${title} · Kryptonite UI`, description: entry.description, url: `/docs/${entry.slug}`, type: 'article' },
+    twitter: { title: `${title} · Kryptonite UI`, description: entry.description },
+  }
 }
 
 async function Example({ meta, Preview }: { meta: DocsExampleMeta; Preview: React.ComponentType<{ name: string }> }) {

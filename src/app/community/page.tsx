@@ -3,8 +3,9 @@ import { CommunityTabs } from '@/components/community/community-tabs'
 import { REPO, SiteHeader } from '@/components/site/site-header'
 
 export const metadata = {
-  title: 'Community · Kryptonite UI',
-  description: 'Share feedback, request components and show what you built with Kryptonite UI.',
+  title: 'Community',
+  description: 'Share feedback, request React components and show what you built with Kryptonite UI.',
+  alternates: { canonical: '/community' },
 }
 
 export default function CommunityPage() {

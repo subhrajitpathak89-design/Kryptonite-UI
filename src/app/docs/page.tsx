@@ -73,7 +73,7 @@ export default function DocsIntro() {
         <p>
           {catalog.filter((e) => e.source === 'hextaui').length} components, hooks and utilities come from{' '}
           <a href="https://hextaui.com" className="underline underline-offset-4 hover:text-foreground">HextaUI</a> by Preet Suthar,
-          used under the MIT license. The landing page background is Light Pillar from{' '}
+          used under the MIT license. The landing page background is Aurora from{' '}
           <a href="https://reactbits.dev" className="underline underline-offset-4 hover:text-foreground">React Bits</a> by David Haz.
           See THIRD_PARTY_NOTICES.md in the repository.
         </p>

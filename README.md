@@ -70,7 +70,7 @@ src/
 
 ## Credits
 
-Components, hooks, examples and theme tokens come from [HextaUI](https://github.com/preetsuthar17/HextaUI) by Preet Suthar (MIT). The landing page background is Light Pillar from [React Bits](https://reactbits.dev) by David Haz (MIT + Commons Clause). It's used only on this site and isn't part of the library. See [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).
+Components, hooks, examples and theme tokens come from [HextaUI](https://github.com/preetsuthar17/HextaUI) by Preet Suthar (MIT). The landing page background is Aurora from [React Bits](https://reactbits.dev) by David Haz (MIT + Commons Clause). It's used only on this site and isn't part of the library. See [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).
 
 ## License
 

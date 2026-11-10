@@ -35,7 +35,7 @@ SOFTWARE.
 
 ## React Bits
 
-`src/components/landing/light-pillar.tsx` is the Light Pillar background from React Bits
+`src/components/landing/aurora.tsx` is the Aurora background from React Bits
 (https://github.com/DavidHDev/react-bits) by David Haz, licensed under MIT + Commons Clause.
 It is used only as the background of Kryptonite UI's own landing page. It is **not** part of the
 Kryptonite component library, is not listed in the docs, and must not be redistributed as a

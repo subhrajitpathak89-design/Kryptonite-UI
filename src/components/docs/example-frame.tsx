@@ -41,7 +41,7 @@ export function ExampleFrame({
       </div>
       {tab === 'preview' ? (
         <div className="flex min-h-72 items-center justify-center bg-background/40 bg-[radial-gradient(circle_at_center,oklch(1_0_0/5%)_1px,transparent_1px)] bg-[length:18px_18px] p-6 sm:p-10">
-          <div className="w-full max-w-2xl [&>*]:mx-auto">
+          <div className="flex w-full max-w-2xl flex-col items-center justify-center [&>*]:max-w-full">
             <ClientOnly fallback={<div className="mx-auto h-10 w-40 animate-pulse rounded-md bg-muted" />}>{preview}</ClientOnly>
           </div>
         </div>

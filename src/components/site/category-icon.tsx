@@ -16,7 +16,7 @@ import {
 import { cn } from '@/lib/utils'
 
 /** One icon per component category. */
-const ICONS: Record<string, Icon> = {
+export const CATEGORY_ICONS: Record<string, Icon> = {
   kryptonite: IconDiamond,
   actions: IconClick,
   forms: IconForms,
@@ -32,7 +32,7 @@ const ICONS: Record<string, Icon> = {
 }
 
 export function CategoryIcon({ category, className }: { category: string; className?: string }) {
-  const Glyph = ICONS[category] ?? IconLayoutGrid
+  const Glyph = CATEGORY_ICONS[category] ?? IconLayoutGrid
   return (
     <span
       aria-hidden

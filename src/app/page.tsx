@@ -4,7 +4,7 @@ import { ClientOnly } from '@/components/docs/client-only'
 import { CommunityCta } from '@/components/landing/community-cta'
 import { FAQ, FEATURES } from '@/components/landing/home-content'
 import { JsonLd } from '@/components/site/json-ld'
-import { HeroBackground } from '@/components/landing/hero-background'
+import { HeroShowcase } from '@/components/landing/hero-showcase'
 import { LINKEDIN_URL, REPO, SiteHeader } from '@/components/site/site-header'
 import { catalog, componentCount, groupedCatalog } from '@/docs/catalog'
 import { absoluteUrl, SITE, SITE_URL } from '@/lib/site'
@@ -74,30 +74,32 @@ export default function Home() {
   return (
     <div className="flex min-h-screen flex-col">
       <JsonLd data={structuredData()} />
-      <SiteHeader transparent />
+      <SiteHeader />
 
       <main className="flex flex-1 flex-col">
 
-      <section className="relative isolate -mt-14 overflow-hidden pt-14">
-        <HeroBackground />
-        <div className="mx-auto max-w-4xl px-4 pt-14 pb-16 text-center sm:pt-20">
-          <Link
-            href="/docs"
-            className="mb-6 inline-flex items-center gap-2 rounded-full border bg-background/40 px-3 py-1 text-xs text-muted-foreground backdrop-blur transition-colors hover:text-foreground"
-          >
-            {componentCount} components · copy, paste, ship <IconArrowRight className="size-3.5" />
-          </Link>
-          <h1 className="font-heading text-4xl leading-[1.1] font-medium tracking-tight text-balance sm:text-5xl lg:text-6xl">
-            Modern, flashy React UI components for your next project
-          </h1>
-          <p className="mx-auto mt-5 max-w-lg text-base text-pretty text-muted-foreground sm:text-lg">
-            Free, open-source animated components for Next.js, built with Tailwind CSS, shadcn/ui and Base UI. Loading, error and empty
-            states are handled. Copy them in and make them yours.
-          </p>
-          <div className="mt-8 flex flex-wrap justify-center gap-3">
+      <section aria-labelledby="hero-heading" className="mx-auto w-full max-w-screen-2xl px-4 pt-8 pb-16 sm:px-6 sm:pt-12">
+        <Link
+          href="/community"
+          className="inline-flex items-center gap-2 rounded-lg border bg-card/60 py-1 pr-3 pl-1 text-sm text-muted-foreground transition-colors hover:text-foreground"
+        >
+          <span className="rounded-md bg-foreground px-2 py-0.5 text-xs font-semibold text-background">New</span>
+          Light mode and community threads
+          <IconArrowRight className="size-3.5" />
+        </Link>
+
+        <h1
+          id="hero-heading"
+          className="mt-6 max-w-5xl font-heading text-4xl leading-[1.08] font-medium tracking-tight sm:text-5xl lg:text-6xl"
+        >
+          Modern, flashy React UI components for your next project
+        </h1>
+
+        <div className="mt-8 flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
+          <div className="flex flex-wrap gap-3">
             <Link
               href="/docs"
-              className="inline-flex h-11 items-center gap-2 rounded-full bg-primary px-6 font-medium text-primary-foreground transition-opacity hover:opacity-90"
+              className="inline-flex h-11 items-center gap-2 rounded-xl bg-foreground px-5 text-sm font-medium text-background transition-opacity hover:opacity-90"
             >
               Browse components <IconArrowRight className="size-4" />
             </Link>
@@ -105,11 +107,19 @@ export default function Home() {
               href={REPO}
               target="_blank"
               rel="noreferrer"
-              className="inline-flex h-11 items-center gap-2 rounded-full border bg-background/50 px-6 font-medium backdrop-blur transition-colors hover:bg-muted"
+              className="inline-flex h-11 items-center gap-2 rounded-xl border bg-card px-5 text-sm font-medium transition-colors hover:bg-muted"
             >
-              <IconBrandGithub className="size-4" /> GitHub
+              <IconBrandGithub className="size-4" /> Star on GitHub
             </a>
           </div>
+          <p className="max-w-md text-pretty text-muted-foreground lg:text-right">
+            {componentCount} free, open-source animated components for Next.js, built with Tailwind CSS, shadcn/ui and Base UI. Copy them
+            in and make them yours.
+          </p>
+        </div>
+
+        <div className="mt-10">
+          <HeroShowcase />
         </div>
       </section>
 

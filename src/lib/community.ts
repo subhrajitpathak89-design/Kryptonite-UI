@@ -12,7 +12,7 @@ export const GISCUS = {
   repoId: 'R_kgDOVpMWUw',
   category: 'General',
   /** From giscus.app (step 3). Threads stay hidden with a setup note until this is set. */
-  categoryId: '',
+  categoryId: 'DIC_kwDOVpMWU84DKzlc',
 }
 
 export const isCommunityReady = () => GISCUS.categoryId !== ''

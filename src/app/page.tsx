@@ -2,7 +2,8 @@ import Link from 'next/link'
 import { IconArrowRight, IconBrandGithub, IconBrandLinkedin, IconPlus } from '@tabler/icons-react'
 import { ClientOnly } from '@/components/docs/client-only'
 import { CommunityCta } from '@/components/landing/community-cta'
-import { FAQ, FEATURES } from '@/components/landing/home-content'
+import { FAQ } from '@/components/landing/home-content'
+import { WhySection } from '@/components/landing/why-section'
 import { JsonLd } from '@/components/site/json-ld'
 import { HeroShowcase } from '@/components/landing/hero-showcase'
 import { LINKEDIN_URL, REPO, SiteHeader } from '@/components/site/site-header'
@@ -166,22 +167,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section aria-labelledby="why-heading" className="mx-auto w-full max-w-6xl px-4 pb-24">
-        <h2 id="why-heading" className="font-heading text-3xl tracking-tight sm:text-4xl">
-          Why Kryptonite UI
-        </h2>
-        <p className="mt-2 max-w-2xl text-muted-foreground">
-          A React component library that looks great out of the box and stays easy to change.
-        </p>
-        <div className="mt-8 grid gap-4 sm:grid-cols-2">
-          {FEATURES.map((f) => (
-            <div key={f.title} className="rounded-2xl border bg-card p-6">
-              <h3 className="font-heading text-lg">{f.title}</h3>
-              <p className="mt-2 text-sm text-muted-foreground">{f.body}</p>
-            </div>
-          ))}
-        </div>
-      </section>
+      <WhySection componentCount={componentCount} />
 
       <section aria-labelledby="faq-heading" className="mx-auto w-full max-w-3xl px-4 pb-24">
         <h2 id="faq-heading" className="text-center font-heading text-3xl tracking-tight sm:text-4xl">

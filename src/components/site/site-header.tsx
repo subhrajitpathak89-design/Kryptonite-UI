@@ -6,7 +6,7 @@ import { cn } from '@/lib/utils'
 export const REPO = 'https://github.com/subhrajitpathak89-design/Kryptonite-UI'
 
 /** Your LinkedIn profile, shown as "Built by Subhrajit" in the footer. Leave empty to show the name without a link. */
-export const LINKEDIN_URL = ''
+export const LINKEDIN_URL = 'https://www.linkedin.com/in/subhrajit-pathak-8127aa230/'
 
 export function SiteHeader({ className, transparent = false }: { className?: string; transparent?: boolean }) {
   return (

@@ -14,7 +14,7 @@ export function MobileNav({ links }: { links: NavLink[] }) {
     <Sheet open={open} onOpenChange={setOpen}>
       <SheetTrigger
         aria-label="Open menu"
-        className="inline-flex size-9 items-center justify-center rounded-lg border bg-background/40 text-muted-foreground transition-colors hover:text-foreground md:hidden"
+        className="inline-flex size-9 items-center justify-center rounded-lg border bg-background/40 text-muted-foreground transition-colors hover:text-foreground lg:hidden"
       >
         <IconMenu2 className="size-5" />
       </SheetTrigger>

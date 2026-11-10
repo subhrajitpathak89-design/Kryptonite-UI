@@ -25,14 +25,14 @@ export async function SiteHeader({ className }: { className?: string; transparen
     <HeaderShell className={className}>
       <div className="mx-auto flex h-16 w-full max-w-screen-2xl items-center justify-between gap-4 px-4 transition-[height] duration-300 group-data-[scrolled]/header:h-14 sm:px-6">
         <div className="flex items-center gap-3">
-          <Link href="/" className="flex items-center gap-2 font-heading text-[17px] font-medium">
+          <Link href="/" className="flex shrink-0 items-center gap-2 font-heading text-[17px] font-medium whitespace-nowrap">
             <Image src="/kryptonite-logo.webp" alt="" width={26} height={26} priority />
             Kryptonite UI
           </Link>
-          <span aria-hidden className="hidden text-lg text-muted-foreground/40 md:inline">
+          <span aria-hidden className="hidden text-lg text-muted-foreground/40 lg:inline">
             /
           </span>
-          <nav aria-label="Main" className="hidden items-center gap-1 text-sm md:flex">
+          <nav aria-label="Main" className="hidden items-center gap-1 text-sm lg:flex">
             {LINKS.map((l) => (
               <Link
                 key={l.href}
@@ -64,7 +64,7 @@ export async function SiteHeader({ className }: { className?: string; transparen
           </Hint>
           <Link
             href="/docs"
-            className="hidden h-9 items-center gap-1.5 rounded-lg bg-primary px-3.5 text-sm font-medium text-primary-foreground transition-opacity hover:opacity-90 sm:inline-flex"
+            className="hidden h-9 items-center gap-1.5 rounded-lg bg-primary px-3.5 text-sm font-medium whitespace-nowrap text-primary-foreground transition-opacity hover:opacity-90 sm:inline-flex"
           >
             Browse components <IconArrowRight className="size-4" />
           </Link>

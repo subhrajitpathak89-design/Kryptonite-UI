@@ -104,7 +104,7 @@ export function HeroShowcase() {
         <div className="absolute inset-x-0 top-0 h-1/2 bg-gradient-to-b from-[#0b0d0c] to-transparent" />
       </div>
 
-      <div className="grid grid-cols-1 gap-4 p-4 sm:p-8 lg:grid-cols-[minmax(0,1.25fr)_minmax(0,1fr)] lg:gap-6 lg:p-12">
+      <div className="grid grid-cols-1 gap-4 p-4 sm:p-8 md:grid-cols-[minmax(0,1.25fr)_minmax(0,1fr)] md:gap-5 lg:gap-6 lg:p-12">
         <Window title="Hero.tsx" className="hidden sm:block lg:mt-6">
           <Code p={preset} />
         </Window>

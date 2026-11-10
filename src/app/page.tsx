@@ -7,10 +7,10 @@ import { WhySection } from '@/components/landing/why-section'
 import { JsonLd } from '@/components/site/json-ld'
 import { Reveal } from '@/components/site/reveal'
 import { HeroShowcase } from '@/components/landing/hero-showcase'
+import { SpecularDemo } from '@/components/landing/specular-demo'
 import { LINKEDIN_URL, REPO, SiteHeader } from '@/components/site/site-header'
 import { catalog, componentCount, groupedCatalog } from '@/docs/catalog'
 import { absoluteUrl, SITE, SITE_URL } from '@/lib/site'
-import { ShimmerButtonDemo } from '@/components/examples/shimmer-button/demo'
 import { ButtonDemo } from '@/components/examples/button/demo'
 import { SwitchDemo } from '@/components/examples/switch/demo'
 import { InputOTPDemo } from '@/components/examples/input-otp/demo'
@@ -19,8 +19,9 @@ import { NumberFlowDemo } from '@/components/examples/number-flow/demo'
 import { BadgeDemo } from '@/components/examples/badge/demo'
 import { MarqueeDemo } from '@/components/examples/marquee/demo'
 
-const showcase = [
-  { slug: 'shimmer-button', title: 'Shimmer Button', Demo: ShimmerButtonDemo },
+const showcase: { slug: string; title: string; Demo: () => React.ReactNode; href?: string }[] = [
+  // Specular Button is from React Bits (site-only), so its card links to its React Bits page.
+  { slug: 'specular-button', title: 'Specular Button', Demo: SpecularDemo, href: 'https://reactbits.dev/components/specular-button' },
   { slug: 'button', title: 'Button', Demo: ButtonDemo },
   { slug: 'input-otp', title: 'Input OTP', Demo: InputOTPDemo },
   { slug: 'spotlight-card', title: 'Spotlight Card', Demo: SpotlightCardDemo },
@@ -131,7 +132,7 @@ export default function Home() {
           Featured components
         </h2>
         <Reveal className="grid gap-px overflow-hidden rounded-2xl border bg-border sm:grid-cols-2 lg:grid-cols-4">
-          {showcase.map(({ slug, title, Demo }) => (
+          {showcase.map(({ slug, title, Demo, href }) => (
             <div key={slug} className="group relative flex min-h-56 flex-col bg-card">
               <div className="flex flex-1 items-center justify-center overflow-hidden p-6">
                 <ClientOnly fallback={<div className="h-10 w-32 animate-pulse rounded-md bg-muted" />}>
@@ -139,7 +140,8 @@ export default function Home() {
                 </ClientOnly>
               </div>
               <Link
-                href={`/docs/${slug}`}
+                href={href ?? `/docs/${slug}`}
+                {...(href ? { target: '_blank', rel: 'noreferrer' } : {})}
                 className="flex items-center justify-between border-t px-4 py-3 text-sm text-muted-foreground transition-colors hover:text-foreground"
               >
                 {title} <IconArrowRight className="size-4 opacity-0 transition-opacity group-hover:opacity-100" />

@@ -8,6 +8,7 @@ import { CategoryIcon } from '@/components/site/category-icon'
 import { JsonLd } from '@/components/site/json-ld'
 import { Reveal } from '@/components/site/reveal'
 import { HeroShowcase } from '@/components/landing/hero-showcase'
+import { RollButton } from '@/components/landing/roll-button'
 import { SpecularDemo } from '@/components/landing/specular-demo'
 import { LINKEDIN_URL, REPO, SiteHeader } from '@/components/site/site-header'
 import { catalog, componentCount, groupedCatalog } from '@/docs/catalog'
@@ -102,12 +103,7 @@ export default function Home() {
 
         <div style={{ animationDelay: '160ms' }} className="animate-in fade-in slide-in-from-bottom-3 duration-700 ease-out fill-mode-both motion-reduce:animate-none mt-8 flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
           <div className="flex flex-wrap gap-3">
-            <Link
-              href="/docs"
-              className="inline-flex h-11 items-center gap-2 rounded-xl bg-foreground px-5 text-sm font-medium text-background transition-opacity hover:opacity-90"
-            >
-              Browse components <IconArrowRight className="size-4" />
-            </Link>
+            <RollButton href="/docs" />
             <a
               href={REPO}
               target="_blank"

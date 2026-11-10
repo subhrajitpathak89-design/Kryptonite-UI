@@ -3,6 +3,7 @@ import Link from 'next/link'
 import { IconArrowRight, IconBrandGithub } from '@tabler/icons-react'
 import { formatStars, getGithubStars } from './github-stars'
 import { HeaderShell } from './header-shell'
+import { Hint } from './hint'
 import { MobileNav, type NavLink } from './mobile-nav'
 import { ThemeToggle } from './theme-toggle'
 
@@ -49,6 +50,7 @@ export async function SiteHeader({ className }: { className?: string; transparen
 
         <div className="flex items-center gap-2">
           <ThemeToggle className="inline-flex size-9 items-center justify-center rounded-lg border bg-background/40 p-0 backdrop-blur" />
+          <Hint label={stars === null ? 'Star on GitHub' : `Star on GitHub · ${stars} ${stars === 1 ? 'star' : 'stars'}`}>
           <a
             href={REPO}
             target="_blank"
@@ -59,6 +61,7 @@ export async function SiteHeader({ className }: { className?: string; transparen
             <IconBrandGithub className="size-4" />
             {stars === null ? <span className="hidden sm:inline">GitHub</span> : formatStars(stars)}
           </a>
+          </Hint>
           <Link
             href="/docs"
             className="hidden h-9 items-center gap-1.5 rounded-lg bg-primary px-3.5 text-sm font-medium text-primary-foreground transition-opacity hover:opacity-90 sm:inline-flex"

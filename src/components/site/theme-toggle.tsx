@@ -4,6 +4,7 @@ import { useTheme } from 'next-themes'
 import { IconMoon, IconSun } from '@tabler/icons-react'
 import { useSyncExternalStore } from 'react'
 import { cn } from '@/lib/utils'
+import { Hint } from './hint'
 
 const subscribe = () => () => {}
 
@@ -14,14 +15,15 @@ export function ThemeToggle({ className }: { className?: string }) {
   const isDark = !mounted || resolvedTheme === 'dark'
 
   return (
-    <button
-      type="button"
-      onClick={() => setTheme(isDark ? 'light' : 'dark')}
-      aria-label={isDark ? 'Switch to light mode' : 'Switch to dark mode'}
-      title={isDark ? 'Light mode' : 'Dark mode'}
-      className={cn('rounded-md p-1.5 text-muted-foreground transition-colors hover:text-foreground', className)}
-    >
-      {isDark ? <IconSun className="size-5" /> : <IconMoon className="size-5" />}
-    </button>
+    <Hint label={isDark ? 'Switch to light mode' : 'Switch to dark mode'}>
+      <button
+        type="button"
+        onClick={() => setTheme(isDark ? 'light' : 'dark')}
+        aria-label={isDark ? 'Switch to light mode' : 'Switch to dark mode'}
+        className={cn('rounded-md p-1.5 text-muted-foreground transition-colors hover:text-foreground', className)}
+      >
+        {isDark ? <IconSun className="size-5" /> : <IconMoon className="size-5" />}
+      </button>
+    </Hint>
   )
 }

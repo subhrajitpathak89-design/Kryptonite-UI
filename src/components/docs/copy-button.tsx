@@ -2,11 +2,13 @@
 
 import { useState } from 'react'
 import { IconCheck, IconCopy } from '@tabler/icons-react'
+import { Hint } from '@/components/site/hint'
 import { cn } from '@/lib/utils'
 
 export function CopyButton({ text, className, label = 'Copy code' }: { text: string; className?: string; label?: string }) {
   const [copied, setCopied] = useState(false)
   return (
+    <Hint label={copied ? 'Copied!' : label} side="top">
     <button
       type="button"
       aria-label={copied ? 'Copied' : label}
@@ -22,5 +24,6 @@ export function CopyButton({ text, className, label = 'Copy code' }: { text: str
     >
       {copied ? <IconCheck className="size-4 text-primary" /> : <IconCopy className="size-4" />}
     </button>
+    </Hint>
   )
 }

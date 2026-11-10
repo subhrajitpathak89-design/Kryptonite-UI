@@ -18,19 +18,15 @@ const GET_STARTED = [
 export function DocsSidebar({ groups, className, onNavigate }: { groups: Group[]; className?: string; onNavigate?: () => void }) {
   const pathname = usePathname()
   const [q, setQ] = useState('')
-  const [category, setCategory] = useState<string | null>(null)
   const total = groups.reduce((n, g) => n + g.entries.length, 0)
 
   const filtered = useMemo(() => {
     const term = q.trim().toLowerCase()
     return groups
-      .filter((g) => !category || g.category === category)
       .map((g) => ({ ...g, entries: term ? g.entries.filter((e) => e.title.toLowerCase().includes(term)) : g.entries }))
       .filter((g) => g.entries.length > 0)
-  }, [groups, q, category])
+  }, [groups, q])
 
-  const visibleCount = filtered.reduce((n, g) => n + g.entries.length, 0)
-  const activeLabel = category ? groups.find((g) => g.category === category)?.label : null
 
   const linkClass = (active: boolean) =>
     cn(
@@ -44,7 +40,6 @@ export function DocsSidebar({ groups, className, onNavigate }: { groups: Group[]
       <Link
         href="/docs"
         onClick={() => {
-          setCategory(null)
           setQ('')
           onNavigate?.()
         }}
@@ -54,50 +49,13 @@ export function DocsSidebar({ groups, className, onNavigate }: { groups: Group[]
         Browse all components
       </Link>
 
-      {/* Category filter */}
-      <div role="toolbar" aria-label="Filter by category" className="mt-2 grid grid-cols-7 gap-1 rounded-xl border p-1">
-        <button
-          type="button"
-          onClick={() => setCategory(null)}
-          aria-pressed={category === null}
-          aria-label="All categories"
-          title="All"
-          className={cn(
-            'inline-flex aspect-square items-center justify-center rounded-lg transition-colors',
-            category === null ? 'bg-primary/15 text-primary' : 'text-muted-foreground hover:bg-muted hover:text-foreground',
-          )}
-        >
-          <IconLayoutGrid className="size-4" stroke={1.75} />
-        </button>
-        {groups.map((g) => {
-          const Glyph = CATEGORY_ICONS[g.category] ?? IconLayoutGrid
-          const active = category === g.category
-          return (
-            <button
-              key={g.category}
-              type="button"
-              onClick={() => setCategory(active ? null : g.category)}
-              aria-pressed={active}
-              aria-label={g.label}
-              title={g.label}
-              className={cn(
-                'inline-flex aspect-square items-center justify-center rounded-lg transition-colors',
-                active ? 'bg-primary/15 text-primary' : 'text-muted-foreground hover:bg-muted hover:text-foreground',
-              )}
-            >
-              <Glyph className="size-4" stroke={1.75} />
-            </button>
-          )
-        })}
-      </div>
-
       {/* Search */}
       <div className="relative mt-2">
         <IconSearch className="pointer-events-none absolute top-1/2 left-3 size-4 -translate-y-1/2 text-muted-foreground" />
         <input
           value={q}
           onChange={(e) => setQ(e.target.value)}
-          placeholder={`Filter ${activeLabel ? `${visibleCount} ${activeLabel.toLowerCase()}` : total} components…`}
+          placeholder={`Filter ${total} components…`}
           aria-label="Filter components"
           className="h-10 w-full rounded-xl border bg-transparent pr-8 pl-9 text-sm outline-none placeholder:text-muted-foreground focus-visible:border-ring"
         />
@@ -114,7 +72,7 @@ export function DocsSidebar({ groups, className, onNavigate }: { groups: Group[]
       </div>
 
       <nav aria-label="Docs" className="-mr-3 mt-5 flex-1 overflow-y-auto pr-3 pb-6 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
-        {!q && !category && (
+        {!q && (
           <div className="mb-6">
             <p className="mb-1.5 px-2.5 text-xs font-medium text-muted-foreground/70">Get started</p>
             {GET_STARTED.map(({ href, label, icon: Icon }) => (

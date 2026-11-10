@@ -9,16 +9,18 @@ export async function readSource(file: string): Promise<string> {
   return readFile(path.join(process.cwd(), 'src', file.replace(/^src\//, '')), 'utf8')
 }
 
-/** Syntax-highlights code as HTML (dark theme, transparent background). */
+/** Syntax-highlights code as HTML (light and dark themes, transparent background). */
 export async function highlight(code: string, lang: 'tsx' | 'bash' = 'tsx'): Promise<string> {
   'use cache'
   return codeToHtml(code.trimEnd(), {
     lang,
-    theme: 'github-dark-default',
+    // Both themes are emitted as CSS variables; globals.css picks one per site theme.
+    themes: { light: 'github-light-default', dark: 'github-dark-default' },
+    defaultColor: false,
     transformers: [
       {
         pre(node) {
-          node.properties.style = 'background:transparent'
+          node.properties.style = `${node.properties.style ?? ''};background:transparent`
         },
       },
     ],

@@ -41,7 +41,7 @@ export function TiltCard({ children, className, max = 12, scale = 1.02, glare = 
       onMouseMove={onMove}
       onMouseLeave={reset}
       className={cn(
-        'relative overflow-hidden rounded-2xl border border-kr-line bg-gradient-to-br from-kr-surface to-black p-6 transition-transform duration-200 ease-out will-change-transform',
+        'relative overflow-hidden rounded-2xl border border-kr-line bg-gradient-to-br from-kr-surface to-kr-bg p-6 transition-transform duration-200 ease-out will-change-transform',
         className,
       )}
     >

@@ -1,6 +1,7 @@
 'use client'
 
 import Giscus from '@giscus/react'
+import { useTheme } from 'next-themes'
 import { IconBrandGithub, IconMessages } from '@tabler/icons-react'
 import { GISCUS, isCommunityReady } from '@/lib/community'
 
@@ -9,6 +10,7 @@ import { GISCUS, isCommunityReady } from '@/lib/community'
  * to post, reply and react. `term` decides which discussion the thread uses.
  */
 export function CommunityThread({ term }: { term: string }) {
+  const { resolvedTheme } = useTheme()
   if (!isCommunityReady()) {
     return (
       <div className="flex flex-col items-center gap-3 rounded-xl border border-dashed p-8 text-center">
@@ -41,7 +43,7 @@ export function CommunityThread({ term }: { term: string }) {
       reactionsEnabled="1"
       emitMetadata="0"
       inputPosition="top"
-      theme="transparent_dark"
+      theme={resolvedTheme === 'light' ? 'light' : 'transparent_dark'}
       lang="en"
       loading="lazy"
     />

@@ -2,6 +2,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { IconBrandGithub } from '@tabler/icons-react'
 import { cn } from '@/lib/utils'
+import { ThemeToggle } from './theme-toggle'
 
 export const REPO = 'https://github.com/subhrajitpathak89-design/Kryptonite-UI'
 
@@ -34,6 +35,7 @@ export function SiteHeader({ className, transparent = false }: { className?: str
           <Link href="/community" className="rounded-md px-3 py-1.5 text-muted-foreground transition-colors hover:text-foreground">
             Community
           </Link>
+          <ThemeToggle />
           <a
             href={REPO}
             target="_blank"

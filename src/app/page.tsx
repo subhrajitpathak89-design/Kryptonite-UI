@@ -1,8 +1,8 @@
 import Link from 'next/link'
-import { IconArrowRight, IconBrandGithub } from '@tabler/icons-react'
+import { IconArrowRight, IconBrandGithub, IconBrandLinkedin } from '@tabler/icons-react'
 import { ClientOnly } from '@/components/docs/client-only'
 import { HeroBackground } from '@/components/landing/hero-background'
-import { REPO, SiteHeader } from '@/components/site/site-header'
+import { LINKEDIN_URL, REPO, SiteHeader } from '@/components/site/site-header'
 import { catalog, componentCount, groupedCatalog } from '@/docs/catalog'
 import { ShimmerButtonDemo } from '@/components/examples/shimmer-button/demo'
 import { ButtonDemo } from '@/components/examples/button/demo'
@@ -109,8 +109,14 @@ export default function Home() {
         <div className="mx-auto flex max-w-6xl flex-col gap-2 px-4 py-8 text-sm text-muted-foreground sm:flex-row sm:justify-between">
           <span>Kryptonite UI · MIT licensed</span>
           <span>
-            Components from <a href="https://hextaui.com" className="underline underline-offset-4 hover:text-foreground">HextaUI</a>, background
-            from <a href="https://reactbits.dev" className="underline underline-offset-4 hover:text-foreground">React Bits</a>
+            Built by{' '}
+            {LINKEDIN_URL ? (
+              <a href={LINKEDIN_URL} target="_blank" rel="noreferrer" className="inline-flex items-center gap-1 text-foreground underline-offset-4 hover:underline">
+                Subhrajit <IconBrandLinkedin className="size-4" />
+              </a>
+            ) : (
+              <span className="text-foreground">Subhrajit</span>
+            )}
           </span>
         </div>
       </footer>

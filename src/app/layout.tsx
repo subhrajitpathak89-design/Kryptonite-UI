@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist_Mono, Instrument_Serif, Poppins } from "next/font/google";
+import { Geist_Mono, Libre_Baskerville, Poppins } from "next/font/google";
 import { Toaster } from "@/components/ui/toast";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import "./globals.css";
@@ -11,11 +11,11 @@ const poppins = Poppins({
   weight: ["300", "400", "500", "600", "700"],
 });
 
-// Fallback for the heading font (Calendas Plus) until its files are in public/fonts
-const instrumentSerif = Instrument_Serif({
-  variable: "--font-heading-fallback",
+// Heading font
+const libreBaskerville = Libre_Baskerville({
+  variable: "--font-libre-baskerville",
   subsets: ["latin"],
-  weight: "400",
+  weight: ["400", "700"],
 });
 
 const geistMono = Geist_Mono({
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html lang="en" className={`dark scroll-smooth ${poppins.variable} ${instrumentSerif.variable} ${geistMono.variable} h-full antialiased`}>
+    <html lang="en" className={`dark scroll-smooth ${poppins.variable} ${libreBaskerville.variable} ${geistMono.variable} h-full antialiased`}>
       <body className="flex min-h-full flex-col">
         <TooltipProvider>{children}</TooltipProvider>
         <Toaster />

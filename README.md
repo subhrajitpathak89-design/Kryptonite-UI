@@ -8,7 +8,7 @@ The library includes:
 - **8 Kryptonite components**: Shimmer Button, Glow Border Button, Magnetic Button, Spotlight Card, Tilt Card, Gradient Text, Aurora Background and Marquee. Colors, speed and other options are all props.
 - **9 hooks** and a few utilities (motion, hotkeys, shimmer, hairline, scroll fade).
 
-The site is a docs site, built with **Next.js** (App Router). It uses a charcoal-black theme, with **Calendas Plus** for headings and **Poppins** for body text.
+The site is a docs site, built with **Next.js** (App Router). It uses a charcoal-black theme, with **Libre Baskerville** for headings and **Poppins** for body text (both from Google Fonts).
 
 ## Run the site locally
 
@@ -24,16 +24,6 @@ Then open http://localhost:3000.
 1. Open the component's docs page, for example `/docs/button`.
 2. Follow **Installation**: install the npm dependencies, copy any components it builds on, then copy its file.
 3. Add the `cn` helper (`src/lib/utils.ts`) and the theme tokens from `src/app/globals.css` if your project doesn't have them yet.
-
-## Heading font
-
-Calendas Plus is a free font from Atipo Foundry and isn't on Google Fonts. Download it from Atipo Foundry and put the files in `public/fonts/` with these names:
-
-- `CalendasPlus-Regular.woff2` (or `.otf`)
-- `CalendasPlus-Italic.woff2` (or `.otf`)
-- `CalendasPlus-Bold.woff2` (or `.otf`)
-
-Until those files are added, headings use Instrument Serif instead.
 
 ## How the docs are built
 

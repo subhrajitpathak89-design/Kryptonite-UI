@@ -39,7 +39,7 @@ export default function Home() {
           >
             {componentCount} components · copy, paste, ship <IconArrowRight className="size-3.5" />
           </Link>
-          <h1 className="font-heading text-4xl leading-[1.1] font-semibold tracking-tight text-balance sm:text-5xl lg:text-6xl">
+          <h1 className="font-heading text-4xl leading-[1.1] font-medium tracking-tight text-balance sm:text-5xl lg:text-6xl">
             Modern, flashy UI components for your next project
           </h1>
           <p className="mx-auto mt-5 max-w-lg text-base text-pretty text-muted-foreground sm:text-lg">

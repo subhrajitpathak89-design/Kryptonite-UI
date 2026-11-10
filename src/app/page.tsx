@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { IconArrowRight, IconBrandGithub, IconBrandLinkedin } from '@tabler/icons-react'
+import { IconArrowRight, IconBrandGithub, IconBrandLinkedin, IconBulb, IconMessages, IconSparkles } from '@tabler/icons-react'
 import { ClientOnly } from '@/components/docs/client-only'
 import { HeroBackground } from '@/components/landing/hero-background'
 import { LINKEDIN_URL, REPO, SiteHeader } from '@/components/site/site-header'
@@ -102,6 +102,40 @@ export default function Home() {
               <p className="mt-2 line-clamp-2 text-sm text-muted-foreground">{g.entries.map((e) => e.title).join(', ')}</p>
             </Link>
           ))}
+        </div>
+      </section>
+
+      <section className="mx-auto w-full max-w-6xl px-4 pb-24">
+        <div className="relative overflow-hidden rounded-3xl border bg-card px-6 py-12 sm:px-12 sm:py-16">
+          {/* Soft green glow */}
+          <div aria-hidden className="pointer-events-none absolute -top-24 left-1/2 h-64 w-[36rem] -translate-x-1/2 rounded-full bg-primary/20 blur-3xl" />
+          <div className="relative flex flex-col items-center text-center">
+            <span className="mb-5 inline-flex size-12 items-center justify-center rounded-2xl border bg-background/60">
+              <IconMessages className="size-6 text-primary" />
+            </span>
+            <h2 className="font-heading text-3xl tracking-tight sm:text-4xl">Join the community</h2>
+            <p className="mt-3 max-w-xl text-pretty text-muted-foreground">
+              Share feedback, ask for the components you need, and show what you built. Reply to others and upvote the requests you want
+              most.
+            </p>
+            <div className="mt-8 flex flex-wrap justify-center gap-2 text-sm text-muted-foreground">
+              <span className="inline-flex items-center gap-1.5 rounded-full border bg-background/60 px-3 py-1">
+                <IconMessages className="size-4" /> Feedback
+              </span>
+              <span className="inline-flex items-center gap-1.5 rounded-full border bg-background/60 px-3 py-1">
+                <IconBulb className="size-4" /> Component requests
+              </span>
+              <span className="inline-flex items-center gap-1.5 rounded-full border bg-background/60 px-3 py-1">
+                <IconSparkles className="size-4" /> Show and tell
+              </span>
+            </div>
+            <Link
+              href="/community"
+              className="mt-8 inline-flex h-11 items-center gap-2 rounded-full bg-primary px-6 font-medium text-primary-foreground transition-opacity hover:opacity-90"
+            >
+              Go to the community <IconArrowRight className="size-4" />
+            </Link>
+          </div>
         </div>
       </section>
 

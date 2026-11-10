@@ -13,7 +13,7 @@ export function SiteHeader({ className, transparent = false }: { className?: str
     <header
       className={cn(
         'sticky top-0 z-40 border-b',
-        transparent ? 'border-transparent bg-transparent' : 'bg-background/80 backdrop-blur',
+        transparent ? 'border-transparent bg-background/30 backdrop-blur-md' : 'bg-background/80 backdrop-blur',
         className,
       )}
     >

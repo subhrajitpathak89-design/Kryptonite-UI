@@ -32,21 +32,21 @@ export default function Home() {
 
       <section className="relative isolate -mt-14 overflow-hidden pt-14">
         <HeroBackground />
-        <div className="mx-auto max-w-4xl px-4 pt-24 pb-20 text-center sm:pt-32">
+        <div className="mx-auto max-w-4xl px-4 pt-14 pb-16 text-center sm:pt-20">
           <Link
             href="/docs"
             className="mb-6 inline-flex items-center gap-2 rounded-full border bg-background/40 px-3 py-1 text-xs text-muted-foreground backdrop-blur transition-colors hover:text-foreground"
           >
             {componentCount} components · copy, paste, ship <IconArrowRight className="size-3.5" />
           </Link>
-          <h1 className="font-heading text-5xl leading-[1.05] tracking-tight text-balance sm:text-7xl">
+          <h1 className="font-heading text-4xl leading-[1.1] font-semibold tracking-tight text-balance sm:text-5xl lg:text-6xl">
             Modern, flashy UI components for your next project
           </h1>
-          <p className="mx-auto mt-6 max-w-xl text-lg text-pretty text-muted-foreground">
+          <p className="mx-auto mt-5 max-w-lg text-base text-pretty text-muted-foreground sm:text-lg">
             Animated React components built on shadcn/ui and Base UI, with loading, error and empty states handled. Copy them in and make
             them yours.
           </p>
-          <div className="mt-9 flex flex-wrap justify-center gap-3">
+          <div className="mt-8 flex flex-wrap justify-center gap-3">
             <Link
               href="/docs"
               className="inline-flex h-11 items-center gap-2 rounded-full bg-primary px-6 font-medium text-primary-foreground transition-opacity hover:opacity-90"

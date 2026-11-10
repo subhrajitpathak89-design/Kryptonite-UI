@@ -26,7 +26,7 @@ export async function SiteHeader({ className }: { className?: string; transparen
       <div className="mx-auto flex h-16 w-full max-w-screen-2xl items-center justify-between gap-4 px-4 sm:px-6">
         <div className="flex items-center gap-3">
           <Link href="/" className="flex items-center gap-2 font-heading text-[17px] font-medium">
-            <Image src="/logo.webp" alt="" width={26} height={26} priority />
+            <Image src="/kryptonite-logo.webp" alt="" width={26} height={26} priority />
             Kryptonite UI
           </Link>
           <span aria-hidden className="hidden text-lg text-muted-foreground/40 md:inline">

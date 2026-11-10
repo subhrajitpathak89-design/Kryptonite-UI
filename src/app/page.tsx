@@ -1,10 +1,10 @@
 import Link from 'next/link'
 import { IconArrowRight, IconBrandGithub, IconBrandLinkedin, IconPlus } from '@tabler/icons-react'
 import { ClientOnly } from '@/components/docs/client-only'
+import { CategoriesSection } from '@/components/landing/categories-section'
 import { CommunityCta } from '@/components/landing/community-cta'
 import { FAQ } from '@/components/landing/home-content'
 import { WhySection } from '@/components/landing/why-section'
-import { CategoryIcon } from '@/components/site/category-icon'
 import { JsonLd } from '@/components/site/json-ld'
 import { Reveal } from '@/components/site/reveal'
 import { HeroShowcase } from '@/components/landing/hero-showcase'
@@ -148,29 +148,11 @@ export default function Home() {
         </Reveal>
       </section>
 
-      <section className="mx-auto w-full max-w-6xl px-4 pb-24">
-        <Reveal>
-        <h2 className="font-heading text-3xl tracking-tight sm:text-4xl">Everything you need to build an interface</h2>
-        <p className="mt-2 text-muted-foreground">{catalog.length} components, hooks and utilities, grouped the way you look for them.</p>
-        </Reveal>
-        <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {groups.map((g, i) => (
-            <Reveal key={g.category} delay={(i % 3) * 80}>
-            <Link
-              href={`/docs/${g.entries[0].slug}`}
-              className="group block h-full rounded-2xl border bg-card p-5 transition-colors hover:bg-muted"
-            >
-              <div className="flex items-center gap-3">
-                <CategoryIcon category={g.category} />
-                <h3 className="flex-1 font-heading text-xl">{g.label}</h3>
-                <span className="text-sm text-muted-foreground tabular-nums">{g.entries.length}</span>
-              </div>
-              <p className="mt-2 line-clamp-2 text-sm text-muted-foreground">{g.entries.map((e) => e.title).join(', ')}</p>
-            </Link>
-            </Reveal>
-          ))}
-        </div>
-      </section>
+      <CategoriesSection
+        groups={groups.map((g) => ({ category: g.category, label: g.label, entries: g.entries.map(({ slug, title }) => ({ slug, title })) }))}
+        total={catalog.length}
+        sources={new Set(catalog.map((e) => e.source).filter((x) => x !== 'kryptonite')).size}
+      />
 
       <WhySection componentCount={componentCount} />
 

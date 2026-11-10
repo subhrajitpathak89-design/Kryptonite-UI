@@ -3,18 +3,19 @@
 import dynamic from 'next/dynamic'
 import { useState, type ReactNode } from 'react'
 import { IconCheck } from '@tabler/icons-react'
-import { ShimmerButton } from '@/components/kryptonite'
 import { cn } from '@/lib/utils'
 
-// WebGL glow behind the windows (React Bits Aurora, site-only).
+// WebGL effects, loaded only in the browser (React Bits Aurora and Specular Button, site-only).
 const Aurora = dynamic(() => import('./aurora'), { ssr: false })
+const SpecularButton = dynamic(() => import('./specular-button'), { ssr: false })
 
+// "Silver" is the exact setup from the design; the others recolor the edge light, base and tint.
 const PRESETS = [
-  { name: 'Kryptonite', color: '#39ff8f', shine: '#d9ffe9', text: '#000000', speed: 2.4 },
-  { name: 'Ocean', color: '#2de2e6', shine: '#d6fbff', text: '#00262a', speed: 2.8 },
-  { name: 'Sunset', color: '#fb923c', shine: '#ffe4cc', text: '#2a0f00', speed: 2 },
-  { name: 'Violet', color: '#a78bfa', shine: '#efe7ff', text: '#1b0b3a', speed: 2.6 },
-  { name: 'Rose', color: '#fb7185', shine: '#ffe0e5', text: '#2b0710', speed: 1.8 },
+  { name: 'Silver', line: '#ffffff', base: '#525252', tint: '#ffffff', glow: '#9ca3af' },
+  { name: 'Kryptonite', line: '#39ff8f', base: '#166534', tint: '#39ff8f', glow: '#39ff8f' },
+  { name: 'Ocean', line: '#2de2e6', base: '#155e75', tint: '#2de2e6', glow: '#2de2e6' },
+  { name: 'Sunset', line: '#fb923c', base: '#7c2d12', tint: '#fb923c', glow: '#fb923c' },
+  { name: 'Violet', line: '#a78bfa', base: '#4c1d95', tint: '#a78bfa', glow: '#a78bfa' },
 ] as const
 
 type Preset = (typeof PRESETS)[number]
@@ -35,20 +36,43 @@ function Code({ p }: { p: Preset }) {
   const str = 'text-[#a5d6ff]'
   const num = 'text-[#ffa657]'
   const kw = 'text-[#ff7b72]'
+  const prop = (name: string, value: ReactNode) => (
+    <>
+      {'  '}
+      <span className={attr}>{name}</span>={value}
+    </>
+  )
+  const text = (v: string) => <span className={str}>&quot;{v}&quot;</span>
+  const n = (v: number) => (
+    <>
+      {'{'}
+      <span className={num}>{v}</span>
+      {'}'}
+    </>
+  )
+  const swatch = (c: string) => <span className="ml-2 inline-block size-2.5 rounded-sm align-middle ring-1 ring-white/20" style={{ background: c }} />
   const lines: ReactNode[] = [
-    <><span className={kw}>import</span> {'{ ShimmerButton }'} <span className={kw}>from</span> <span className={str}>&apos;@/components/kryptonite&apos;</span></>,
+    <><span className={kw}>import</span> SpecularButton <span className={kw}>from</span> <span className={str}>&apos;./SpecularButton&apos;</span>;</>,
     <>&nbsp;</>,
-    <><span className={kw}>export default function</span> Hero() {'{'}</>,
-    <>{'  '}<span className={kw}>return</span> (</>,
-    <>{'    '}&lt;<span className={tag}>ShimmerButton</span></>,
-    <>{'      '}<span className={attr}>color</span>=<span className={str}>&quot;{p.color}&quot;</span><span className="ml-2 inline-block size-2.5 rounded-sm align-middle" style={{ background: p.color }} /></>,
-    <>{'      '}<span className={attr}>shineColor</span>=<span className={str}>&quot;{p.shine}&quot;</span></>,
-    <>{'      '}<span className={attr}>speed</span>={'{'}<span className={num}>{p.speed}</span>{'}'}</>,
-    <>{'    '}&gt;</>,
-    <>{'      '}Get started</>,
-    <>{'    '}&lt;/<span className={tag}>ShimmerButton</span>&gt;</>,
-    <>{'  '})</>,
-    <>{'}'}</>,
+    <>&lt;<span className={tag}>SpecularButton</span></>,
+    prop('size', text('lg')),
+    prop('radius', n(18)),
+    <>{prop('tint', text(p.tint))}{swatch(p.tint)}</>,
+    prop('tintOpacity', n(0.04)),
+    prop('textColor', text('#f5f5f5')),
+    <>{prop('lineColor', text(p.line))}{swatch(p.line)}</>,
+    <>{prop('baseColor', text(p.base))}{swatch(p.base)}</>,
+    prop('intensity', n(1)),
+    prop('idleIntensity', n(0.35)),
+    prop('shineSize', n(10)),
+    prop('shineFade', n(34)),
+    prop('thickness', n(1.2)),
+    prop('glow', n(1)),
+    <>{'  '}<span className={attr}>followMouse</span></>,
+    prop('proximity', n(250)),
+    <>&gt;</>,
+    <>{'  '}Get Started</>,
+    <>&lt;/<span className={tag}>SpecularButton</span>&gt;</>,
   ]
   return (
     <pre className="overflow-x-auto p-4 font-mono text-[12.5px] leading-6 text-white/80">
@@ -70,7 +94,7 @@ export function HeroShowcase() {
     <div className="dark relative isolate overflow-hidden rounded-2xl border bg-[#0b0d0c] text-foreground">
       <div aria-hidden className="pointer-events-none absolute inset-0 -z-10">
         <Aurora
-          colorStops={[preset.color, '#0f9f5a', preset.color]}
+          colorStops={[preset.glow, '#0f9f5a', preset.glow]}
           amplitude={1.1}
           blend={0.6}
           speed={0.5}
@@ -88,9 +112,25 @@ export function HeroShowcase() {
         <div className="flex flex-col gap-4 lg:gap-6">
           <Window title="Preview">
             <div className="grid h-36 place-items-center">
-              <ShimmerButton key={preset.name} color={preset.color} shineColor={preset.shine} textColor={preset.text} speed={preset.speed}>
-                Get started
-              </ShimmerButton>
+              <SpecularButton
+                size="lg"
+                radius={18}
+                tint={preset.tint}
+                tintOpacity={0.04}
+                textColor="#f5f5f5"
+                lineColor={preset.line}
+                baseColor={preset.base}
+                intensity={1}
+                idleIntensity={0.35}
+                shineSize={10}
+                shineFade={34}
+                thickness={1.2}
+                glow={1}
+                followMouse
+                proximity={250}
+              >
+                Get Started
+              </SpecularButton>
             </div>
           </Window>
 
@@ -108,11 +148,11 @@ export function HeroShowcase() {
                     )}
                   >
                     <span className="flex -space-x-1">
-                      <span className="size-3 rounded-full ring-2 ring-[#121413]" style={{ background: p.color }} />
-                      <span className="size-3 rounded-full ring-2 ring-[#121413]" style={{ background: p.shine }} />
+                      <span className="size-3 rounded-full ring-2 ring-[#121413]" style={{ background: p.line }} />
+                      <span className="size-3 rounded-full ring-2 ring-[#121413]" style={{ background: p.base }} />
                     </span>
                     <span className="flex-1">{p.name}</span>
-                    <span className="hidden font-mono text-xs text-white/35 sm:inline">speed {p.speed}s</span>
+                    <span className="hidden font-mono text-xs text-white/35 sm:inline">{p.line}</span>
                     {p.name === preset.name && <IconCheck className="size-4 text-white/70" />}
                   </button>
                 </li>

@@ -671,7 +671,9 @@ const Grainient = ({
       gl.deleteVertexArray(vao);
       gl.deleteProgram(field.program);
       gl.deleteProgram(composite.program);
-      gl.getExtension('WEBGL_lose_context')?.loseContext();
+      // Kryptonite UI change: don't call loseContext() here. React remounts effects on the same
+      // <canvas> (Strict Mode, fast refresh), and a lost context can't be recovered, which left the
+      // background blank. The browser frees the context when the canvas is removed.
     };
   }, []);
 

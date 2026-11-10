@@ -1,0 +1,484 @@
+{
+  "url": "https://kryptonite-ui.vercel.app/",
+  "title": "Kryptonite UI: Animated React Components for Next.js and Tailwind CSS",
+  "description": "Kryptonite UI is a free, open-source library of modern, animated React components for Next.js, built with Tailwind CSS, shadcn/ui and Base UI. Copy and paste buttons, forms, dialogs, data tables, charts and more, with loading, error and empty states handled.",
+  "themeColor": "#0f0f0f",
+  "colors": {
+    "background": "#0c0c0c",
+    "text": "#f2f2f2",
+    "heading": "#f2f2f2",
+    "link": "#f2f2f2",
+    "accent": "#54fc93",
+    "other": [
+      {
+        "color": "#0b0d0c",
+        "share": 0.107
+      },
+      {
+        "color": "#121413",
+        "share": 0.072
+      },
+      {
+        "color": "#ffffff",
+        "share": 0.026
+      },
+      {
+        "color": "#989898",
+        "share": 0.008
+      },
+      {
+        "color": "#79c0ff",
+        "share": 0.002
+      },
+      {
+        "color": "#a5d6ff",
+        "share": 0.001
+      }
+    ],
+    "accentFrom": "buttons"
+  },
+  "fonts": {
+    "body": "Poppins",
+    "headings": [
+      "Poppins"
+    ],
+    "buttons": [
+      "Poppins"
+    ],
+    "families": [
+      {
+        "family": "Poppins",
+        "uses": [
+          {
+            "weight": 400,
+            "style": "normal"
+          },
+          {
+            "weight": 500,
+            "style": "normal"
+          },
+          {
+            "weight": 600,
+            "style": "normal"
+          }
+        ],
+        "faces": [
+          {
+            "weight": "300",
+            "style": "normal",
+            "status": "unloaded"
+          },
+          {
+            "weight": "300",
+            "style": "normal",
+            "status": "unloaded"
+          },
+          {
+            "weight": "300",
+            "style": "normal",
+            "status": "unloaded"
+          },
+          {
+            "weight": "400",
+            "style": "normal",
+            "status": "unloaded"
+          },
+          {
+            "weight": "400",
+            "style": "normal",
+            "status": "unloaded"
+          },
+          {
+            "weight": "400",
+            "style": "normal",
+            "status": "loaded"
+          },
+          {
+            "weight": "500",
+            "style": "normal",
+            "status": "loaded"
+          },
+          {
+            "weight": "500",
+            "style": "normal",
+            "status": "unloaded"
+          },
+          {
+            "weight": "500",
+            "style": "normal",
+            "status": "loaded"
+          },
+          {
+            "weight": "600",
+            "style": "normal",
+            "status": "unloaded"
+          },
+          {
+            "weight": "600",
+            "style": "normal",
+            "status": "unloaded"
+          },
+          {
+            "weight": "600",
+            "style": "normal",
+            "status": "loaded"
+          },
+          {
+            "weight": "700",
+            "style": "normal",
+            "status": "unloaded"
+          },
+          {
+            "weight": "700",
+            "style": "normal",
+            "status": "unloaded"
+          },
+          {
+            "weight": "700",
+            "style": "normal",
+            "status": "unloaded"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://kryptonite-ui.vercel.app/_next/static/immutable/media/3dddc7aa96062c91-s.3hj06t9-fdplt.woff2",
+            "weight": "300",
+            "style": "normal",
+            "loaded": false
+          },
+          {
+            "url": "https://kryptonite-ui.vercel.app/_next/static/immutable/media/d50510d994ab0074-s.2ch_0577yepja.woff2",
+            "weight": "300",
+            "style": "normal",
+            "loaded": false
+          },
+          {
+            "url": "https://kryptonite-ui.vercel.app/_next/static/immutable/media/13958cae6c93c43e-s.p.2hvcnh59x4e6z.woff2",
+            "weight": "300",
+            "style": "normal",
+            "loaded": true
+          },
+          {
+            "url": "https://kryptonite-ui.vercel.app/_next/static/immutable/media/41c98a3b1bc68f3a-s.3xzwb88tucl-q.woff2",
+            "weight": "400",
+            "style": "normal",
+            "loaded": false
+          },
+          {
+            "url": "https://kryptonite-ui.vercel.app/_next/static/immutable/media/e84c5cd1ffbefa6f-s.20csvlgbb63y1.woff2",
+            "weight": "400",
+            "style": "normal",
+            "loaded": false
+          },
+          {
+            "url": "https://kryptonite-ui.vercel.app/_next/static/immutable/media/dd9dfc3601372168-s.p.17e3l4txdrufi.woff2",
+            "weight": "400",
+            "style": "normal",
+            "loaded": true
+          },
+          {
+            "url": "https://kryptonite-ui.vercel.app/_next/static/immutable/media/599675dea67dcb8d-s.0ewdtdf6ai7o-.woff2",
+            "weight": "500",
+            "style": "normal",
+            "loaded": true
+          },
+          {
+            "url": "https://kryptonite-ui.vercel.app/_next/static/immutable/media/cdf6f527ee34c972-s.03ilua6xb7p2f.woff2",
+            "weight": "500",
+            "style": "normal",
+            "loaded": false
+          },
+          {
+            "url": "https://kryptonite-ui.vercel.app/_next/static/immutable/media/22a701959b157a82-s.p.1bg6trwi21i5q.woff2",
+            "weight": "500",
+            "style": "normal",
+            "loaded": true
+          },
+          {
+            "url": "https://kryptonite-ui.vercel.app/_next/static/immutable/media/1b6340a83cf1ecee-s.2bakuypqc5dou.woff2",
+            "weight": "600",
+            "style": "normal",
+            "loaded": false
+          },
+          {
+            "url": "https://kryptonite-ui.vercel.app/_next/static/immutable/media/d89abe7e263475e6-s.0fg7ryy-bp2x_.woff2",
+            "weight": "600",
+            "style": "normal",
+            "loaded": false
+          },
+          {
+            "url": "https://kryptonite-ui.vercel.app/_next/static/immutable/media/6bafae418e8a1b08-s.p.2g9xiodaln20i.woff2",
+            "weight": "600",
+            "style": "normal",
+            "loaded": true
+          },
+          {
+            "url": "https://kryptonite-ui.vercel.app/_next/static/immutable/media/c0743afb7b1f57bc-s.3a_7qwcscqi0t.woff2",
+            "weight": "700",
+            "style": "normal",
+            "loaded": false
+          },
+          {
+            "url": "https://kryptonite-ui.vercel.app/_next/static/immutable/media/b0b9e5e07c9deaa9-s.22w-t0ek6hrfw.woff2",
+            "weight": "700",
+            "style": "normal",
+            "loaded": false
+          },
+          {
+            "url": "https://kryptonite-ui.vercel.app/_next/static/immutable/media/76e9fd951b869c7b-s.p.1n2oi-d4a-xww.woff2",
+            "weight": "700",
+            "style": "normal",
+            "loaded": true
+          }
+        ]
+      },
+      {
+        "family": "Geist Mono",
+        "uses": [
+          {
+            "weight": 400,
+            "style": "normal"
+          }
+        ],
+        "faces": [
+          {
+            "weight": "100 900",
+            "style": "normal",
+            "status": "unloaded"
+          },
+          {
+            "weight": "100 900",
+            "style": "normal",
+            "status": "unloaded"
+          },
+          {
+            "weight": "100 900",
+            "style": "normal",
+            "status": "unloaded"
+          },
+          {
+            "weight": "100 900",
+            "style": "normal",
+            "status": "unloaded"
+          },
+          {
+            "weight": "100 900",
+            "style": "normal",
+            "status": "unloaded"
+          },
+          {
+            "weight": "100 900",
+            "style": "normal",
+            "status": "loaded"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://kryptonite-ui.vercel.app/_next/static/immutable/media/b0c6b664fd57c2c6-s.27spqqad3wyeo.woff2",
+            "weight": "100 900",
+            "style": "normal",
+            "loaded": false
+          },
+          {
+            "url": "https://kryptonite-ui.vercel.app/_next/static/immutable/media/6e342921ee4dcd9d-s.3f4zuumv8svu0.woff2",
+            "weight": "100 900",
+            "style": "normal",
+            "loaded": false
+          },
+          {
+            "url": "https://kryptonite-ui.vercel.app/_next/static/immutable/media/2bb852295097cd96-s.34r5yzckw0h2s.woff2",
+            "weight": "100 900",
+            "style": "normal",
+            "loaded": false
+          },
+          {
+            "url": "https://kryptonite-ui.vercel.app/_next/static/immutable/media/9eb5a876700c0028-s.2jyz_zw3a8jit.woff2",
+            "weight": "100 900",
+            "style": "normal",
+            "loaded": false
+          },
+          {
+            "url": "https://kryptonite-ui.vercel.app/_next/static/immutable/media/2a04751c893bf294-s.30bdpjkrtcces.woff2",
+            "weight": "100 900",
+            "style": "normal",
+            "loaded": false
+          },
+          {
+            "url": "https://kryptonite-ui.vercel.app/_next/static/immutable/media/07a39a8a4660cc7c-s.p.1v5bejj26fx9h.woff2",
+            "weight": "100 900",
+            "style": "normal",
+            "loaded": true
+          }
+        ]
+      }
+    ],
+    "saved": [
+      {
+        "family": "Poppins",
+        "weight": 400,
+        "style": "normal",
+        "file": "assets/capture/kryptonite-ui.vercel.app/home/fonts/Poppins-400-1.woff2",
+        "source": "https://kryptonite-ui.vercel.app/_next/static/immutable/media/dd9dfc3601372168-s.p.17e3l4txdrufi.woff2"
+      },
+      {
+        "family": "Poppins",
+        "weight": 500,
+        "style": "normal",
+        "file": "assets/capture/kryptonite-ui.vercel.app/home/fonts/Poppins-500-2.woff2",
+        "source": "https://kryptonite-ui.vercel.app/_next/static/immutable/media/599675dea67dcb8d-s.0ewdtdf6ai7o-.woff2"
+      },
+      {
+        "family": "Poppins",
+        "weight": 500,
+        "style": "normal",
+        "file": "assets/capture/kryptonite-ui.vercel.app/home/fonts/Poppins-500-3.woff2",
+        "source": "https://kryptonite-ui.vercel.app/_next/static/immutable/media/22a701959b157a82-s.p.1bg6trwi21i5q.woff2"
+      },
+      {
+        "family": "Poppins",
+        "weight": 600,
+        "style": "normal",
+        "file": "assets/capture/kryptonite-ui.vercel.app/home/fonts/Poppins-600-4.woff2",
+        "source": "https://kryptonite-ui.vercel.app/_next/static/immutable/media/6bafae418e8a1b08-s.p.2g9xiodaln20i.woff2"
+      },
+      {
+        "family": "Geist Mono",
+        "weight": "100 900",
+        "style": "normal",
+        "file": "assets/capture/kryptonite-ui.vercel.app/home/fonts/Geist-Mono-100-900-5.woff2",
+        "source": "https://kryptonite-ui.vercel.app/_next/static/immutable/media/07a39a8a4660cc7c-s.p.1v5bejj26fx9h.woff2"
+      }
+    ]
+  },
+  "text": {
+    "h1": [
+      "Modern, flashy React UI components for your next project"
+    ],
+    "h2": [
+      "Featured components"
+    ],
+    "navigation": [
+      "Docs",
+      "Components",
+      "Community\nNew",
+      "Community",
+      "GitHub"
+    ],
+    "buttons": [
+      "Switch to light mode",
+      "1",
+      "Browse components",
+      "Browse components\nकंपोनेंट्स देखें\nExplorar componentes\nকম্পোনেন্ট দেখুন\nParcourir les composants\nコンポーネントを見る\nKomponenten ansehen",
+      "Star on GitHub",
+      "Get Started",
+      "Silver\n#ffffff",
+      "Kryptonite\n#39ff8f",
+      "Ocean\n#2de2e6",
+      "Sunset\n#fb923c",
+      "Violet\n#a78bfa"
+    ],
+    "labels": [],
+    "placeholders": [],
+    "body": "Kryptonite UI\n/\nDocs\nComponents\nCommunity\nNew\n1\nBrowse components\nNew\nCommunity threads\nModern, flashy React UI components for your next project\nBrowse components\nकंपोनेंट्स देखें\nExplorar componentes\nকম্পোনেন্ট দেখুন\nParcourir les composants\nコンポーネントを見る\nKomponenten ansehen\nStar on GitHub\n\n86 free, open-source animated components for Next.js, built with Tailwind CSS, shadcn/ui and Base UI. Copy them in and make them yours.\n\nWORKS WITH\nClaude\nCursor\nVS Code\nCodex\nshadcn/ui\nGitHub Copilot\nNext.js\nReact\nTailwind CSS\nTypeScript\nVercel\nClaude\nCursor\nVS Code\nCodex\nshadcn/ui\nGitHub Copilot\nNext.js\nReact\nTailwind CSS\nTypeScript\nVercel\nHero.tsx\n1\nimport SpecularButton from './SpecularButton';\n2\n\n3\n<SpecularButton\n4\n  size=\"lg\"\n5\n  radius={18}\n6\n  tint=\"#ffffff\"\n7\n  tintOpacity={0.04}\n8\n  textColor=\"#f5f5f5\"\n9\n  lineColor=\"#ffffff\"\n10\n  baseColor=\"#525252\"\n11\n  intensity={1}\n12\n  idleIntensity={0.35}\n13\n  shineSize={10}\n14\n  shineFade={34}\n15\n  thickness={1.2}\n16\n  glow={1}\n17\n  followMouse\n18\n  proximity={250}\n19\n>\n20\n  Get Started\n21\n</SpecularButton>\nPreview\nGet Started\nPresets\nSilver\n#ffffff\nKryptonite\n#39ff8f\nOcean\n#2de2e6\nSunset\n#fb923c\nViolet\n#a78bfa\nFeatured components\nGet Started\nSpecular Button\nSave changes\nDone\nFailed\nRequest that fails\nDone\nFailed\nFast request\nDone\nFailed\nButton\nVerification code\n\nType or paste 123456 to pass. Anything else fails.\n\nInput OTP\n\nSpotlight\n\nMove your cursor around this card.\n\nSpotlight Card\n22\n2\n0\n1\n2\n3\n4\n5\n6\n7\n8\n9\n0\n1\n2\n3\n4\n5\n6\n7\n8\n9\n0\n1\n2\n3\n4\n5\n6\n7\n8\n9\n2\n0\n1\n2\n3\n4\n5\n6\n7\n8\n9\n0\n1\n2\n3\n4\n5\n6\n7\n8\n9\n0\n1\n2\n3\n4\n5\n6\n7\n8\n9\n−1\n+1\n+111\nRandom\nNumber Flow\nWi-Fi\nJoin known networks automatically.\nBluetooth\nConnect to headphones and keyboards.\nNearby sharing\nLet people around you send files.\nSwitch\nPending\nIn progress\nIn review\nFailed\nSuccess\nExpired\nBadge\nReact\nNext.js\nTailwind\nTypeScript\nshadcn/ui\nBase UI\nReact\nNext.js\nTailwind\nTypeScript\nshadcn/ui\nBase UI\nMarquee\n\nThe catalog\n\nEverything you need to build an interface\n\nGrouped the way you look for them. Pick a category to see every component in it, with live previews and code.\n\ncomponents, hooks and utilities\n100\ncomponents, hooks and utilities\ncategories\n15\ncategories\nReact hooks\n9\nReact hooks\nopen-source libraries, credited\n2\nopen-source libraries, credited\nBrowse everything\nKryptonite\n8\nAurora Background, Glow Border Button, Gradient Text\nAI\n2\nAI Input Selector, AI State Loading\nActions\n8\nBell Button, Button, Button group\nForms\n18\nCalendar, Checkbox, Combobox\nOverlays\n11\nAlert dialog, Command, Context menu\nData display\n13\nActivity Terrain, Apple Activity Card, Avatar\nNavigation\n5\nBreadcrumb, Navigation menu, Pagination\nLayout\n7\nAccordion, Aspect ratio, Carousel\nFeedback\n6\nAlert, Empty, Progress\nChat\n5\nAttachment, Bubble, Marker\nMedia\n1\nVideo player\nBackgrounds\n1\nDrape Background\nText\n1\nPlucked Text\nUtilities\n5\nHairline, Hotkey, Motion\nHooks\n9\nuseAutosize, useButtonFeedback, useComposedRef\n\nWhy Kryptonite UI\n\nLooks great out of the box. Stays easy to change.\n86\ncomponents,\nall free and open source\n\nyour-app\n\ncomponents\n\nkryptonite\n\nShimmerButton.tsx\n\nShimmerButton.tsx\nCopy\nCopy and paste, no package\n\nEvery component is a single file you copy into your project. No npm package to install or upgrade, and the code is yours to change.\n\nSave\nShare\nDelete\nTab\n↵\nEsc\nAccessible by default\n\nBuilt on Base UI primitives, so keyboard navigation, focus management and screen reader support come built in.\n\nSave changes\nDone\nFailed\nClick it: loading, then success\nStates already handled\n\nLoading, success, error and empty states are part of the components, not something you wire up later.\n\nNext.js\nReact 19\nTailwind CSS v4\nTypeScript\nshadcn/ui\nBase UI\nDark and light mode\nMade for Next.js and Tailwind CSS\n\nWorks with the Next.js App Router, React 19, Tailwind CSS v4 and shadcn/ui. Theme it with CSS variables.\n\nSee how to add your first component\nFrequently asked questions\nWhat is Kryptonite UI?\nIs Kryptonite UI free?\nDoes it work with Next.js and Tailwind CSS?\nDo I need shadcn/ui to use it?\nHow do I add a component to my project?\nCan I request a new component?\nHelp shape what we build next.\n\nJoin the community to share feedback, request the components you need, and show what you built. Reply to others and upvote the ideas you want most.\n\nJoin the community\nBrowse components\nKryptonite UI · MIT licensed\nDocs\nComponents\nCommunity\nGitHub\nBuilt by Subhrajit",
+    "bodyCut": false
+  },
+  "images": [
+    {
+      "src": "https://kryptonite-ui.vercel.app/_next/image?url=%2Fkryptonite-logo.webp&w=64&q=75",
+      "alt": "",
+      "width": 26,
+      "height": 26,
+      "naturalWidth": 32,
+      "naturalHeight": 32,
+      "firstScreen": true
+    }
+  ],
+  "brand": {
+    "accent": "#54fc93",
+    "background": "#0c0c0c",
+    "ink": "#f2f2f2",
+    "font": "Poppins",
+    "headline": "Poppins",
+    "logo": "assets/capture/kryptonite-ui.vercel.app/home/logo.png"
+  },
+  "notes": [
+    "Poppins: saved 4 font files in assets/capture/kryptonite-ui.vercel.app/home/fonts/, check the license before you publish.",
+    "Geist Mono: saved 1 font file in assets/capture/kryptonite-ui.vercel.app/home/fonts/, check the license before you publish."
+  ],
+  "logo": {
+    "picked": "assets/capture/kryptonite-ui.vercel.app/home/logo.png",
+    "candidates": [
+      {
+        "file": "assets/capture/kryptonite-ui.vercel.app/home/logo.png",
+        "source": "https://kryptonite-ui.vercel.app/icon.png?icon.25o0s3wng5vtx.png",
+        "kind": "icon"
+      },
+      {
+        "file": "assets/capture/kryptonite-ui.vercel.app/home/logo-2.png",
+        "source": "https://kryptonite-ui.vercel.app/apple-icon.png?apple-icon.0vq445o9aave2.png",
+        "kind": "icon"
+      },
+      {
+        "file": "assets/capture/kryptonite-ui.vercel.app/home/logo-3.png",
+        "source": "https://kryptonite-ui.vercel.app/opengraph-image?9b537a0904555ee7",
+        "kind": "og"
+      }
+    ]
+  },
+  "suggestion": {
+    "brand": {
+      "accent": "#54fc93",
+      "background": "#0c0c0c",
+      "ink": "#f2f2f2",
+      "font": "Poppins",
+      "headline": "Poppins",
+      "logo": "assets/capture/kryptonite-ui.vercel.app/home/logo.png"
+    },
+    "fonts": [
+      {
+        "family": "Poppins",
+        "src": "assets/capture/kryptonite-ui.vercel.app/home/fonts/Poppins-400-1.woff2",
+        "weight": 400,
+        "style": "normal"
+      },
+      {
+        "family": "Poppins",
+        "src": "assets/capture/kryptonite-ui.vercel.app/home/fonts/Poppins-500-2.woff2",
+        "weight": 500,
+        "style": "normal"
+      },
+      {
+        "family": "Poppins",
+        "src": "assets/capture/kryptonite-ui.vercel.app/home/fonts/Poppins-500-3.woff2",
+        "weight": 500,
+        "style": "normal"
+      },
+      {
+        "family": "Poppins",
+        "src": "assets/capture/kryptonite-ui.vercel.app/home/fonts/Poppins-600-4.woff2",
+        "weight": 600,
+        "style": "normal"
+      },
+      {
+        "family": "Geist Mono",
+        "src": "assets/capture/kryptonite-ui.vercel.app/home/fonts/Geist-Mono-100-900-5.woff2",
+        "weight": "100 900",
+        "style": "normal"
+      }
+    ]
+  },
+  "files": [
+    "assets/capture/kryptonite-ui.vercel.app/home/capture.json",
+    "assets/capture/kryptonite-ui.vercel.app/home/fonts/Geist-Mono-100-900-5.woff2",
+    "assets/capture/kryptonite-ui.vercel.app/home/fonts/Poppins-400-1.woff2",
+    "assets/capture/kryptonite-ui.vercel.app/home/fonts/Poppins-500-2.woff2",
+    "assets/capture/kryptonite-ui.vercel.app/home/fonts/Poppins-500-3.woff2",
+    "assets/capture/kryptonite-ui.vercel.app/home/fonts/Poppins-600-4.woff2",
+    "assets/capture/kryptonite-ui.vercel.app/home/fonts/fonts.json",
+    "assets/capture/kryptonite-ui.vercel.app/home/full.png",
+    "assets/capture/kryptonite-ui.vercel.app/home/logo-2.png",
+    "assets/capture/kryptonite-ui.vercel.app/home/logo-3.png",
+    "assets/capture/kryptonite-ui.vercel.app/home/logo.png",
+    "assets/capture/kryptonite-ui.vercel.app/home/page.png"
+  ]
+}

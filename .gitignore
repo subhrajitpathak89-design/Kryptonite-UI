@@ -42,3 +42,8 @@ next-env.d.ts
 
 .vercel
 .env*
+
+# explainroo video projects: generated files
+videos/*/build/
+videos/*/out/
+videos/*/history/

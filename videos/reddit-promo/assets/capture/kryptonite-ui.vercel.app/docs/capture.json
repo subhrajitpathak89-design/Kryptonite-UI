@@ -1,0 +1,532 @@
+{
+  "url": "https://kryptonite-ui.vercel.app/docs/button",
+  "title": "Button React component for Next.js and Tailwind CSS · Kryptonite UI",
+  "description": "Buttons in every variant and size, with a built-in loading, success and error flow that skips the spinner for fast requests.",
+  "themeColor": "#0f0f0f",
+  "colors": {
+    "background": "#0c0c0c",
+    "text": "#f2f2f2",
+    "heading": "#f2f2f2",
+    "link": "#f2f2f2",
+    "accent": "#54fc93",
+    "other": [
+      {
+        "color": "#131313",
+        "share": 0.197
+      },
+      {
+        "color": "#989898",
+        "share": 0.045
+      },
+      {
+        "color": "#e6edf3",
+        "share": 0.019
+      },
+      {
+        "color": "#a5d6ff",
+        "share": 0.017
+      },
+      {
+        "color": "#141414",
+        "share": 0.01
+      },
+      {
+        "color": "#ff7b72",
+        "share": 0.007
+      }
+    ],
+    "accentFrom": "buttons"
+  },
+  "fonts": {
+    "body": "Poppins",
+    "headings": [
+      "Poppins"
+    ],
+    "buttons": [
+      "Poppins"
+    ],
+    "families": [
+      {
+        "family": "Poppins",
+        "uses": [
+          {
+            "weight": 400,
+            "style": "normal"
+          },
+          {
+            "weight": 500,
+            "style": "normal"
+          },
+          {
+            "weight": 600,
+            "style": "normal"
+          }
+        ],
+        "faces": [
+          {
+            "weight": "300",
+            "style": "normal",
+            "status": "unloaded"
+          },
+          {
+            "weight": "300",
+            "style": "normal",
+            "status": "unloaded"
+          },
+          {
+            "weight": "300",
+            "style": "normal",
+            "status": "unloaded"
+          },
+          {
+            "weight": "400",
+            "style": "normal",
+            "status": "unloaded"
+          },
+          {
+            "weight": "400",
+            "style": "normal",
+            "status": "unloaded"
+          },
+          {
+            "weight": "400",
+            "style": "normal",
+            "status": "loaded"
+          },
+          {
+            "weight": "500",
+            "style": "normal",
+            "status": "unloaded"
+          },
+          {
+            "weight": "500",
+            "style": "normal",
+            "status": "unloaded"
+          },
+          {
+            "weight": "500",
+            "style": "normal",
+            "status": "loaded"
+          },
+          {
+            "weight": "600",
+            "style": "normal",
+            "status": "unloaded"
+          },
+          {
+            "weight": "600",
+            "style": "normal",
+            "status": "unloaded"
+          },
+          {
+            "weight": "600",
+            "style": "normal",
+            "status": "loaded"
+          },
+          {
+            "weight": "700",
+            "style": "normal",
+            "status": "unloaded"
+          },
+          {
+            "weight": "700",
+            "style": "normal",
+            "status": "unloaded"
+          },
+          {
+            "weight": "700",
+            "style": "normal",
+            "status": "unloaded"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://kryptonite-ui.vercel.app/_next/static/immutable/media/3dddc7aa96062c91-s.3hj06t9-fdplt.woff2",
+            "weight": "300",
+            "style": "normal",
+            "loaded": false
+          },
+          {
+            "url": "https://kryptonite-ui.vercel.app/_next/static/immutable/media/d50510d994ab0074-s.2ch_0577yepja.woff2",
+            "weight": "300",
+            "style": "normal",
+            "loaded": false
+          },
+          {
+            "url": "https://kryptonite-ui.vercel.app/_next/static/immutable/media/13958cae6c93c43e-s.p.2hvcnh59x4e6z.woff2",
+            "weight": "300",
+            "style": "normal",
+            "loaded": true
+          },
+          {
+            "url": "https://kryptonite-ui.vercel.app/_next/static/immutable/media/41c98a3b1bc68f3a-s.3xzwb88tucl-q.woff2",
+            "weight": "400",
+            "style": "normal",
+            "loaded": false
+          },
+          {
+            "url": "https://kryptonite-ui.vercel.app/_next/static/immutable/media/e84c5cd1ffbefa6f-s.20csvlgbb63y1.woff2",
+            "weight": "400",
+            "style": "normal",
+            "loaded": false
+          },
+          {
+            "url": "https://kryptonite-ui.vercel.app/_next/static/immutable/media/dd9dfc3601372168-s.p.17e3l4txdrufi.woff2",
+            "weight": "400",
+            "style": "normal",
+            "loaded": true
+          },
+          {
+            "url": "https://kryptonite-ui.vercel.app/_next/static/immutable/media/599675dea67dcb8d-s.0ewdtdf6ai7o-.woff2",
+            "weight": "500",
+            "style": "normal",
+            "loaded": false
+          },
+          {
+            "url": "https://kryptonite-ui.vercel.app/_next/static/immutable/media/cdf6f527ee34c972-s.03ilua6xb7p2f.woff2",
+            "weight": "500",
+            "style": "normal",
+            "loaded": false
+          },
+          {
+            "url": "https://kryptonite-ui.vercel.app/_next/static/immutable/media/22a701959b157a82-s.p.1bg6trwi21i5q.woff2",
+            "weight": "500",
+            "style": "normal",
+            "loaded": true
+          },
+          {
+            "url": "https://kryptonite-ui.vercel.app/_next/static/immutable/media/1b6340a83cf1ecee-s.2bakuypqc5dou.woff2",
+            "weight": "600",
+            "style": "normal",
+            "loaded": false
+          },
+          {
+            "url": "https://kryptonite-ui.vercel.app/_next/static/immutable/media/d89abe7e263475e6-s.0fg7ryy-bp2x_.woff2",
+            "weight": "600",
+            "style": "normal",
+            "loaded": false
+          },
+          {
+            "url": "https://kryptonite-ui.vercel.app/_next/static/immutable/media/6bafae418e8a1b08-s.p.2g9xiodaln20i.woff2",
+            "weight": "600",
+            "style": "normal",
+            "loaded": true
+          },
+          {
+            "url": "https://kryptonite-ui.vercel.app/_next/static/immutable/media/c0743afb7b1f57bc-s.3a_7qwcscqi0t.woff2",
+            "weight": "700",
+            "style": "normal",
+            "loaded": false
+          },
+          {
+            "url": "https://kryptonite-ui.vercel.app/_next/static/immutable/media/b0b9e5e07c9deaa9-s.22w-t0ek6hrfw.woff2",
+            "weight": "700",
+            "style": "normal",
+            "loaded": false
+          },
+          {
+            "url": "https://kryptonite-ui.vercel.app/_next/static/immutable/media/76e9fd951b869c7b-s.p.1n2oi-d4a-xww.woff2",
+            "weight": "700",
+            "style": "normal",
+            "loaded": true
+          }
+        ]
+      },
+      {
+        "family": "Geist Mono",
+        "uses": [
+          {
+            "weight": 400,
+            "style": "normal"
+          }
+        ],
+        "faces": [
+          {
+            "weight": "100 900",
+            "style": "normal",
+            "status": "unloaded"
+          },
+          {
+            "weight": "100 900",
+            "style": "normal",
+            "status": "unloaded"
+          },
+          {
+            "weight": "100 900",
+            "style": "normal",
+            "status": "unloaded"
+          },
+          {
+            "weight": "100 900",
+            "style": "normal",
+            "status": "unloaded"
+          },
+          {
+            "weight": "100 900",
+            "style": "normal",
+            "status": "unloaded"
+          },
+          {
+            "weight": "100 900",
+            "style": "normal",
+            "status": "loaded"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://kryptonite-ui.vercel.app/_next/static/immutable/media/b0c6b664fd57c2c6-s.27spqqad3wyeo.woff2",
+            "weight": "100 900",
+            "style": "normal",
+            "loaded": false
+          },
+          {
+            "url": "https://kryptonite-ui.vercel.app/_next/static/immutable/media/6e342921ee4dcd9d-s.3f4zuumv8svu0.woff2",
+            "weight": "100 900",
+            "style": "normal",
+            "loaded": false
+          },
+          {
+            "url": "https://kryptonite-ui.vercel.app/_next/static/immutable/media/2bb852295097cd96-s.34r5yzckw0h2s.woff2",
+            "weight": "100 900",
+            "style": "normal",
+            "loaded": false
+          },
+          {
+            "url": "https://kryptonite-ui.vercel.app/_next/static/immutable/media/9eb5a876700c0028-s.2jyz_zw3a8jit.woff2",
+            "weight": "100 900",
+            "style": "normal",
+            "loaded": false
+          },
+          {
+            "url": "https://kryptonite-ui.vercel.app/_next/static/immutable/media/2a04751c893bf294-s.30bdpjkrtcces.woff2",
+            "weight": "100 900",
+            "style": "normal",
+            "loaded": false
+          },
+          {
+            "url": "https://kryptonite-ui.vercel.app/_next/static/immutable/media/07a39a8a4660cc7c-s.p.1v5bejj26fx9h.woff2",
+            "weight": "100 900",
+            "style": "normal",
+            "loaded": true
+          }
+        ]
+      }
+    ],
+    "saved": [
+      {
+        "family": "Poppins",
+        "weight": 400,
+        "style": "normal",
+        "file": "assets/capture/kryptonite-ui.vercel.app/docs/fonts/Poppins-400-1.woff2",
+        "source": "https://kryptonite-ui.vercel.app/_next/static/immutable/media/dd9dfc3601372168-s.p.17e3l4txdrufi.woff2"
+      },
+      {
+        "family": "Poppins",
+        "weight": 500,
+        "style": "normal",
+        "file": "assets/capture/kryptonite-ui.vercel.app/docs/fonts/Poppins-500-2.woff2",
+        "source": "https://kryptonite-ui.vercel.app/_next/static/immutable/media/22a701959b157a82-s.p.1bg6trwi21i5q.woff2"
+      },
+      {
+        "family": "Poppins",
+        "weight": 600,
+        "style": "normal",
+        "file": "assets/capture/kryptonite-ui.vercel.app/docs/fonts/Poppins-600-3.woff2",
+        "source": "https://kryptonite-ui.vercel.app/_next/static/immutable/media/6bafae418e8a1b08-s.p.2g9xiodaln20i.woff2"
+      },
+      {
+        "family": "Geist Mono",
+        "weight": "100 900",
+        "style": "normal",
+        "file": "assets/capture/kryptonite-ui.vercel.app/docs/fonts/Geist-Mono-100-900-4.woff2",
+        "source": "https://kryptonite-ui.vercel.app/_next/static/immutable/media/07a39a8a4660cc7c-s.p.1v5bejj26fx9h.woff2"
+      }
+    ]
+  },
+  "text": {
+    "h1": [
+      "Button"
+    ],
+    "h2": [
+      "Installation",
+      "Examples",
+      "Feedback"
+    ],
+    "navigation": [
+      "Docs",
+      "Components",
+      "Community\nNew",
+      "Introduction",
+      "Community",
+      "Aurora Background",
+      "Glow Border Button",
+      "Gradient Text",
+      "Magnetic Button",
+      "Marquee",
+      "Shimmer Button",
+      "Spotlight Card",
+      "Tilt Card",
+      "AI Input Selector",
+      "AI State Loading",
+      "Bell Button",
+      "Button",
+      "Button group",
+      "Pull Cord",
+      "Slide to Confirm",
+      "Tear Button",
+      "Toggle",
+      "Toggle group",
+      "Calendar",
+      "Checkbox",
+      "Combobox",
+      "Date picker",
+      "Detent Dial",
+      "Field",
+      "Input",
+      "Input group",
+      "Input OTP",
+      "Label",
+      "Native select",
+      "Questionnaire",
+      "Radio group",
+      "Select",
+      "Slider",
+      "Switch",
+      "Textarea"
+    ],
+    "buttons": [
+      "Switch to light mode",
+      "1",
+      "Browse components",
+      "Browse all components",
+      "Button",
+      "Preview",
+      "Code",
+      "Copy code",
+      "Save changes\nDone\nFailed",
+      "Request that fails\nDone\nFailed",
+      "Fast request\nDone\nFailed",
+      "Send invite\nDone\nFailed",
+      "Stop loading",
+      "Deploy\nDeployed\nDeploy failed",
+      "idle",
+      "loading",
+      "success",
+      "error",
+      "Save\nSaving…\nSaved\nCouldn’t save",
+      "Disabled",
+      "Focusable when disabled",
+      "Pay $24\nDone\nFailed",
+      "Subscribe\nSubscribed\nInvalid email",
+      "Save",
+      "Read the docs",
+      "Get started",
+      "New chat",
+      "Send",
+      "Add",
+      "حفظ\nتم الحفظ\nفشل الحفظ",
+      "Extra small",
+      "Small",
+      "Default",
+      "Large",
+      "Publish\nPublishing to 3 regions…\nLive\nFailed",
+      "default\nDone\nFailed",
+      "outline\nDone\nFailed",
+      "secondary\nDone\nFailed",
+      "ghost\nDone\nFailed",
+      "destructive\nDone\nFailed"
+    ],
+    "labels": [],
+    "placeholders": [
+      "Filter 100 components…"
+    ],
+    "body": "Kryptonite UI\n/\nDocs\nComponents\nCommunity\nNew\n1\nBrowse components\nBrowse all components\n\nGet started\n\nIntroduction\nCommunity\n\nKryptonite\n8\n\nAurora Background\nGlow Border Button\nGradient Text\nMagnetic Button\nMarquee\nShimmer Button\nSpotlight Card\nTilt Card\n\nAI\n2\n\nAI Input Selector\nAI State Loading\n\nActions\n8\n\nBell Button\nButton\nButton group\nPull Cord\nSlide to Confirm\nTear Button\nToggle\nToggle group\n\nForms\n18\n\nCalendar\nCheckbox\nCombobox\nDate picker\nDetent Dial\nField\nInput\nInput group\nInput OTP\nLabel\nNative select\nQuestionnaire\nRadio group\nSelect\nSlider\nSwitch\nTextarea\nWheel Picker\n\nOverlays\n11\n\nAlert dialog\nCommand\nContext menu\nDialog\nDrawer\nDropdown menu\nHover card\nMenubar\nPopover\nSheet\nTooltip\n\nData display\n13\n\nActivity Terrain\nApple Activity Card\nAvatar\nBadge\nCard\nChart\nData table\nItem\nKbd\nLiquid Gauge\nNumber flow\nTable\nTree\n\nNavigation\n5\n\nBreadcrumb\nNavigation menu\nPagination\nSidebar\nTabs\n\nLayout\n7\n\nAccordion\nAspect ratio\nCarousel\nCollapsible\nResizable\nScroll area\nSeparator\n\nFeedback\n6\n\nAlert\nEmpty\nProgress\nSkeleton\nSpinner\nToast\n\nChat\n5\n\nAttachment\nBubble\nMarker\nMessage\nMessage scroller\n\nMedia\n1\n\nVideo player\n\nBackgrounds\n1\n\nDrape Background\n\nText\n1\n\nPlucked Text\n\nUtilities\n5\n\nHairline\nHotkey\nMotion\nScroll Fade\nShimmer\n\nHooks\n9\n\nuseAutosize\nuseButtonFeedback\nuseComposedRef\nuseDelayedLoading\nuseHeldKeys\nuseInvalidShake\nuseMergedRef\nusePagination\nuseToday\nDocs\n/\nActions\nButton\n\nButtons in every variant and size, with a built-in loading, success and error flow that skips the spinner for fast requests.\n\n16 examples\nDepends on\n@base-ui/react\n@tabler/icons-react\nclass-variance-authority\ncn\nFrom HextaUI (MIT)\nPreview\nCode\nSave changes\nDone\nFailed\nRequest that fails\nDone\nFailed\nFast request\nDone\nFailed\nInstallation\n\nInstall the dependencies:\n\nnpm install @base-ui/react @tabler/icons-react class-variance-authority cn\n\nIt builds on these, so copy them first:\n\nspinner\nuse-button-feedback\n\nCopy this into components/ui/button.tsx:\n\nbutton.tsx\n\"use client\"\n\nimport * as React from \"react\"\nimport { Button as ButtonPrimitive } from \"@base-ui/react/button\"\nimport { IconAlertCircle, IconCircleCheck } from \"@tabler/icons-react\"\nimport { cva, type VariantProps } from \"class-variance-authority\"\nimport { cn } from \"cn\"\n\nimport { Spinner } from \"@/components/ui/spinner\"\nimport {\n  useButtonFeedback,\n  type ButtonFeedbackOptions,\n  type ButtonStatus,\n} from \"@/hooks/use-button-feedback\"\n\nconst buttonVariants = cva(\n  \"group/button relative inline-flex items-center justify-center rounded-md bg-clip-padding text-sm font-medium whitespace-nowrap inset-ring-(length:--hairline) inset-ring-transparent transition-[color,background-color,box-shadow,opacity,translate,scale] duration-200 ease-out-quint outline-none select-none focus-visible:ring-3 focus-visible:ring-focus-ring focus-visible:inset-ring-ring focus-visible:outline-hidden active:duration-100 active:not-aria-[haspopup]:not-aria-busy:translate-y-px disabled:pointer-events-none disabled:opacity-50 aria-busy:cursor-progress aria-invalid:ring-3 aria-invalid:ring-destructive/20 aria-invalid:inset-ring-destructive motion-safe:active:not-aria-[haspopup]:not-aria-busy:scale-[0.97] dark:aria-invalid:ring-destructive/40 dark:aria-invalid:inset-ring-destructive/50 forced-colors:border [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4\",\n  {\n    variants: {\n      variant: {\n        default: \"bg-primary text-primary-foreground hover:bg-primary/80\",\n        outline:\n          \"bg-background inset-ring-border hover:bg-muted hover:text-foreground aria-expanded:bg-muted aria-expanded:text-foreground dark:bg-input/30 dark:inset-ring-input dark:hover:bg-input/50\",\n        secondary:\n          \"bg-secondary text-secondary-foreground hover:bg-[color-mix(in_oklch,var(--secondary),var(--foreground)_5%)] aria-expanded:bg-secondary aria-expanded:text-secondary-foreground\",\n        ghost:\n          \"hover:bg-muted hover:text-foreground aria-expanded:bg-muted aria-expanded:text-foreground dark:hover:bg-muted/50 forced-colors:border-0\",\n        \"ghost-destructive\":\n          \"text-destructive hover:bg-destructive/10 hover:text-destructive aria-expanded:bg-destructive/10 focus-visible:ring-destructive/70 focus-visible:inset-ring-destructive/40 dark:hover:bg-destructive/20 forced-colors:border-0\",\n        destructive:\n          \"bg-destructive/10 text-destructive hover:bg-destructive/20 focus-visible:ring-destructive/70 focus-visible:inset-ring-destructive/40 dark:bg-destructive/20 dark:hover:bg-destructive/30 dark:focus-visible:ring-destructive/70\",\n        link: \"text-primary underline-offset-4 hover:underline forced-colors:border-0\",\n        success:\n          \"bg-success text-success-foreground hover:bg-success/90 focus-visible:ring-success/70 focus-visible:inset-ring-success/40\",\n        error:\n          \"bg-destructive text-destructive-foreground hover:bg-destructive/90 focus-visible:ring-destructive/70 focus-visible:inset-ring-destructive/40 motion-safe:animate-button-shake\",\n      },\n      size: {\n        default:\n          \"h-9 gap-1.5 px-2.5 in-data-[slot=button-group]:rounded-md has-data-[icon=inline-end]:pe-2 has-data-[icon=inline-start]:ps-2\",\n        xs: \"h-6 gap-1 rounded-[min(var(--radius-md),8px)] px-2 text-xs in-data-[slot=button-group]:rounded-md pointer-coarse:after:absolute pointer-coarse:after:-inset-y-2.5 pointer-coarse:after:inset-x-0 pointer-coarse:in-data-[slot=button-group]:after:hidden has-data-[icon=inline-end]:pe-1.5 has-data-[icon=inline-start]:ps-1.5 [&_svg:not([class*='size-'])]:size-3\",\n        sm: \"h-8 gap-1 rounded-[min(var(--radius-md),10px)] px-2.5 in-data-[slot=button-group]:rounded-md pointer-coarse:after:absolute pointer-coarse:after:-inset-y-1.5 pointer-coarse:after:inset-x-0 pointer-coarse:in-data-[slot=button-group]:after:hidden has-data-[icon=inline-end]:pe-1.5 has-data-[icon=inline-start]:ps-1.5\",\n        lg: \"h-10 gap-1.5 px-2.5 has-data-[icon=inline-end]:pe-2 has-data-[icon=inline-start]:ps-2\",\n        icon: \"size-9 shrink-0\",\n        \"icon-xs\":\n          \"size-6 shrink-0 rounded-[min(var(--radius-md),8px)] in-data-[slot=button-group]:rounded-md pointer-coarse:after:absolute pointer-coarse:after:-inset-2.5 pointer-coarse:in-data-[slot=button-group]:after:hidden [&_svg:not([class*='size-'])]:size-3\",\n        \"icon-sm\":\n          \"size-8 shrink-0 rounded-[min(var(--radius-md),10px)] in-data-[slot=button-group]:rounded-md pointer-coarse:after:absolute pointer-coarse:after:-inset-1.5 pointer-coarse:in-data-[slot=button-group]:after:hidden\",\n        \"icon-lg\": \"size-10 shrink-0\",\n        \"icon-xl\": \"size-12 shrink-0 [&_svg:not([class*='size-'])]:size-5\",\n      },\n      shape: {\n        default: \"\",\n        pill: \"rounded-full in-data-[slot=button-group]:rounded-full\",\n      },\n    },\n    defaultVariants: {\n      variant: \"default\",\n      size: \"default\",\n      shape: \"default\",\n    },\n  }\n)\n\ntype ButtonVariant = Exclude<\n  NonNullable<VariantProps<typeof buttonVariants>[\"variant\"]>,\n  \"success\" | \"error\"\n>\n\ntype ButtonClickEvent = Parameters<\n  NonNullable<ButtonPrimitive.Props[\"onClick\"]>\n>[0]\n\ntype ButtonProps = Omit<ButtonPrimitive.Props, \"onClick\"> &\n  Omit<VariantProps<typeof buttonVariants>, \"variant\"> &\n  ButtonFeedbackOptions & {\n    variant?: ButtonVariant | null\n    onClick?: (event: ButtonClickEvent) => unknown\n    feedback?: boolean\n    loading?: boolean\n    status?: ButtonStatus\n    loadingLabel?: React.ReactNode\n    successLabel?: React.ReactNode\n    errorLabel?: React.ReactNode | ((error: unknown) => React.ReactNode)\n  }\n\nconst stateTransitionTime = 220\nconst statuses: ButtonStatus[] = [\"idle\", \"loading\", \"success\", \"error\"]\nconst quietVariants: ButtonVariant[] = [\"ghost\", \"link\"]\nconst quietStatusClasses: Partial<Record<ButtonStatus, string>> = {\n  success: \"text-success hover:text-success\",\n  error:\n    \"text-destructive hover:text-destructive motion-safe:animate-button-shake\",\n}\n\nfunction isThenable(value: unknown): value is PromiseLike<unknown> {\n  return (\n    typeof value === \"object\" &&\n    value !== null &&\n    typeof (value as PromiseLike<unknown>).then === \"function\"\n  )\n}\n\nfunction useStatusTransition(status: ButtonStatus) {\n  const [shown, setShown] = React.useState(status)\n  const [leaving, setLeaving] = React.useState<ButtonStatus | null>(null)\n  const [transitionKey, setTransitionKey] = React.useState(0)\n\n  if (status !== shown) {\n    setLeaving(shown)\n    setShown(status)\n    setTransitionKey((key) => key + 1)\n  }\n\n  React.useEffect(() => {\n    if (leaving === null) {\n      return\n    }\n    const timer = setTimeout(() => setLeaving(null), stateTransitionTime)\n    return () => clearTimeout(timer)\n  }, [leaving, transitionKey])\n\n  return { leaving, transitionKey }\n}\n\nfunction useLayerWidth(status: ButtonStatus, active: boolean) {\n  const contentRef = React.useRef<HTMLSpanElement>(null)\n  const layersRef = React.useRef(new Map<ButtonStatus, HTMLElement>())\n  const observerRef = React.useRef<ResizeObserver | null>(null)\n  const statusRef = React.useRef(status)\n\n  const applyWidth = React.useCallback(() => {\n    const content = contentRef.current\n    const layer = layersRef.current.get(statusRef.current)\n    if (!content || !layer) {\n      return\n    }\n    const natural = parseFloat(getComputedStyle(layer).width)\n    if (!Number.isFinite(natural)) {\n      return\n    }\n    content.style.width = `${natural}px`\n    if (!content.hasAttribute(\"data-measured\")) {\n      requestAnimationFrame(() => content.setAttribute(\"data-measured\", \"\"))\n    }\n  }, [])\n\n  React.useLayoutEffect(() => {\n    statusRef.current = status\n    if (active) {\n      applyWidth()\n    }\n  }, [active, applyWidth, status])\n\n  React.useLayoutEffect(() => {\n    if (!active || typeof ResizeObserver === \"undefined\") {\n      return\n    }\n    const observer = new ResizeObserver(applyWidth)\n    observerRef.current = observer\n    layersRef.current.forEach((layer) => observer.observe(layer))\n    document.fonts?.addEventListener?.(\"loadingdone\", applyWidth)\n    return () => {\n      observer.disconnect()\n      observerRef.current = null\n      document.fonts?.removeEventListener?.(\"loadingdone\", applyWidth)\n    }\n  }, [active, applyWidth])\n\n  const layerRef = React.useCallback((node: HTMLElement | null) => {\n    if (!node) {\n      return\n    }\n    const layer = node.dataset.layer as ButtonStatus\n    layersRef.current.set(layer, node)\n    observerRef.current?.observe(node)\n    return () => {\n      observerRef.current?.unobserve(node)\n      if (layersRef.current.get(layer) === node) {\n        layersRef.current.delete(layer)\n      }\n    }\n  }, [])\n\n  return { contentRef, layerRef }\n}\n\nfunction composeHandlers<Event>(\n  first: ((event: Event) => void) | undefined,\n  second: (event: Event) => void\n) {\n  return (event: Event) => {\n    first?.(event)\n    second(event)\n  }\n}\n\nfunction Button({\n  className,\n  variant = \"default\",\n  size = \"default\",\n  shape = \"default\",\n  children,\n  onClick,\n  disabled,\n  focusableWhenDisabled,\n  feedback,\n  loading,\n  status: statusProp,\n  onStatusChange,\n  onError,\n  resetAfter,\n  loadingLabel,\n  successLabel = \"Done\",\n  errorLabel = \"Failed\",\n  onPointerEnter,\n  onPointerLeave,\n  onFocus,\n  onBlur,\n  ...props\n}: ButtonProps) {\n  const internal = useButtonFeedback({ resetAfter, onStatusChange, onError })\n  const status = statusProp ?? (loading ? \"loading\" : internal.status)\n  const requested =\n    Boolean(feedback) || loading !== undefined || statusProp !== undefined\n  const [enabled, setEnabled] = React.useState(requested)\n  if (requested && !enabled) {\n    setEnabled(true)\n  }\n\n  const { leaving, transitionKey } = useStatusTransition(status)\n  const iconOnly = size?.startsWith(\"icon\") ?? false\n  const widthStatus =\n    status === \"loading\" && loadingLabel === undefined ? \"idle\" : status\n  const { contentRef, layerRef } = useLayerWidth(\n    widthStatus,\n    enabled && !iconOnly\n  )\n  const isLoading = status === \"loading\"\n  const quiet = quietVariants.includes(variant ?? \"default\")\n  const resolvedVariant =\n    !quiet && status === \"success\"\n      ? \"success\"\n      : !quiet && status === \"error\"\n        ? \"error\"\n        : variant\n  const resolvedErrorLabel =\n    typeof errorLabel !== \"function\"\n      ? errorLabel\n      : internal.error !== undefined\n        ? errorLabel(internal.error)\n        : \"Failed\"\n\n  const handleClick = (event: ButtonClickEvent) => {\n    if (feedback && internal.isPending()) {\n      return\n    }\n    const result = onClick?.(event)\n    if (feedback && isThenable(result)) {\n      internal.track(result)\n    }\n  }\n\n  const layerContent = (layer: ButtonStatus, animated: boolean) => {\n    if (layer === \"idle\") {\n      return children\n    }\n    if (layer === \"loading\") {\n      return (\n        <>\n          <Spinner aria-hidden size={null} animated={animated} />\n          {iconOnly ? null : loadingLabel}\n        </>\n      )\n    }\n    if (layer === \"success\") {\n      return (\n        <>\n          <IconCircleCheck\n            className={cn(\n              animated &&\n                \"motion-safe:[&>path:first-child]:animate-button-draw-circle motion-safe:[&>path:first-child]:[stroke-dasharray:57] motion-safe:[&>path:first-child]:[stroke-dashoffset:57] motion-safe:[&>path:last-child]:animate-button-draw-check motion-safe:[&>path:last-child]:[stroke-dasharray:9] motion-safe:[&>path:last-child]:[stroke-dashoffset:9]\"\n            )}\n          />\n          {iconOnly ? null : successLabel}\n        </>\n      )\n    }\n    return (\n      <>\n        <IconAlertCircle />\n        {iconOnly ? null : resolvedErrorLabel}\n      </>\n    )\n  }\n\n  const button = (\n    <ButtonPrimitive\n      data-slot=\"button\"\n      data-shape={shape ?? \"default\"}\n      data-status={enabled ? status : undefined}\n      aria-busy={isLoading || undefined}\n      disabled={disabled || isLoading}\n      focusableWhenDisabled={focusableWhenDisabled ?? (isLoading || undefined)}\n      className={cn(\n        buttonVariants({ variant: resolvedVariant, size, shape }),\n        quiet && quietStatusClasses[status],\n        className\n      )}\n      onClick={handleClick}\n      onPointerEnter={composeHandlers(\n        onPointerEnter,\n        internal.buttonProps.onPointerEnter\n      )}\n      onPointerLeave={composeHandlers(\n        onPointerLeave,\n        internal.buttonProps.onPointerLeave\n      )}\n      onFocus={composeHandlers(onFocus, internal.buttonProps.onFocus)}\n      onBlur={composeHandlers(onBlur, internal.buttonProps.onBlur)}\n      {...props}\n    >\n      {enabled ? (\n        <span\n          ref={contentRef}\n          data-slot=\"button-content\"\n          className=\"relative inline-grid grid-cols-[minmax(0,1fr)] place-items-center gap-[inherit] overflow-x-clip *:col-start-1 *:row-start-1 motion-safe:data-measured:transition-[width] motion-safe:data-measured:duration-220 motion-safe:data-measured:ease-[cubic-bezier(0.2,0,0,1)]\"\n        >\n          {statuses.map((layer) => {\n            const active = layer === status\n            const exiting = layer === leaving\n            const namesButton =\n              layer === \"idle\" && isLoading && loadingLabel === undefined\n\n            return (\n              <span\n                key={active ? `${layer}-${transitionKey}` : layer}\n                ref={layerRef}\n                data-slot=\"button-layer\"\n                data-layer={layer}\n                aria-hidden={active || namesButton ? undefined : true}\n                className={cn(\n                  \"inline-flex items-center justify-center gap-[inherit] backface-hidden\",\n                  !active &&\n                    !exiting &&\n                    \"pointer-events-none absolute opacity-0\",\n                  active &&\n                    transitionKey > 0 &&\n                    \"origin-bottom motion-safe:animate-button-state-in motion-reduce:animate-in motion-reduce:animation-duration-150 motion-reduce:fade-in-0\",\n                  exiting &&\n                    \"pointer-events-none origin-top opacity-0 motion-safe:animate-button-state-out\"\n                )}\n              >\n                {layerContent(layer, active || exiting)}\n              </span>\n            )\n          })}\n        </span>\n      ) : (\n        children\n      )}\n    </ButtonPrimitive>\n  )\n\n  if (!enabled) {\n    return button\n  }\n\n  const announcement =\n    status === \"loading\"\n      ? typeof loadingLabel === \"string\"\n        ? loadingLabel\n        : \"Loading\"\n      : status === \"success\"\n        ? typeof successLabel === \"string\"\n          ? successLabel\n          : \"Done\"\n        : status === \"error\"\n          ? typeof resolvedErrorLabel === \"string\"\n            ? resolvedErrorLabel\n            : \"Failed\"\n          : \"\"\n\n  return (\n    <>\n      {button}\n      <span data-slot=\"button-status\" role=\"status\" className=\"sr-only\">\n        {announcement}\n      </span>\n    </>\n  )\n}\n\nexport { Button, buttonVariants, useButtonFeedback }\nexport type { ButtonProps, ButtonStatus, ButtonFeedbackOptions }\nExamples\nControlled loading\nPreview\nCode\nSend invite\nDone\nFailed\nStop loading\nControlled status\nPreview\nCode\nDeploy\nDeployed\nDeploy failed\nidle\nloading\nsuccess\nerror\nCustom labels\nPreview\nCode\nSave\nSaving…\nSaved\nCouldn’t save\nSave\nSaving…\nSaved\nCouldn’t save\nDisabled\nPreview\nCode\nDisabled\nFocusable when disabled\nError details\nPreview\nCode\nPay $24\nDone\nFailed\nForms\nPreview\nCode\nSubscribe\nSubscribed\nInvalid email\nIcon buttons\nPreview\nCode\nAs a link\nPreview\nCode\nRead the docs\nPill\nPreview\nCode\nGet started\nNew chat\nRight to left\nPreview\nCode\nحفظ\nتم الحفظ\nفشل الحفظ\nSizes\nPreview\nCode\nExtra small\nSmall\nDefault\nLarge\nSmooth width\nPreview\nCode\nPublish\nPublishing to 3 regions…\nLive\nFailed\nFeedback on every variant\nPreview\nCode\ndefault\nDone\nFailed\noutline\nDone\nFailed\nsecondary\nDone\nFailed\nghost\nDone\nFailed\ndestructive\nDone\nFailed\nlink\nDone\nFailed\nVariants\nPreview\nCode\nDefault\nOutline\nSecondary\nGhost\nDestructive\nGhost destructive\nLink\nWith icon\nPreview\nCode\nNew branch\nContinue\nFeedback\n\nQuestions, bugs or ideas for Button? Post them here, or reply to someone else. Sign in with GitHub to comment.\n\nPrevious\nBell Button\nNext\nButton group",
+    "bodyCut": false
+  },
+  "images": [
+    {
+      "src": "https://kryptonite-ui.vercel.app/_next/image?url=%2Fkryptonite-logo.webp&w=64&q=75",
+      "alt": "",
+      "width": 26,
+      "height": 26,
+      "naturalWidth": 32,
+      "naturalHeight": 32,
+      "firstScreen": true
+    }
+  ],
+  "brand": {
+    "accent": "#54fc93",
+    "background": "#0c0c0c",
+    "ink": "#f2f2f2",
+    "font": "Poppins",
+    "headline": "Poppins",
+    "logo": "assets/capture/kryptonite-ui.vercel.app/docs/logo.png"
+  },
+  "notes": [
+    "Poppins: saved 3 font files in assets/capture/kryptonite-ui.vercel.app/docs/fonts/, check the license before you publish.",
+    "Geist Mono: saved 1 font file in assets/capture/kryptonite-ui.vercel.app/docs/fonts/, check the license before you publish."
+  ],
+  "logo": {
+    "picked": "assets/capture/kryptonite-ui.vercel.app/docs/logo.png",
+    "candidates": [
+      {
+        "file": "assets/capture/kryptonite-ui.vercel.app/docs/logo.png",
+        "source": "https://kryptonite-ui.vercel.app/icon.png?icon.25o0s3wng5vtx.png",
+        "kind": "icon"
+      },
+      {
+        "file": "assets/capture/kryptonite-ui.vercel.app/docs/logo-2.png",
+        "source": "https://kryptonite-ui.vercel.app/apple-icon.png?apple-icon.0vq445o9aave2.png",
+        "kind": "icon"
+      }
+    ]
+  },
+  "suggestion": {
+    "brand": {
+      "accent": "#54fc93",
+      "background": "#0c0c0c",
+      "ink": "#f2f2f2",
+      "font": "Poppins",
+      "headline": "Poppins",
+      "logo": "assets/capture/kryptonite-ui.vercel.app/docs/logo.png"
+    },
+    "fonts": [
+      {
+        "family": "Poppins",
+        "src": "assets/capture/kryptonite-ui.vercel.app/docs/fonts/Poppins-400-1.woff2",
+        "weight": 400,
+        "style": "normal"
+      },
+      {
+        "family": "Poppins",
+        "src": "assets/capture/kryptonite-ui.vercel.app/docs/fonts/Poppins-500-2.woff2",
+        "weight": 500,
+        "style": "normal"
+      },
+      {
+        "family": "Poppins",
+        "src": "assets/capture/kryptonite-ui.vercel.app/docs/fonts/Poppins-600-3.woff2",
+        "weight": 600,
+        "style": "normal"
+      },
+      {
+        "family": "Geist Mono",
+        "src": "assets/capture/kryptonite-ui.vercel.app/docs/fonts/Geist-Mono-100-900-4.woff2",
+        "weight": "100 900",
+        "style": "normal"
+      }
+    ]
+  },
+  "files": [
+    "assets/capture/kryptonite-ui.vercel.app/docs/capture.json",
+    "assets/capture/kryptonite-ui.vercel.app/docs/fonts/Geist-Mono-100-900-4.woff2",
+    "assets/capture/kryptonite-ui.vercel.app/docs/fonts/Poppins-400-1.woff2",
+    "assets/capture/kryptonite-ui.vercel.app/docs/fonts/Poppins-500-2.woff2",
+    "assets/capture/kryptonite-ui.vercel.app/docs/fonts/Poppins-600-3.woff2",
+    "assets/capture/kryptonite-ui.vercel.app/docs/fonts/fonts.json",
+    "assets/capture/kryptonite-ui.vercel.app/docs/full.png",
+    "assets/capture/kryptonite-ui.vercel.app/docs/logo-2.png",
+    "assets/capture/kryptonite-ui.vercel.app/docs/logo.png",
+    "assets/capture/kryptonite-ui.vercel.app/docs/page.png"
+  ]
+}

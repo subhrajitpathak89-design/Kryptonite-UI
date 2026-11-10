@@ -1,0 +1,46 @@
+{
+  "title": "Kryptonite UI",
+  "theme": "kryptonite-look.json",
+  "size": "16:9",
+  "voice": "af_heart",
+  "pace": 1.2,
+  "music": {
+    "style": "tech",
+    "volume": 0.4
+  },
+  "captions": true,
+  "cover": "auto",
+  "brand": {
+    "accent": "#39ff8f",
+    "background": "#0f0f0f",
+    "font": "Poppins",
+    "headline": "Poppins",
+    "logo": "assets/logo.png"
+  },
+  "fonts": [
+    {
+      "family": "Poppins",
+      "src": "assets/fonts/Poppins-400-1.woff2",
+      "weight": 400
+    },
+    {
+      "family": "Poppins",
+      "src": "assets/fonts/Poppins-500-2.woff2",
+      "weight": 500
+    },
+    {
+      "family": "Poppins",
+      "src": "assets/fonts/Poppins-600-4.woff2",
+      "weight": 600
+    }
+  ],
+  "defaults": "0.6",
+  "heard": {
+    "kryptonite-ui.vercel.app": [
+      "kryptonite u i versal app"
+    ],
+    "Eighty-six": [
+      "86"
+    ]
+  }
+}

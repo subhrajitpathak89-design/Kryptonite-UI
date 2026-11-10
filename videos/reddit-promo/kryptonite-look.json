@@ -1,0 +1,10 @@
+{
+  "extends": "midnight",
+  "name": "kryptonite",
+  "bg": "#0f0f0f",
+  "ink": "#f5f5f5",
+  "accent": "green",
+  "colors": { "green": "#39ff8f" },
+  "transition": "zoom",
+  "music": "tech"
+}

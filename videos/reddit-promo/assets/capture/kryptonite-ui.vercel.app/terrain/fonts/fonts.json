@@ -1,0 +1,30 @@
+[
+  {
+    "family": "Poppins",
+    "weight": 400,
+    "style": "normal",
+    "file": "assets/capture/kryptonite-ui.vercel.app/terrain/fonts/Poppins-400-1.woff2",
+    "source": "https://kryptonite-ui.vercel.app/_next/static/immutable/media/dd9dfc3601372168-s.p.17e3l4txdrufi.woff2"
+  },
+  {
+    "family": "Poppins",
+    "weight": 500,
+    "style": "normal",
+    "file": "assets/capture/kryptonite-ui.vercel.app/terrain/fonts/Poppins-500-2.woff2",
+    "source": "https://kryptonite-ui.vercel.app/_next/static/immutable/media/22a701959b157a82-s.p.1bg6trwi21i5q.woff2"
+  },
+  {
+    "family": "Poppins",
+    "weight": 600,
+    "style": "normal",
+    "file": "assets/capture/kryptonite-ui.vercel.app/terrain/fonts/Poppins-600-3.woff2",
+    "source": "https://kryptonite-ui.vercel.app/_next/static/immutable/media/6bafae418e8a1b08-s.p.2g9xiodaln20i.woff2"
+  },
+  {
+    "family": "Geist Mono",
+    "weight": "100 900",
+    "style": "normal",
+    "file": "assets/capture/kryptonite-ui.vercel.app/terrain/fonts/Geist-Mono-100-900-4.woff2",
+    "source": "https://kryptonite-ui.vercel.app/_next/static/immutable/media/07a39a8a4660cc7c-s.p.1v5bejj26fx9h.woff2"
+  }
+]

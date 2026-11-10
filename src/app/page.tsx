@@ -18,7 +18,7 @@ export default async function Home() {
       <nav className="sticky top-0 z-30 border-b bg-background/80 backdrop-blur">
         <div className="mx-auto flex h-14 w-full max-w-7xl items-center justify-between px-4">
           <a href="#" className="flex items-center gap-2 font-heading text-lg">
-            <Image src="/logo.webp" alt="" width={32} height={32} priority className="drop-shadow-[0_0_8px_rgba(57,255,143,0.35)]" />
+            <Image src="/logo.webp" alt="" width={32} height={32} priority />
             Kryptonite UI
           </a>
           <a href={REPO} target="_blank" rel="noreferrer" className="text-sm text-muted-foreground hover:text-foreground">

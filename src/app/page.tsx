@@ -9,6 +9,7 @@ import { JsonLd } from '@/components/site/json-ld'
 import { Reveal } from '@/components/site/reveal'
 import { HeroShowcase } from '@/components/landing/hero-showcase'
 import { RollButton } from '@/components/landing/roll-button'
+import { WorksWithTicker } from '@/components/landing/works-with-ticker'
 import { SpecularDemo } from '@/components/landing/specular-demo'
 import { LINKEDIN_URL, REPO, SiteHeader } from '@/components/site/site-header'
 import { catalog, componentCount, groupedCatalog } from '@/docs/catalog'
@@ -89,7 +90,8 @@ export default function Home() {
           className="animate-in fade-in slide-in-from-bottom-3 duration-700 ease-out fill-mode-both motion-reduce:animate-none inline-flex items-center gap-2 rounded-lg border bg-card/60 py-1 pr-3 pl-1 text-sm text-muted-foreground transition-colors hover:text-foreground"
         >
           <span className="rounded-md bg-foreground px-2 py-0.5 text-xs font-semibold text-background">New</span>
-          Light mode and community threads
+          <span className="sm:hidden">Community</span>
+          <span className="hidden sm:inline">Community threads</span>
           <IconArrowRight className="size-3.5" />
         </Link>
 
@@ -119,7 +121,11 @@ export default function Home() {
           </p>
         </div>
 
-        <div style={{ animationDelay: '260ms' }} className="animate-in fade-in slide-in-from-bottom-6 duration-700 ease-out fill-mode-both motion-reduce:animate-none mt-10">
+        <div style={{ animationDelay: '220ms' }} className="animate-in fade-in duration-700 ease-out fill-mode-both motion-reduce:animate-none mt-10">
+          <WorksWithTicker />
+        </div>
+
+        <div style={{ animationDelay: '300ms' }} className="animate-in fade-in slide-in-from-bottom-6 duration-700 ease-out fill-mode-both motion-reduce:animate-none mt-10">
           <HeroShowcase />
         </div>
       </section>

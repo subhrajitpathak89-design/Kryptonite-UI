@@ -1,5 +1,7 @@
+'use client'
+
 import { useRef, type MouseEvent, type ReactNode } from 'react'
-import { cn } from '../../lib'
+import { cn } from '@/lib/utils'
 
 export function TiltCard({ children, className, max = 12 }: { children: ReactNode; className?: string; max?: number }) {
   const ref = useRef<HTMLDivElement>(null)

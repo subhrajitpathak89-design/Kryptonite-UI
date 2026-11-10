@@ -1,5 +1,5 @@
 import type { CSSProperties, ReactNode } from 'react'
-import { cn } from '../../lib'
+import { cn } from '@/lib/utils'
 
 export function Marquee({ children, className, duration = 25 }: { children: ReactNode; className?: string; duration?: number }) {
   return (

@@ -1,5 +1,7 @@
+'use client'
+
 import { useRef, type ButtonHTMLAttributes, type MouseEvent } from 'react'
-import { cn } from '../../lib'
+import { cn } from '@/lib/utils'
 
 type Props = ButtonHTMLAttributes<HTMLButtonElement> & { strength?: number }
 

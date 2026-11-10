@@ -1,5 +1,5 @@
 import type { ReactNode } from 'react'
-import { cn } from '../../lib'
+import { cn } from '@/lib/utils'
 
 export function AuroraBackground({ children, className }: { children?: ReactNode; className?: string }) {
   return (

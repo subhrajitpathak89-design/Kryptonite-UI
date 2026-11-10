@@ -2,6 +2,8 @@
 
 Modern, animated React + Tailwind CSS components. Copy them into your project and adapt them. There's no package to install.
 
+The showcase site is built with **Next.js** (App Router), **shadcn/ui** and **Tailwind CSS v4**. It uses a charcoal-black theme.
+
 ## Components
 
 | Component | Category |
@@ -15,36 +17,41 @@ Modern, animated React + Tailwind CSS components. Copy them into your project an
 | Aurora Background | Backgrounds |
 | Marquee | Layout |
 
-## Run the showcase locally
+## Run the site locally
 
 ```bash
 npm install
 npm run dev
 ```
 
+Then open http://localhost:3000.
+
 ## Using a component
 
-1. Open the showcase, pick a component and click **Copy code**.
-2. Paste it into your project (for example `components/ui/ShimmerButton.tsx`).
-3. Copy `src/lib.ts` (the `cn` helper) and the `@theme` block from `src/index.css`. The block holds the colors and keyframes the components use.
+1. On the site, pick a component and click **Copy**.
+2. Paste it into your project (for example `components/ShimmerButton.tsx`).
+3. Make sure you have a `cn` helper (shadcn projects already have one at `@/lib/utils`). Also copy the "Kryptonite brand tokens" `@theme` block from `src/app/globals.css`, which holds the colors and keyframes the components use.
 
 Requires React 18+ and Tailwind CSS v4.
 
 ## Adding a new component
 
-1. Create `src/components/ui/MyComponent.tsx` and export it from `src/components/ui/index.ts`.
-2. Add any new keyframes or colors to the `@theme` block in `src/index.css`.
-3. Add an entry to `src/registry/index.tsx` with a name, category, description and preview. The code tab reads the source file automatically.
+1. Create `src/components/kryptonite/MyComponent.tsx` and export it from `src/components/kryptonite/index.ts`.
+2. Add an entry to `src/registry/meta.ts` (name, slug, file, category, description).
+3. Add its preview to `src/registry/previews.tsx`.
+
+The Code tab reads the source file automatically.
 
 ## Project structure
 
 ```
 src/
-  components/ui/   the components (one file each)
-  registry/        showcase metadata and previews
-  lib.ts           cn() class helper
-  index.css        Tailwind theme: colors, animations
-  App.tsx          the showcase site
+  app/                    Next.js pages, layout and globals.css (theme)
+  components/kryptonite/  the Kryptonite components (one file each)
+  components/site/        the showcase UI (gallery, component card)
+  components/ui/          shadcn/ui primitives
+  registry/               component list, previews and source loader
+  lib/utils.ts            cn() class helper
 ```
 
 ## License

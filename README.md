@@ -8,7 +8,7 @@ The library includes:
 - **8 Kryptonite components**: Shimmer Button, Glow Border Button, Magnetic Button, Spotlight Card, Tilt Card, Gradient Text, Aurora Background and Marquee. Colors, speed and other options are all props.
 - **9 hooks** and a few utilities (motion, hotkeys, shimmer, hairline, scroll fade).
 
-The site is a docs site, built with **Next.js** (App Router). It uses a charcoal-black theme, with **Libre Baskerville** for headings and **Poppins** for body text (both from Google Fonts).
+The site is a docs site, built with **Next.js** (App Router). It uses a charcoal-black theme, with **Poppins** for headings and **Libre Baskerville** for body text (both from Google Fonts).
 
 ## Run the site locally
 

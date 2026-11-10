@@ -71,11 +71,16 @@ export default async function DocsEntryPage({ params }: PageProps<'/docs/[slug]'
             ))}
           </span>
         )}
-        {entry.source === 'hextaui' && (
+        {entry.source !== 'kryptonite' && (
           <span>
             From{' '}
-            <a href="https://hextaui.com" target="_blank" rel="noreferrer" className="underline underline-offset-4 hover:text-foreground">
-              HextaUI
+            <a
+              href={entry.source === 'hextaui' ? 'https://hextaui.com' : 'https://kokonutui.com'}
+              target="_blank"
+              rel="noreferrer"
+              className="underline underline-offset-4 hover:text-foreground"
+            >
+              {entry.source === 'hextaui' ? 'HextaUI' : 'KokonutUI'}
             </a>{' '}
             (MIT)
           </span>

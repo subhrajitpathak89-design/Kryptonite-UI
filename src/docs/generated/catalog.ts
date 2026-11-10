@@ -3,6 +3,7 @@ import type { DocsEntry } from '../types'
 
 export const CATEGORY_LABELS: Record<string, string> = {
   "kryptonite": "Kryptonite",
+  "ai": "AI",
   "actions": "Actions",
   "forms": "Forms",
   "overlays": "Overlays",
@@ -12,6 +13,8 @@ export const CATEGORY_LABELS: Record<string, string> = {
   "feedback": "Feedback",
   "chat": "Chat",
   "media": "Media",
+  "backgrounds": "Backgrounds",
+  "text": "Text",
   "utilities": "Utilities",
   "hooks": "Hooks"
 }
@@ -210,6 +213,73 @@ export const catalog: DocsEntry[] = [
     ]
   },
   {
+    "slug": "ai-prompt",
+    "title": "AI Input Selector",
+    "description": "AI chat input with a model menu, a separate Effort control, file chips you can drop or paste, a / command menu, and Stop while replying.",
+    "category": "ai",
+    "source": "kokonutui",
+    "dependencies": [
+      "lucide-react",
+      "motion",
+      "@radix-ui/react-dropdown-menu"
+    ],
+    "requires": [],
+    "files": [
+      "src/components/kokonut/ai-prompt.tsx",
+      "src/components/kokonut/ui/dropdown-menu.tsx",
+      "src/components/kokonut/ui/textarea.tsx",
+      "src/components/kokonut/hooks/use-auto-resize-textarea.ts"
+    ],
+    "examples": [
+      {
+        "name": "demo",
+        "file": "ai-prompt/demo",
+        "title": "Demo"
+      }
+    ]
+  },
+  {
+    "slug": "ai-loading",
+    "title": "AI State Loading",
+    "description": "Agent progress as a list of steps with a live log, elapsed time and a summary when done.",
+    "category": "ai",
+    "source": "kokonutui",
+    "dependencies": [
+      "lucide-react",
+      "motion"
+    ],
+    "requires": [],
+    "files": [
+      "src/components/kokonut/ai-loading.tsx"
+    ],
+    "examples": [
+      {
+        "name": "demo",
+        "file": "ai-loading/demo",
+        "title": "Demo"
+      }
+    ]
+  },
+  {
+    "slug": "bell-button",
+    "title": "Bell Button",
+    "description": "A subscribe button whose bell swings and rings, with a clapper that really strikes.",
+    "category": "actions",
+    "source": "kokonutui",
+    "dependencies": [],
+    "requires": [],
+    "files": [
+      "src/components/kokonut/bell-button.tsx"
+    ],
+    "examples": [
+      {
+        "name": "demo",
+        "file": "bell-button/demo",
+        "title": "Demo"
+      }
+    ]
+  },
+  {
     "slug": "button",
     "title": "Button",
     "description": "Buttons in every variant and size, with a built-in loading, success and error flow that skips the spinner for fast requests.",
@@ -389,6 +459,66 @@ export const catalog: DocsEntry[] = [
         "name": "vertical",
         "file": "button-group/vertical",
         "title": "Vertical"
+      }
+    ]
+  },
+  {
+    "slug": "pull-cord",
+    "title": "Pull Cord",
+    "description": "A lamp switch you pull on a swinging cord, built with React and a rope simulation.",
+    "category": "actions",
+    "source": "kokonutui",
+    "dependencies": [],
+    "requires": [],
+    "files": [
+      "src/components/kokonut/pull-cord.tsx"
+    ],
+    "examples": [
+      {
+        "name": "demo",
+        "file": "pull-cord/demo",
+        "title": "Demo"
+      }
+    ]
+  },
+  {
+    "slug": "slide-to-confirm",
+    "title": "Slide to Confirm",
+    "description": "A confirm control for payments and other actions you can't take back. Slide the thumb to the end, or flick it.",
+    "category": "actions",
+    "source": "kokonutui",
+    "dependencies": [
+      "lucide-react",
+      "motion"
+    ],
+    "requires": [],
+    "files": [
+      "src/components/kokonut/slide-to-confirm.tsx"
+    ],
+    "examples": [
+      {
+        "name": "demo",
+        "file": "slide-to-confirm/demo",
+        "title": "Demo"
+      }
+    ]
+  },
+  {
+    "slug": "tear-button",
+    "title": "Tear Button",
+    "description": "A confirm button you tear off like a ticket stub, hole by hole.",
+    "category": "actions",
+    "source": "kokonutui",
+    "dependencies": [],
+    "requires": [],
+    "files": [
+      "src/components/kokonut/tear-button.tsx"
+    ],
+    "examples": [
+      {
+        "name": "demo",
+        "file": "tear-button/demo",
+        "title": "Demo"
       }
     ]
   },
@@ -826,6 +956,27 @@ export const catalog: DocsEntry[] = [
         "name": "rtl",
         "file": "date-picker/rtl",
         "title": "Right to left"
+      }
+    ]
+  },
+  {
+    "slug": "detent-dial",
+    "title": "Detent Dial",
+    "description": "Rotary knob that clicks from notch to notch and coasts when flicked, built with React and Motion.",
+    "category": "forms",
+    "source": "kokonutui",
+    "dependencies": [
+      "motion"
+    ],
+    "requires": [],
+    "files": [
+      "src/components/kokonut/detent-dial.tsx"
+    ],
+    "examples": [
+      {
+        "name": "demo",
+        "file": "detent-dial/demo",
+        "title": "Demo"
       }
     ]
   },
@@ -1717,6 +1868,27 @@ export const catalog: DocsEntry[] = [
     ]
   },
   {
+    "slug": "wheel-picker",
+    "title": "Wheel Picker",
+    "description": "iOS-style 3D drum picker with flick momentum, built with React and Motion.",
+    "category": "forms",
+    "source": "kokonutui",
+    "dependencies": [
+      "motion"
+    ],
+    "requires": [],
+    "files": [
+      "src/components/kokonut/wheel-picker.tsx"
+    ],
+    "examples": [
+      {
+        "name": "demo",
+        "file": "wheel-picker/demo",
+        "title": "Demo"
+      }
+    ]
+  },
+  {
     "slug": "alert-dialog",
     "title": "Alert dialog",
     "description": "A confirmation dialog for destructive or important actions that waits for async work, and becomes a bottom sheet on phones.",
@@ -2491,6 +2663,46 @@ export const catalog: DocsEntry[] = [
     ]
   },
   {
+    "slug": "activity-terrain",
+    "title": "Activity Terrain",
+    "description": "A contribution heatmap that tilts up into a 3D terrain you can turn, built with React and canvas.",
+    "category": "data-display",
+    "source": "kokonutui",
+    "dependencies": [],
+    "requires": [],
+    "files": [
+      "src/components/kokonut/activity-terrain.tsx"
+    ],
+    "examples": [
+      {
+        "name": "demo",
+        "file": "activity-terrain/demo",
+        "title": "Demo"
+      }
+    ]
+  },
+  {
+    "slug": "apple-activity-card",
+    "title": "Apple Activity Card",
+    "description": "Activity rings that draw with a count-up, lap past 100% with a shadowed end cap and dim to focus, built with React and Motion.",
+    "category": "data-display",
+    "source": "kokonutui",
+    "dependencies": [
+      "motion"
+    ],
+    "requires": [],
+    "files": [
+      "src/components/kokonut/apple-activity-card.tsx"
+    ],
+    "examples": [
+      {
+        "name": "demo",
+        "file": "apple-activity-card/demo",
+        "title": "Demo"
+      }
+    ]
+  },
+  {
     "slug": "avatar",
     "title": "Avatar",
     "description": "User photos with an initials fallback, status badges and stacked groups that collapse into a count.",
@@ -2984,6 +3196,25 @@ export const catalog: DocsEntry[] = [
         "name": "variants",
         "file": "kbd/variants",
         "title": "Variants"
+      }
+    ]
+  },
+  {
+    "slug": "liquid-gauge",
+    "title": "Liquid Gauge",
+    "description": "A usage meter filled with liquid that sloshes, ripples and bubbles, built with React and a wave simulation.",
+    "category": "data-display",
+    "source": "kokonutui",
+    "dependencies": [],
+    "requires": [],
+    "files": [
+      "src/components/kokonut/liquid-gauge.tsx"
+    ],
+    "examples": [
+      {
+        "name": "demo",
+        "file": "liquid-gauge/demo",
+        "title": "Demo"
       }
     ]
   },
@@ -4804,6 +5035,44 @@ export const catalog: DocsEntry[] = [
         "name": "seek-offsets",
         "file": "video-player/seek-offsets",
         "title": "Seek offsets and speeds"
+      }
+    ]
+  },
+  {
+    "slug": "drape-background",
+    "title": "Drape Background",
+    "description": "A pleated curtain in a breeze that you can push and pull, built with React, WebGL and a cloth simulation.",
+    "category": "backgrounds",
+    "source": "kokonutui",
+    "dependencies": [],
+    "requires": [],
+    "files": [
+      "src/components/kokonut/drape-background.tsx"
+    ],
+    "examples": [
+      {
+        "name": "demo",
+        "file": "drape-background/demo",
+        "title": "Demo"
+      }
+    ]
+  },
+  {
+    "slug": "plucked-text",
+    "title": "Plucked Text",
+    "description": "A headline sitting on a string you can pluck, strum and let ring, built with React and real string physics.",
+    "category": "text",
+    "source": "kokonutui",
+    "dependencies": [],
+    "requires": [],
+    "files": [
+      "src/components/kokonut/plucked-text.tsx"
+    ],
+    "examples": [
+      {
+        "name": "demo",
+        "file": "plucked-text/demo",
+        "title": "Demo"
       }
     ]
   },

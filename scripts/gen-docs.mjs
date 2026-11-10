@@ -4,6 +4,7 @@
 // Sources:
 //   scripts/hexta-registry.json  metadata for components copied from HextaUI (MIT)
 //   scripts/kryptonite.json      metadata for Kryptonite's own components
+//   scripts/kokonut.json         metadata for components copied from KokonutUI (MIT)
 //   src/components/examples/<slug>/*.tsx  one demo per file, one exported component each
 
 import fs from 'node:fs'
@@ -15,11 +16,13 @@ const outDir = path.join(root, 'src/docs/generated')
 
 const hexta = JSON.parse(fs.readFileSync(path.join(root, 'scripts/hexta-registry.json'), 'utf8'))
 const kryptonite = JSON.parse(fs.readFileSync(path.join(root, 'scripts/kryptonite.json'), 'utf8'))
+const kokonut = JSON.parse(fs.readFileSync(path.join(root, 'scripts/kokonut.json'), 'utf8'))
 
 const titleCase = (s) => s.replace(/-/g, ' ').replace(/\b\w/g, (c) => c.toUpperCase())
 
 const CATEGORY_LABELS = {
   kryptonite: 'Kryptonite',
+  ai: 'AI',
   actions: 'Actions',
   forms: 'Forms',
   overlays: 'Overlays',
@@ -29,6 +32,8 @@ const CATEGORY_LABELS = {
   feedback: 'Feedback',
   chat: 'Chat',
   media: 'Media',
+  backgrounds: 'Backgrounds',
+  text: 'Text',
   utilities: 'Utilities',
   hooks: 'Hooks',
 }
@@ -73,11 +78,25 @@ for (const k of kryptonite) {
   })
 }
 
+for (const k of kokonut) {
+  entries.push({
+    slug: k.name,
+    title: k.title,
+    description: k.description,
+    category: k.category,
+    source: 'kokonutui',
+    dependencies: k.dependencies,
+    requires: [],
+    files: k.files,
+    examples: readExamples(k.name),
+  })
+}
+
 const byName = new Map(hexta.filter((i) => i.type !== 'registry:example').map((i) => [i.name, i]))
 const exampleDirs = fs.readdirSync(examplesDir).filter((d) => fs.statSync(path.join(examplesDir, d)).isDirectory())
 
 for (const slug of exampleDirs) {
-  if (kryptonite.some((k) => k.name === slug)) continue
+  if (kryptonite.some((k) => k.name === slug) || kokonut.some((k) => k.name === slug)) continue
   const item = byName.get(slug)
   const category = item?.type === 'registry:hook' ? 'hooks' : item?.type === 'registry:ui' ? (item.categories?.[0] ?? 'utilities') : 'utilities'
   entries.push({

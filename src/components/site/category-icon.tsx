@@ -1,5 +1,8 @@
 import {
   IconBell,
+  IconSparkles,
+  IconPhoto,
+  IconTypography,
   IconClick,
   IconCode,
   IconCompass,
@@ -18,6 +21,9 @@ import { cn } from '@/lib/utils'
 /** One icon per component category. */
 export const CATEGORY_ICONS: Record<string, Icon> = {
   kryptonite: IconDiamond,
+  ai: IconSparkles,
+  backgrounds: IconPhoto,
+  text: IconTypography,
   actions: IconClick,
   forms: IconForms,
   overlays: IconStack2,

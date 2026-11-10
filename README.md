@@ -5,6 +5,7 @@ Modern, animated React components built on **shadcn/ui**, **Base UI** and **Tail
 The library includes:
 
 - **66 components** from [HextaUI](https://hextaui.com) (MIT): buttons, forms, overlays, data display, navigation, chat and more, with loading, error and empty states handled.
+- **13 components** from [KokonutUI](https://kokonutui.com) (MIT): AI Input Selector, AI State Loading, Slide to Confirm, Tear Button, Pull Cord, Bell Button, Detent Dial, Wheel Picker, Apple Activity Card, Activity Terrain, Liquid Gauge, Drape Background and Plucked Text.
 - **8 Kryptonite components**: Shimmer Button, Glow Border Button, Magnetic Button, Spotlight Card, Tilt Card, Gradient Text, Aurora Background and Marquee. Colors, speed and other options are all props.
 - **9 hooks** and a few utilities (motion, hotkeys, shimmer, hairline, scroll fade).
 
@@ -55,6 +56,7 @@ Until step 3 is done, the threads show a short "almost ready" note instead.
 
 - `scripts/hexta-registry.json`: titles, descriptions, categories and dependencies of the HextaUI components.
 - `scripts/kryptonite.json`: the same for Kryptonite's own components.
+- `scripts/kokonut.json`: the same for the KokonutUI components (in `src/components/kokonut/`).
 - `src/components/examples/<slug>/*.tsx`: one live example per file. `demo.tsx` is shown at the top of the page, and the rest appear under Examples.
 
 It writes `src/docs/generated/` (don't edit it by hand). Every docs page comes from the single template in `src/app/docs/[slug]/page.tsx`.
@@ -84,7 +86,7 @@ src/
 
 ## Credits
 
-Components, hooks, examples and theme tokens come from [HextaUI](https://github.com/preetsuthar17/HextaUI) by Preet Suthar (MIT). The landing page background is Aurora from [React Bits](https://reactbits.dev) by David Haz (MIT + Commons Clause). It's used only on this site and isn't part of the library. See [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).
+Components, hooks, examples and theme tokens come from [HextaUI](https://github.com/preetsuthar17/HextaUI) by Preet Suthar (MIT). Thirteen more components come from [KokonutUI](https://github.com/kokonut-labs/kokonutui) (MIT). The landing page background is Aurora from [React Bits](https://reactbits.dev) by David Haz (MIT + Commons Clause). It's used only on this site and isn't part of the library. See [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).
 
 ## License
 

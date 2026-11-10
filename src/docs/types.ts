@@ -12,7 +12,7 @@ export type DocsEntry = {
   description: string
   category: string
   /** Where the component came from */
-  source: 'kryptonite' | 'hextaui'
+  source: 'kryptonite' | 'hextaui' | 'kokonutui'
   /** npm packages the component needs */
   dependencies: string[]
   /** Other Kryptonite components/hooks it builds on */

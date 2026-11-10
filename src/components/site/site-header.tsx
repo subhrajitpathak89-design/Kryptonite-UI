@@ -29,6 +29,9 @@ export function SiteHeader({ className, transparent = false }: { className?: str
           <Link href="/docs/button" className="rounded-md px-3 py-1.5 text-muted-foreground transition-colors hover:text-foreground">
             Components
           </Link>
+          <Link href="/community" className="rounded-md px-3 py-1.5 text-muted-foreground transition-colors hover:text-foreground">
+            Community
+          </Link>
           <a
             href={REPO}
             target="_blank"

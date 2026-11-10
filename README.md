@@ -25,6 +25,16 @@ Then open http://localhost:3000.
 2. Follow **Installation**: install the npm dependencies, copy any components it builds on, then copy its file.
 3. Add the `cn` helper (`src/lib/utils.ts`) and the theme tokens from `src/app/globals.css` if your project doesn't have them yet.
 
+## Community threads
+
+The `/community` page (Feedback, Component requests, Show and tell) and the Feedback section at the bottom of every component page use [Giscus](https://giscus.app). Every post and reply is stored as a GitHub Discussion in this repo, and people sign in with GitHub to post. To turn it on:
+
+1. On GitHub, open the repo, then **Settings > General > Features**, and tick **Discussions**.
+2. Install the Giscus app on the repo: https://github.com/apps/giscus
+3. Open https://giscus.app, enter `subhrajitpathak89-design/Kryptonite-UI`, choose the **General** category, and copy the `data-category-id` value into `categoryId` in `src/lib/community.ts`.
+
+Until step 3 is done, the threads show a short "almost ready" note instead.
+
 ## How the docs are built
 
 `scripts/gen-docs.mjs` builds the docs catalog. It runs automatically before `dev` and `build`, and you can run it yourself with `npm run docs:gen`. It reads:

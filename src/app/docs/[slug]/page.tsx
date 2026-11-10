@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
 import { IconArrowLeft, IconArrowRight } from '@tabler/icons-react'
+import { CommunityThread } from '@/components/community/thread'
 import { CodeBlock } from '@/components/docs/code-block'
 import { DocsMobileNav } from '@/components/docs/docs-mobile-nav'
 import { ExampleFrame } from '@/components/docs/example-frame'
@@ -125,6 +126,14 @@ export default async function DocsEntryPage({ params }: PageProps<'/docs/[slug]'
           </div>
         </section>
       )}
+
+      <section className="mt-16">
+        <h2 className="mb-2 font-heading text-2xl">Feedback</h2>
+        <p className="mb-6 text-sm text-muted-foreground">
+          Questions, bugs or ideas for {entry.title}? Post them here, or reply to someone else. Sign in with GitHub to comment.
+        </p>
+        <CommunityThread term={`Component · ${entry.title}`} />
+      </section>
 
       <nav className="mt-16 grid grid-cols-2 gap-4 border-t pt-6" aria-label="Pager">
         {prev ? (

@@ -18,7 +18,9 @@ export function MobileNav({ links }: { links: NavLink[] }) {
       >
         <IconMenu2 className="size-5" />
       </SheetTrigger>
-      <SheetContent side="right" className="w-72 p-6">
+      {/* Keep the sheet's own width and padding (it bleeds off-screen for the swipe animation). */}
+      <SheetContent side="right">
+        <div className="px-5 pt-5 pb-6">
         <SheetTitle className="mb-6 font-heading text-lg">Menu</SheetTitle>
         <nav className="flex flex-col gap-1">
           {links.map((l) => (
@@ -33,6 +35,7 @@ export function MobileNav({ links }: { links: NavLink[] }) {
             </Link>
           ))}
         </nav>
+        </div>
       </SheetContent>
     </Sheet>
   )

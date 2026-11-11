@@ -602,8 +602,10 @@ function ModelMenu({
 }) {
   return (
     <DropdownMenu>
-      <DropdownMenuTrigger asChild>
-        <button className={cn(ghostButton, "group pr-2")} type="button">
+      {/* Kryptonite UI change: the trigger is styled directly instead of using
+          asChild, because the shadcn CLI rewrites asChild to Base UI's render
+          prop on install, which this Radix trigger doesn't accept. */}
+      <DropdownMenuTrigger className={cn(ghostButton, "group pr-2")}>
           <span className="flex items-center [&_svg]:size-3.5">
             {getModelIcon(selected)}
           </span>
@@ -626,7 +628,6 @@ function ModelMenu({
             aria-hidden="true"
             className="size-3 opacity-50 transition-transform duration-200 ease-[cubic-bezier(0.23,1,0.32,1)] group-data-[state=open]:rotate-180"
           />
-        </button>
       </DropdownMenuTrigger>
       {/* Opens upward, as the prompt sits at the bottom of a chat, and
           grows out of its trigger. */}
@@ -688,15 +689,9 @@ function EffortMenu({
   const level = Math.max(0, efforts.indexOf(value));
   return (
     <DropdownMenu>
-      <DropdownMenuTrigger asChild>
-        <button
-          aria-label={`Effort: ${value}. Change`}
-          className={ghostButton}
-          type="button"
-        >
-          <EffortBars count={efforts.length} level={level} />
-          <span className="tabular-nums">{value}</span>
-        </button>
+      <DropdownMenuTrigger aria-label={`Effort: ${value}. Change`} className={ghostButton}>
+        <EffortBars count={efforts.length} level={level} />
+        <span className="tabular-nums">{value}</span>
       </DropdownMenuTrigger>
       <DropdownMenuContent
         align="start"

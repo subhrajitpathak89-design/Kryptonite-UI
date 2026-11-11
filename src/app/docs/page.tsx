@@ -1,5 +1,7 @@
 import Link from 'next/link'
 import { CodeBlock } from '@/components/docs/code-block'
+import { InstallCommand } from '@/components/docs/install-command'
+import { absoluteUrl } from '@/lib/site'
 import { DocsMobileNav } from '@/components/docs/docs-mobile-nav'
 import { catalog, componentCount, groupedCatalog } from '@/docs/catalog'
 
@@ -10,8 +12,11 @@ export const metadata = {
   alternates: { canonical: '/docs' },
 }
 
-const utilsCode = `// src/lib/utils.ts
-export { cn } from "cn"`
+const registryCode = `{
+  "registries": {
+    "@kryptonite": "${absoluteUrl('/r/{name}.json')}"
+  }
+}`
 
 export default function DocsIntro() {
   const groups = groupedCatalog()
@@ -30,27 +35,29 @@ export default function DocsIntro() {
       </p>
 
       <section className="mt-12 space-y-4">
-        <h2 className="font-heading text-2xl">How it works</h2>
+        <h2 className="font-heading text-2xl">Installation</h2>
         <p className="text-muted-foreground">
-          There is no package to install. Open a component, install its dependencies, and copy its file into your project. The code is
-          yours to change.
+          Every component installs with one command, using the shadcn CLI. It copies the files into your project, installs the npm
+          packages and anything the component builds on, and adds the theme styles. The code is yours to change.
         </p>
         <ol className="list-decimal space-y-2 pl-5 text-muted-foreground marker:text-foreground">
-          <li>Set up a Next.js (or any React) project with Tailwind CSS v4 and shadcn/ui.</li>
           <li>
-            Add the <code className="rounded bg-muted px-1.5 py-0.5 font-mono text-xs text-foreground">cn</code> helper, which every
-            component uses:
+            Start from a React project with Tailwind CSS v4 and shadcn/ui. In a new or existing app, run{' '}
+            <code className="rounded bg-muted px-1.5 py-0.5 font-mono text-xs text-foreground">npx shadcn@latest init</code>.
           </li>
+          <li>Pick a component and run its command. For example:</li>
         </ol>
-        <CodeBlock code={utilsCode} />
-        <ol start={3} className="list-decimal space-y-2 pl-5 text-muted-foreground marker:text-foreground">
-          <li>
-            Copy the theme tokens (colors, easing and keyframes) from{' '}
-            <code className="rounded bg-muted px-1.5 py-0.5 font-mono text-xs text-foreground">src/app/globals.css</code> in the
-            repository.
-          </li>
-          <li>Pick a component from the sidebar and follow its Installation steps.</li>
-        </ol>
+        <InstallCommand url={absoluteUrl('/r/shimmer-button.json')} />
+        <p className="text-muted-foreground">
+          To use short names instead of URLs, add the registry to your{' '}
+          <code className="rounded bg-muted px-1.5 py-0.5 font-mono text-xs text-foreground">components.json</code>:
+        </p>
+        <CodeBlock code={registryCode} />
+        <p className="text-muted-foreground">
+          Then install with{' '}
+          <code className="rounded bg-muted px-1.5 py-0.5 font-mono text-xs text-foreground">npx shadcn@latest add @kryptonite/shimmer-button</code>
+          . Every component page also has the steps to install by hand.
+        </p>
       </section>
 
       <section className="mt-12">

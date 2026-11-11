@@ -1,9 +1,11 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
-import { IconArrowLeft, IconArrowRight } from '@tabler/icons-react'
+import { IconArrowLeft, IconArrowRight, IconChevronDown } from '@tabler/icons-react'
 import { CommunityThread } from '@/components/community/thread'
 import { CodeBlock } from '@/components/docs/code-block'
+import { InstallCommand } from '@/components/docs/install-command'
+import { absoluteUrl } from '@/lib/site'
 import { DocsMobileNav } from '@/components/docs/docs-mobile-nav'
 import { ExampleFrame } from '@/components/docs/example-frame'
 import { catalog, CATEGORY_LABELS, getEntry, groupedCatalog, neighbours } from '@/docs/catalog'
@@ -96,7 +98,21 @@ export default async function DocsEntryPage({ params }: PageProps<'/docs/[slug]'
       {(entry.files.length > 0 || entry.dependencies.length > 0) && (
         <section className="mt-14">
           <h2 className="mb-4 font-heading text-2xl">Installation</h2>
-          <ol className="space-y-6">
+          {entry.files.length > 0 && (
+            <div className="mb-6 space-y-3">
+              <p className="text-sm text-muted-foreground">
+                Run this in your project. It adds the files, installs the npm packages and anything this builds on, and sets up the
+                theme:
+              </p>
+              <InstallCommand url={absoluteUrl(`/r/${entry.slug}.json`)} />
+            </div>
+          )}
+          <details className="group rounded-xl border open:pb-2 [&_summary::-webkit-details-marker]:hidden" open={entry.files.length === 0}>
+            <summary className="flex cursor-pointer list-none items-center justify-between px-4 py-3 text-sm font-medium">
+              Install manually
+              <IconChevronDown className="size-4 text-muted-foreground transition-transform group-open:rotate-180" />
+            </summary>
+          <ol className="space-y-6 px-4 pt-2">
             {entry.dependencies.length > 0 && (
               <li className="space-y-3">
                 <p className="text-sm text-muted-foreground">Install the dependencies:</p>
@@ -124,6 +140,7 @@ export default async function DocsEntryPage({ params }: PageProps<'/docs/[slug]'
               </li>
             ))}
           </ol>
+          </details>
         </section>
       )}
 

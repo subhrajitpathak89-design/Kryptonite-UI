@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import { cn } from '@/lib/utils'
 import { IconArrowRight, IconBrandGithub, IconBrandLinkedin, IconPlus } from '@tabler/icons-react'
 import { ClientOnly } from '@/components/docs/client-only'
 import { CategoriesSection } from '@/components/landing/categories-section'
@@ -13,6 +14,7 @@ import { WorksWithTicker } from '@/components/landing/works-with-ticker'
 import { LINKEDIN_URL, REPO, SiteHeader } from '@/components/site/site-header'
 import { catalog, componentCount, groupedCatalog, latestComponents } from '@/docs/catalog'
 import { loaders } from '@/docs/generated/loaders'
+import { BENTO_CLASSES, bentoSize } from '@/docs/bento'
 import { absoluteUrl, SITE, SITE_URL } from '@/lib/site'
 
 
@@ -129,10 +131,16 @@ export default async function Home() {
             View all <IconArrowRight className="size-4" />
           </Link>
         </div>
-        <Reveal className="grid grid-cols-1 gap-px overflow-hidden rounded-2xl border bg-border sm:grid-cols-2 lg:grid-cols-4">
-          {latest.map(({ slug, title, Preview, addedAt }) => (
-            <div key={slug} className="group relative flex min-h-56 flex-col bg-card">
-              <div className="flex flex-1 items-center justify-center overflow-hidden p-6">
+        <Reveal className="grid grid-flow-row-dense auto-rows-[minmax(15rem,auto)] sm:auto-rows-[21.5rem] grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-4">
+          {latest.map(({ slug, title, category, Preview, addedAt }) => (
+            <div
+              key={slug}
+              className={cn(
+                'group relative flex min-w-0 flex-col overflow-hidden rounded-2xl border bg-card transition-colors hover:border-foreground/20',
+                BENTO_CLASSES[bentoSize({ slug, category })],
+              )}
+            >
+              <div className="flex min-h-0 min-w-0 flex-1 items-center justify-center overflow-hidden p-5 sm:p-6 [&>*]:max-w-full">
                 <ClientOnly fallback={<div className="h-10 w-32 animate-pulse rounded-md bg-muted" />}>
                   <Preview name="demo" />
                 </ClientOnly>

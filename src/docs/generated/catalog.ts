@@ -31,6 +31,7 @@ export const catalog: DocsEntry[] = [
     "files": [
       "src/components/kryptonite/AuroraBackground.tsx"
     ],
+    "addedAt": "2026-11-08",
     "examples": [
       {
         "name": "demo",
@@ -55,6 +56,7 @@ export const catalog: DocsEntry[] = [
     "files": [
       "src/components/kryptonite/GlowBorderButton.tsx"
     ],
+    "addedAt": "2026-11-08",
     "examples": [
       {
         "name": "demo",
@@ -79,6 +81,7 @@ export const catalog: DocsEntry[] = [
     "files": [
       "src/components/kryptonite/GradientText.tsx"
     ],
+    "addedAt": "2026-11-08",
     "examples": [
       {
         "name": "demo",
@@ -103,6 +106,7 @@ export const catalog: DocsEntry[] = [
     "files": [
       "src/components/kryptonite/MagneticButton.tsx"
     ],
+    "addedAt": "2026-11-08",
     "examples": [
       {
         "name": "demo",
@@ -127,6 +131,7 @@ export const catalog: DocsEntry[] = [
     "files": [
       "src/components/kryptonite/Marquee.tsx"
     ],
+    "addedAt": "2026-11-08",
     "examples": [
       {
         "name": "demo",
@@ -151,6 +156,7 @@ export const catalog: DocsEntry[] = [
     "files": [
       "src/components/kryptonite/ShimmerButton.tsx"
     ],
+    "addedAt": "2026-11-08",
     "examples": [
       {
         "name": "demo",
@@ -175,6 +181,7 @@ export const catalog: DocsEntry[] = [
     "files": [
       "src/components/kryptonite/SpotlightCard.tsx"
     ],
+    "addedAt": "2026-11-08",
     "examples": [
       {
         "name": "demo",
@@ -199,6 +206,7 @@ export const catalog: DocsEntry[] = [
     "files": [
       "src/components/kryptonite/TiltCard.tsx"
     ],
+    "addedAt": "2026-11-08",
     "examples": [
       {
         "name": "demo",
@@ -230,6 +238,7 @@ export const catalog: DocsEntry[] = [
       "src/components/kokonut/ui/textarea.tsx",
       "src/components/kokonut/hooks/use-auto-resize-textarea.ts"
     ],
+    "addedAt": "2026-11-10",
     "examples": [
       {
         "name": "demo",
@@ -252,6 +261,7 @@ export const catalog: DocsEntry[] = [
     "files": [
       "src/components/kokonut/ai-loading.tsx"
     ],
+    "addedAt": "2026-11-10",
     "examples": [
       {
         "name": "demo",
@@ -271,6 +281,7 @@ export const catalog: DocsEntry[] = [
     "files": [
       "src/components/kokonut/bell-button.tsx"
     ],
+    "addedAt": "2026-11-10",
     "examples": [
       {
         "name": "demo",
@@ -298,6 +309,7 @@ export const catalog: DocsEntry[] = [
     "files": [
       "src/components/ui/button.tsx"
     ],
+    "addedAt": "2026-11-08",
     "examples": [
       {
         "name": "demo",
@@ -399,6 +411,7 @@ export const catalog: DocsEntry[] = [
     "files": [
       "src/components/ui/button-group.tsx"
     ],
+    "addedAt": "2026-11-08",
     "examples": [
       {
         "name": "demo",
@@ -473,6 +486,7 @@ export const catalog: DocsEntry[] = [
     "files": [
       "src/components/kokonut/pull-cord.tsx"
     ],
+    "addedAt": "2026-11-10",
     "examples": [
       {
         "name": "demo",
@@ -495,6 +509,7 @@ export const catalog: DocsEntry[] = [
     "files": [
       "src/components/kokonut/slide-to-confirm.tsx"
     ],
+    "addedAt": "2026-11-10",
     "examples": [
       {
         "name": "demo",
@@ -514,6 +529,7 @@ export const catalog: DocsEntry[] = [
     "files": [
       "src/components/kokonut/tear-button.tsx"
     ],
+    "addedAt": "2026-11-10",
     "examples": [
       {
         "name": "demo",
@@ -537,6 +553,7 @@ export const catalog: DocsEntry[] = [
     "files": [
       "src/components/ui/toggle.tsx"
     ],
+    "addedAt": "2026-11-08",
     "examples": [
       {
         "name": "demo",
@@ -603,6 +620,7 @@ export const catalog: DocsEntry[] = [
     "files": [
       "src/components/ui/toggle-group.tsx"
     ],
+    "addedAt": "2026-11-08",
     "examples": [
       {
         "name": "demo",
@@ -676,6 +694,7 @@ export const catalog: DocsEntry[] = [
     "files": [
       "src/components/ui/calendar.tsx"
     ],
+    "addedAt": "2026-11-08",
     "examples": [
       {
         "name": "demo",
@@ -749,6 +768,7 @@ export const catalog: DocsEntry[] = [
     "files": [
       "src/components/ui/checkbox.tsx"
     ],
+    "addedAt": "2026-11-08",
     "examples": [
       {
         "name": "demo",
@@ -818,6 +838,7 @@ export const catalog: DocsEntry[] = [
     "files": [
       "src/components/ui/combobox.tsx"
     ],
+    "addedAt": "2026-11-08",
     "examples": [
       {
         "name": "demo",
@@ -906,6 +927,7 @@ export const catalog: DocsEntry[] = [
     "files": [
       "src/components/ui/date-picker.tsx"
     ],
+    "addedAt": "2026-11-08",
     "examples": [
       {
         "name": "demo",
@@ -972,6 +994,7 @@ export const catalog: DocsEntry[] = [
     "files": [
       "src/components/kokonut/detent-dial.tsx"
     ],
+    "addedAt": "2026-11-10",
     "examples": [
       {
         "name": "demo",
@@ -1002,6 +1025,7 @@ export const catalog: DocsEntry[] = [
     "files": [
       "src/components/ui/field.tsx"
     ],
+    "addedAt": "2026-11-08",
     "examples": [
       {
         "name": "demo",
@@ -1102,6 +1126,7 @@ export const catalog: DocsEntry[] = [
     "files": [
       "src/components/ui/input.tsx"
     ],
+    "addedAt": "2026-11-08",
     "examples": [
       {
         "name": "demo",
@@ -1199,6 +1224,7 @@ export const catalog: DocsEntry[] = [
     "files": [
       "src/components/ui/input-group.tsx"
     ],
+    "addedAt": "2026-11-08",
     "examples": [
       {
         "name": "demo",
@@ -1305,6 +1331,7 @@ export const catalog: DocsEntry[] = [
     "files": [
       "src/components/ui/input-otp.tsx"
     ],
+    "addedAt": "2026-11-08",
     "examples": [
       {
         "name": "demo",
@@ -1397,6 +1424,7 @@ export const catalog: DocsEntry[] = [
     "files": [
       "src/components/ui/label.tsx"
     ],
+    "addedAt": "2026-11-08",
     "examples": [
       {
         "name": "demo",
@@ -1454,6 +1482,7 @@ export const catalog: DocsEntry[] = [
     "files": [
       "src/components/ui/native-select.tsx"
     ],
+    "addedAt": "2026-11-08",
     "examples": [
       {
         "name": "demo",
@@ -1524,6 +1553,7 @@ export const catalog: DocsEntry[] = [
     "files": [
       "src/components/ui/questionnaire.tsx"
     ],
+    "addedAt": "2026-11-08",
     "examples": [
       {
         "name": "demo",
@@ -1568,6 +1598,7 @@ export const catalog: DocsEntry[] = [
     "files": [
       "src/components/ui/radio-group.tsx"
     ],
+    "addedAt": "2026-11-08",
     "examples": [
       {
         "name": "demo",
@@ -1622,6 +1653,7 @@ export const catalog: DocsEntry[] = [
     "files": [
       "src/components/ui/select.tsx"
     ],
+    "addedAt": "2026-11-08",
     "examples": [
       {
         "name": "demo",
@@ -1685,6 +1717,7 @@ export const catalog: DocsEntry[] = [
     "files": [
       "src/components/ui/slider.tsx"
     ],
+    "addedAt": "2026-11-08",
     "examples": [
       {
         "name": "demo",
@@ -1762,6 +1795,7 @@ export const catalog: DocsEntry[] = [
     "files": [
       "src/components/ui/switch.tsx"
     ],
+    "addedAt": "2026-11-08",
     "examples": [
       {
         "name": "demo",
@@ -1829,6 +1863,7 @@ export const catalog: DocsEntry[] = [
     "files": [
       "src/components/ui/textarea.tsx"
     ],
+    "addedAt": "2026-11-08",
     "examples": [
       {
         "name": "demo",
@@ -1880,6 +1915,7 @@ export const catalog: DocsEntry[] = [
     "files": [
       "src/components/kokonut/wheel-picker.tsx"
     ],
+    "addedAt": "2026-11-10",
     "examples": [
       {
         "name": "demo",
@@ -1906,6 +1942,7 @@ export const catalog: DocsEntry[] = [
     "files": [
       "src/components/ui/alert-dialog.tsx"
     ],
+    "addedAt": "2026-11-08",
     "examples": [
       {
         "name": "demo",
@@ -1975,6 +2012,7 @@ export const catalog: DocsEntry[] = [
     "files": [
       "src/components/ui/command.tsx"
     ],
+    "addedAt": "2026-11-08",
     "examples": [
       {
         "name": "demo",
@@ -2034,6 +2072,7 @@ export const catalog: DocsEntry[] = [
     "files": [
       "src/components/ui/context-menu.tsx"
     ],
+    "addedAt": "2026-11-08",
     "examples": [
       {
         "name": "demo",
@@ -2105,6 +2144,7 @@ export const catalog: DocsEntry[] = [
     "files": [
       "src/components/ui/dialog.tsx"
     ],
+    "addedAt": "2026-11-08",
     "examples": [
       {
         "name": "demo",
@@ -2179,6 +2219,7 @@ export const catalog: DocsEntry[] = [
     "files": [
       "src/components/ui/drawer.tsx"
     ],
+    "addedAt": "2026-11-08",
     "examples": [
       {
         "name": "demo",
@@ -2260,6 +2301,7 @@ export const catalog: DocsEntry[] = [
     "files": [
       "src/components/ui/dropdown-menu.tsx"
     ],
+    "addedAt": "2026-11-08",
     "examples": [
       {
         "name": "demo",
@@ -2349,6 +2391,7 @@ export const catalog: DocsEntry[] = [
     "files": [
       "src/components/ui/hover-card.tsx"
     ],
+    "addedAt": "2026-11-08",
     "examples": [
       {
         "name": "demo",
@@ -2424,6 +2467,7 @@ export const catalog: DocsEntry[] = [
     "files": [
       "src/components/ui/menubar.tsx"
     ],
+    "addedAt": "2026-11-08",
     "examples": [
       {
         "name": "demo",
@@ -2471,6 +2515,7 @@ export const catalog: DocsEntry[] = [
     "files": [
       "src/components/ui/popover.tsx"
     ],
+    "addedAt": "2026-11-08",
     "examples": [
       {
         "name": "demo",
@@ -2552,6 +2597,7 @@ export const catalog: DocsEntry[] = [
     "files": [
       "src/components/ui/sheet.tsx"
     ],
+    "addedAt": "2026-11-08",
     "examples": [
       {
         "name": "demo",
@@ -2609,6 +2655,7 @@ export const catalog: DocsEntry[] = [
     "files": [
       "src/components/ui/tooltip.tsx"
     ],
+    "addedAt": "2026-11-08",
     "examples": [
       {
         "name": "demo",
@@ -2673,6 +2720,7 @@ export const catalog: DocsEntry[] = [
     "files": [
       "src/components/kokonut/activity-terrain.tsx"
     ],
+    "addedAt": "2026-11-10",
     "examples": [
       {
         "name": "demo",
@@ -2694,6 +2742,7 @@ export const catalog: DocsEntry[] = [
     "files": [
       "src/components/kokonut/apple-activity-card.tsx"
     ],
+    "addedAt": "2026-11-10",
     "examples": [
       {
         "name": "demo",
@@ -2718,6 +2767,7 @@ export const catalog: DocsEntry[] = [
     "files": [
       "src/components/ui/avatar.tsx"
     ],
+    "addedAt": "2026-11-08",
     "examples": [
       {
         "name": "demo",
@@ -2785,6 +2835,7 @@ export const catalog: DocsEntry[] = [
     "files": [
       "src/components/ui/badge.tsx"
     ],
+    "addedAt": "2026-11-08",
     "examples": [
       {
         "name": "demo",
@@ -2848,6 +2899,7 @@ export const catalog: DocsEntry[] = [
     "files": [
       "src/components/ui/card.tsx"
     ],
+    "addedAt": "2026-11-08",
     "examples": [
       {
         "name": "demo",
@@ -2920,6 +2972,7 @@ export const catalog: DocsEntry[] = [
     "files": [
       "src/components/ui/chart.tsx"
     ],
+    "addedAt": "2026-11-08",
     "examples": [
       {
         "name": "demo",
@@ -3014,6 +3067,7 @@ export const catalog: DocsEntry[] = [
     "files": [
       "src/components/ui/data-table.tsx"
     ],
+    "addedAt": "2026-11-08",
     "examples": [
       {
         "name": "demo",
@@ -3070,6 +3124,7 @@ export const catalog: DocsEntry[] = [
     "files": [
       "src/components/ui/item.tsx"
     ],
+    "addedAt": "2026-11-08",
     "examples": [
       {
         "name": "demo",
@@ -3156,6 +3211,7 @@ export const catalog: DocsEntry[] = [
     "files": [
       "src/components/ui/kbd.tsx"
     ],
+    "addedAt": "2026-11-08",
     "examples": [
       {
         "name": "demo",
@@ -3210,6 +3266,7 @@ export const catalog: DocsEntry[] = [
     "files": [
       "src/components/kokonut/liquid-gauge.tsx"
     ],
+    "addedAt": "2026-11-10",
     "examples": [
       {
         "name": "demo",
@@ -3233,6 +3290,7 @@ export const catalog: DocsEntry[] = [
     "files": [
       "src/components/ui/number-flow.tsx"
     ],
+    "addedAt": "2026-11-08",
     "examples": [
       {
         "name": "demo",
@@ -3290,6 +3348,7 @@ export const catalog: DocsEntry[] = [
     "files": [
       "src/components/ui/table.tsx"
     ],
+    "addedAt": "2026-11-08",
     "examples": [
       {
         "name": "demo",
@@ -3351,6 +3410,7 @@ export const catalog: DocsEntry[] = [
     "files": [
       "src/components/ui/tree.tsx"
     ],
+    "addedAt": "2026-11-08",
     "examples": [
       {
         "name": "demo",
@@ -3431,6 +3491,7 @@ export const catalog: DocsEntry[] = [
     "files": [
       "src/components/ui/breadcrumb.tsx"
     ],
+    "addedAt": "2026-11-08",
     "examples": [
       {
         "name": "demo",
@@ -3503,6 +3564,7 @@ export const catalog: DocsEntry[] = [
     "files": [
       "src/components/ui/navigation-menu.tsx"
     ],
+    "addedAt": "2026-11-08",
     "examples": [
       {
         "name": "demo",
@@ -3545,6 +3607,7 @@ export const catalog: DocsEntry[] = [
     "files": [
       "src/components/ui/pagination.tsx"
     ],
+    "addedAt": "2026-11-08",
     "examples": [
       {
         "name": "demo",
@@ -3605,6 +3668,7 @@ export const catalog: DocsEntry[] = [
     "files": [
       "src/components/ui/sidebar.tsx"
     ],
+    "addedAt": "2026-11-08",
     "examples": [
       {
         "name": "demo",
@@ -3673,6 +3737,7 @@ export const catalog: DocsEntry[] = [
     "files": [
       "src/components/ui/tabs.tsx"
     ],
+    "addedAt": "2026-11-08",
     "examples": [
       {
         "name": "demo",
@@ -3737,6 +3802,7 @@ export const catalog: DocsEntry[] = [
     "files": [
       "src/components/ui/accordion.tsx"
     ],
+    "addedAt": "2026-11-08",
     "examples": [
       {
         "name": "demo",
@@ -3817,6 +3883,7 @@ export const catalog: DocsEntry[] = [
     "files": [
       "src/components/ui/aspect-ratio.tsx"
     ],
+    "addedAt": "2026-11-08",
     "examples": [
       {
         "name": "demo",
@@ -3899,6 +3966,7 @@ export const catalog: DocsEntry[] = [
     "files": [
       "src/components/ui/carousel.tsx"
     ],
+    "addedAt": "2026-11-08",
     "examples": [
       {
         "name": "demo",
@@ -3987,6 +4055,7 @@ export const catalog: DocsEntry[] = [
     "files": [
       "src/components/ui/collapsible.tsx"
     ],
+    "addedAt": "2026-11-08",
     "examples": [
       {
         "name": "demo",
@@ -4059,6 +4128,7 @@ export const catalog: DocsEntry[] = [
     "files": [
       "src/components/ui/resizable.tsx"
     ],
+    "addedAt": "2026-11-08",
     "examples": [
       {
         "name": "demo",
@@ -4112,6 +4182,7 @@ export const catalog: DocsEntry[] = [
     "files": [
       "src/components/ui/scroll-area.tsx"
     ],
+    "addedAt": "2026-11-08",
     "examples": [
       {
         "name": "demo",
@@ -4184,6 +4255,7 @@ export const catalog: DocsEntry[] = [
     "files": [
       "src/components/ui/separator.tsx"
     ],
+    "addedAt": "2026-11-08",
     "examples": [
       {
         "name": "demo",
@@ -4251,6 +4323,7 @@ export const catalog: DocsEntry[] = [
     "files": [
       "src/components/ui/alert.tsx"
     ],
+    "addedAt": "2026-11-08",
     "examples": [
       {
         "name": "demo",
@@ -4324,6 +4397,7 @@ export const catalog: DocsEntry[] = [
     "files": [
       "src/components/ui/empty.tsx"
     ],
+    "addedAt": "2026-11-08",
     "examples": [
       {
         "name": "demo",
@@ -4422,6 +4496,7 @@ export const catalog: DocsEntry[] = [
     "files": [
       "src/components/ui/progress.tsx"
     ],
+    "addedAt": "2026-11-08",
     "examples": [
       {
         "name": "demo",
@@ -4500,6 +4575,7 @@ export const catalog: DocsEntry[] = [
     "files": [
       "src/components/ui/skeleton.tsx"
     ],
+    "addedAt": "2026-11-08",
     "examples": [
       {
         "name": "demo",
@@ -4564,6 +4640,7 @@ export const catalog: DocsEntry[] = [
     "files": [
       "src/components/ui/spinner.tsx"
     ],
+    "addedAt": "2026-11-08",
     "examples": [
       {
         "name": "demo",
@@ -4610,6 +4687,7 @@ export const catalog: DocsEntry[] = [
     "files": [
       "src/components/ui/toast.tsx"
     ],
+    "addedAt": "2026-11-08",
     "examples": [
       {
         "name": "demo",
@@ -4665,6 +4743,7 @@ export const catalog: DocsEntry[] = [
     "files": [
       "src/components/ui/attachment.tsx"
     ],
+    "addedAt": "2026-11-08",
     "examples": [
       {
         "name": "demo",
@@ -4743,6 +4822,7 @@ export const catalog: DocsEntry[] = [
     "files": [
       "src/components/ui/bubble.tsx"
     ],
+    "addedAt": "2026-11-08",
     "examples": [
       {
         "name": "demo",
@@ -4826,6 +4906,7 @@ export const catalog: DocsEntry[] = [
     "files": [
       "src/components/ui/marker.tsx"
     ],
+    "addedAt": "2026-11-08",
     "examples": [
       {
         "name": "demo",
@@ -4881,6 +4962,7 @@ export const catalog: DocsEntry[] = [
     "files": [
       "src/components/ui/message.tsx"
     ],
+    "addedAt": "2026-11-08",
     "examples": [
       {
         "name": "demo",
@@ -4933,6 +5015,7 @@ export const catalog: DocsEntry[] = [
     "files": [
       "src/components/ui/message-scroller.tsx"
     ],
+    "addedAt": "2026-11-08",
     "examples": [
       {
         "name": "demo",
@@ -4990,6 +5073,7 @@ export const catalog: DocsEntry[] = [
     "files": [
       "src/components/ui/video-player.tsx"
     ],
+    "addedAt": "2026-11-08",
     "examples": [
       {
         "name": "demo",
@@ -5049,6 +5133,7 @@ export const catalog: DocsEntry[] = [
     "files": [
       "src/components/kokonut/drape-background.tsx"
     ],
+    "addedAt": "2026-11-10",
     "examples": [
       {
         "name": "demo",
@@ -5068,6 +5153,7 @@ export const catalog: DocsEntry[] = [
     "files": [
       "src/components/kokonut/plucked-text.tsx"
     ],
+    "addedAt": "2026-11-10",
     "examples": [
       {
         "name": "demo",
@@ -5085,6 +5171,7 @@ export const catalog: DocsEntry[] = [
     "dependencies": [],
     "requires": [],
     "files": [],
+    "addedAt": "2026-11-08",
     "examples": [
       {
         "name": "demo",
@@ -5109,6 +5196,7 @@ export const catalog: DocsEntry[] = [
     "files": [
       "src/lib/hotkey.ts"
     ],
+    "addedAt": "2026-11-08",
     "examples": [
       {
         "name": "demo",
@@ -5133,6 +5221,7 @@ export const catalog: DocsEntry[] = [
     "files": [
       "src/lib/motion.ts"
     ],
+    "addedAt": "2026-11-08",
     "examples": [
       {
         "name": "easing",
@@ -5160,6 +5249,7 @@ export const catalog: DocsEntry[] = [
     "dependencies": [],
     "requires": [],
     "files": [],
+    "addedAt": "2026-11-08",
     "examples": [
       {
         "name": "demo",
@@ -5187,6 +5277,7 @@ export const catalog: DocsEntry[] = [
     "dependencies": [],
     "requires": [],
     "files": [],
+    "addedAt": "2026-11-08",
     "examples": [
       {
         "name": "demo",
@@ -5218,6 +5309,7 @@ export const catalog: DocsEntry[] = [
     "files": [
       "src/hooks/use-autosize.ts"
     ],
+    "addedAt": "2026-11-08",
     "examples": [
       {
         "name": "demo",
@@ -5242,6 +5334,7 @@ export const catalog: DocsEntry[] = [
     "files": [
       "src/hooks/use-button-feedback.ts"
     ],
+    "addedAt": "2026-11-08",
     "examples": [
       {
         "name": "autosave",
@@ -5266,6 +5359,7 @@ export const catalog: DocsEntry[] = [
     "files": [
       "src/hooks/use-composed-ref.ts"
     ],
+    "addedAt": "2026-11-08",
     "examples": [
       {
         "name": "demo",
@@ -5285,6 +5379,7 @@ export const catalog: DocsEntry[] = [
     "files": [
       "src/hooks/use-delayed-loading.ts"
     ],
+    "addedAt": "2026-11-08",
     "examples": [
       {
         "name": "demo",
@@ -5309,6 +5404,7 @@ export const catalog: DocsEntry[] = [
     "files": [
       "src/hooks/use-held-keys.ts"
     ],
+    "addedAt": "2026-11-08",
     "examples": [
       {
         "name": "demo",
@@ -5335,6 +5431,7 @@ export const catalog: DocsEntry[] = [
     "files": [
       "src/hooks/use-invalid-shake.ts"
     ],
+    "addedAt": "2026-11-08",
     "examples": [
       {
         "name": "demo",
@@ -5354,6 +5451,7 @@ export const catalog: DocsEntry[] = [
     "files": [
       "src/hooks/use-merged-ref.ts"
     ],
+    "addedAt": "2026-11-08",
     "examples": [
       {
         "name": "demo",
@@ -5373,6 +5471,7 @@ export const catalog: DocsEntry[] = [
     "files": [
       "src/hooks/use-pagination.ts"
     ],
+    "addedAt": "2026-11-08",
     "examples": [
       {
         "name": "demo",
@@ -5397,6 +5496,7 @@ export const catalog: DocsEntry[] = [
     "files": [
       "src/hooks/use-today.ts"
     ],
+    "addedAt": "2026-11-08",
     "examples": [
       {
         "name": "demo",

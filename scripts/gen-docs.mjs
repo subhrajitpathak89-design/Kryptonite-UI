@@ -112,6 +112,26 @@ for (const slug of exampleDirs) {
   })
 }
 
+// --- When each entry was added -----------------------------------------------
+// scripts/added.json is a committed ledger of slug -> date (YYYY-MM-DD). A new slug gets
+// today's date the first time this runs, so the home page grid and the top banner pick
+// up new components on their own. Commit the updated ledger along with the component.
+const ledgerPath = path.join(root, 'scripts/added.json')
+const ledger = fs.existsSync(ledgerPath) ? JSON.parse(fs.readFileSync(ledgerPath, 'utf8')) : {}
+const today = new Date().toISOString().slice(0, 10)
+let ledgerChanged = false
+for (const e of entries) {
+  if (!ledger[e.slug]) {
+    ledger[e.slug] = today
+    ledgerChanged = true
+  }
+  e.addedAt = ledger[e.slug]
+}
+if (ledgerChanged) {
+  const sorted = Object.fromEntries(Object.entries(ledger).sort(([a], [b]) => a.localeCompare(b)))
+  fs.writeFileSync(ledgerPath, JSON.stringify(sorted, null, 2) + '\n')
+}
+
 const order = Object.keys(CATEGORY_LABELS)
 entries.sort((a, b) => order.indexOf(a.category) - order.indexOf(b.category) || a.title.localeCompare(b.title))
 

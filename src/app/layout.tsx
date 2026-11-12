@@ -3,6 +3,7 @@ import { Geist_Mono, Poppins } from "next/font/google";
 import { Toaster } from "@/components/ui/toast";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { ThemeProvider } from "@/components/site/theme-provider";
+import { AnnouncementBar } from "@/components/site/announcement-bar";
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { SITE, SITE_URL } from "@/lib/site";
@@ -67,6 +68,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
     <html lang="en" suppressHydrationWarning className={`scroll-smooth ${poppins.variable} ${geistMono.variable} h-full antialiased`}>
       <body className="flex min-h-full flex-col">
         <ThemeProvider>
+          <AnnouncementBar />
           <TooltipProvider>{children}</TooltipProvider>
           <Toaster />
         </ThemeProvider>

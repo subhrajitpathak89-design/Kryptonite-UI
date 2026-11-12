@@ -10,29 +10,11 @@ import { Reveal } from '@/components/site/reveal'
 import { HeroShowcase } from '@/components/landing/hero-showcase'
 import { RollButton } from '@/components/landing/roll-button'
 import { WorksWithTicker } from '@/components/landing/works-with-ticker'
-import { SpecularDemo } from '@/components/landing/specular-demo'
 import { LINKEDIN_URL, REPO, SiteHeader } from '@/components/site/site-header'
-import { catalog, componentCount, groupedCatalog } from '@/docs/catalog'
+import { catalog, componentCount, groupedCatalog, latestComponents } from '@/docs/catalog'
+import { loaders } from '@/docs/generated/loaders'
 import { absoluteUrl, SITE, SITE_URL } from '@/lib/site'
-import { ButtonDemo } from '@/components/examples/button/demo'
-import { SwitchDemo } from '@/components/examples/switch/demo'
-import { InputOTPDemo } from '@/components/examples/input-otp/demo'
-import { SpotlightCardDemo } from '@/components/examples/spotlight-card/demo'
-import { NumberFlowDemo } from '@/components/examples/number-flow/demo'
-import { BadgeDemo } from '@/components/examples/badge/demo'
-import { MarqueeDemo } from '@/components/examples/marquee/demo'
 
-const showcase: { slug: string; title: string; Demo: () => React.ReactNode; href?: string }[] = [
-  // Specular Button is from React Bits (site-only), so its card links to its React Bits page.
-  { slug: 'specular-button', title: 'Specular Button', Demo: SpecularDemo, href: 'https://reactbits.dev/components/specular-button' },
-  { slug: 'button', title: 'Button', Demo: ButtonDemo },
-  { slug: 'input-otp', title: 'Input OTP', Demo: InputOTPDemo },
-  { slug: 'spotlight-card', title: 'Spotlight Card', Demo: SpotlightCardDemo },
-  { slug: 'number-flow', title: 'Number Flow', Demo: NumberFlowDemo },
-  { slug: 'switch', title: 'Switch', Demo: SwitchDemo },
-  { slug: 'badge', title: 'Badge', Demo: BadgeDemo },
-  { slug: 'marquee', title: 'Marquee', Demo: MarqueeDemo },
-]
 
 function structuredData() {
   const author = { '@type': 'Person', name: SITE.author.name, url: SITE.author.url }
@@ -75,8 +57,13 @@ function structuredData() {
   ]
 }
 
-export default function Home() {
+export default async function Home() {
   const groups = groupedCatalog()
+  // The newest components, picked from scripts/added.json, so this grid updates itself.
+  const latest = await Promise.all(
+    latestComponents(8).map(async (e) => ({ ...e, Preview: (await loaders[e.slug]()).default })),
+  )
+  const newestDate = latest[0]?.addedAt
   return (
     <div className="flex min-h-screen flex-col">
       <JsonLd data={structuredData()} />
@@ -131,23 +118,36 @@ export default function Home() {
       </section>
 
       <section aria-labelledby="featured-heading" className="mx-auto w-full max-w-6xl px-4 pb-24">
-        <h2 id="featured-heading" className="sr-only">
-          Featured components
-        </h2>
+        <div className="mb-5 flex items-end justify-between gap-4">
+          <div>
+            <h2 id="featured-heading" className="font-heading text-2xl tracking-tight sm:text-3xl">
+              Just added
+            </h2>
+            <p className="mt-1 text-sm text-muted-foreground">The newest components in the library, updated as they land.</p>
+          </div>
+          <Link href="/docs" className="hidden shrink-0 items-center gap-1 text-sm text-muted-foreground hover:text-foreground sm:inline-flex">
+            View all <IconArrowRight className="size-4" />
+          </Link>
+        </div>
         <Reveal className="grid grid-cols-1 gap-px overflow-hidden rounded-2xl border bg-border sm:grid-cols-2 lg:grid-cols-4">
-          {showcase.map(({ slug, title, Demo, href }) => (
+          {latest.map(({ slug, title, Preview, addedAt }) => (
             <div key={slug} className="group relative flex min-h-56 flex-col bg-card">
               <div className="flex flex-1 items-center justify-center overflow-hidden p-6">
                 <ClientOnly fallback={<div className="h-10 w-32 animate-pulse rounded-md bg-muted" />}>
-                  <Demo />
+                  <Preview name="demo" />
                 </ClientOnly>
               </div>
               <Link
-                href={href ?? `/docs/${slug}`}
-                {...(href ? { target: '_blank', rel: 'noreferrer' } : {})}
-                className="flex items-center justify-between border-t px-4 py-3 text-sm text-muted-foreground transition-colors hover:text-foreground"
+                href={`/docs/${slug}`}
+                className="flex items-center justify-between gap-2 border-t px-4 py-3 text-sm text-muted-foreground transition-colors hover:text-foreground"
               >
-                {title} <IconArrowRight className="size-4 opacity-0 transition-opacity group-hover:opacity-100" />
+                <span className="flex min-w-0 items-center gap-2">
+                  <span className="truncate">{title}</span>
+                  {addedAt === newestDate && (
+                    <span className="rounded-full bg-primary/15 px-1.5 py-0.5 text-[10px] font-medium text-primary">New</span>
+                  )}
+                </span>
+                <IconArrowRight className="size-4 shrink-0 opacity-0 transition-opacity group-hover:opacity-100" />
               </Link>
             </div>
           ))}

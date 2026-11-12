@@ -26,3 +26,18 @@ export function neighbours(slug: string) {
 }
 
 export const componentCount = catalog.filter((e) => e.category !== 'hooks' && e.category !== 'utilities').length
+
+/** Components (not hooks or helpers) that have a demo, newest first. */
+export function latestComponents(limit = 8) {
+  return catalog
+    .filter((e) => e.category !== 'hooks' && e.category !== 'utilities' && e.examples.some((x) => x.name === 'demo'))
+    .toSorted((a, b) => b.addedAt.localeCompare(a.addedAt) || a.title.localeCompare(b.title))
+    .slice(0, limit)
+}
+
+/** The most recent batch of components: everything added on the latest date. */
+export function latestBatch() {
+  const latest = latestComponents(Infinity)
+  const date = latest[0]?.addedAt
+  return { date, entries: latest.filter((e) => e.addedAt === date) }
+}

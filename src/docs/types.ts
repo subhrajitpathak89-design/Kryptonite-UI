@@ -20,4 +20,6 @@ export type DocsEntry = {
   /** Source files to copy, relative to the project root */
   files: string[]
   examples: DocsExampleMeta[]
+  /** When the component was added to the site, YYYY-MM-DD (from scripts/added.json) */
+  addedAt: string
 }

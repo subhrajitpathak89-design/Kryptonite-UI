@@ -5,6 +5,7 @@ import { ClientOnly } from '@/components/docs/client-only'
 import { CategoriesSection } from '@/components/landing/categories-section'
 import { CommunityCta } from '@/components/landing/community-cta'
 import { FAQ } from '@/components/landing/home-content'
+import { SectionTransition } from '@/components/landing/section-transition'
 import { WhySection } from '@/components/landing/why-section'
 import { JsonLd } from '@/components/site/json-ld'
 import { Reveal } from '@/components/site/reveal'
@@ -73,7 +74,7 @@ export default async function Home() {
 
       <main className="flex flex-1 flex-col">
 
-      <section aria-labelledby="hero-heading" className="mx-auto w-full max-w-screen-2xl px-4 pt-8 pb-16 sm:px-6 sm:pt-12">
+      <section aria-labelledby="hero-heading" className="mx-auto w-full max-w-screen-2xl px-4 pt-8 pb-2 sm:px-6 sm:pt-12">
         <Link
           href="/community"
           className="animate-in fade-in slide-in-from-bottom-3 duration-700 ease-out fill-mode-both motion-reduce:animate-none inline-flex items-center gap-2 rounded-lg border bg-card/60 py-1 pr-3 pl-1 text-sm text-muted-foreground transition-colors hover:text-foreground"
@@ -118,6 +119,8 @@ export default async function Home() {
           <HeroShowcase />
         </div>
       </section>
+
+      <SectionTransition label={`${latest.length} fresh components`} />
 
       <section aria-labelledby="featured-heading" className="mx-auto w-full max-w-6xl px-4 pb-24">
         <div className="mb-5 flex items-end justify-between gap-4">

@@ -5,7 +5,6 @@ import { ClientOnly } from '@/components/docs/client-only'
 import { CategoriesSection } from '@/components/landing/categories-section'
 import { CommunityCta } from '@/components/landing/community-cta'
 import { FAQ } from '@/components/landing/home-content'
-import { SectionTransition } from '@/components/landing/section-transition'
 import { WhySection } from '@/components/landing/why-section'
 import { JsonLd } from '@/components/site/json-ld'
 import { Reveal } from '@/components/site/reveal'
@@ -116,13 +115,14 @@ export default async function Home() {
         </div>
 
         <div style={{ animationDelay: '300ms' }} className="animate-in fade-in slide-in-from-bottom-6 duration-700 ease-out fill-mode-both motion-reduce:animate-none mt-10">
-          <HeroShowcase />
+          {/* Shrinks back and dims as it scrolls away (scroll-driven, CSS only) */}
+          <div className="scroll-exit">
+            <HeroShowcase />
+          </div>
         </div>
       </section>
 
-      <SectionTransition label={`${latest.length} fresh components`} />
-
-      <section aria-labelledby="featured-heading" className="mx-auto w-full max-w-6xl px-4 pb-24">
+      <section aria-labelledby="featured-heading" className="scroll-enter mx-auto w-full max-w-6xl px-4 pt-14 pb-24 sm:pt-20">
         <div className="mb-5 flex items-end justify-between gap-4">
           <div>
             <h2 id="featured-heading" className="font-heading text-2xl tracking-tight sm:text-3xl">

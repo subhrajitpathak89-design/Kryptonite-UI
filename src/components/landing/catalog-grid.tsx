@@ -1,10 +1,9 @@
 'use client'
 
 import Link from 'next/link'
-import { lazy, Suspense, useEffect, useMemo, useRef, useState, type ComponentType } from 'react'
+import { lazy, Suspense, useEffect, useRef, useState, type ComponentType } from 'react'
 import { IconArrowRight, IconArrowUpRight } from '@tabler/icons-react'
 import { loaders } from '@/docs/generated/loaders'
-import { cn } from '@/lib/utils'
 
 export type CatalogCard = { slug: string; title: string; description: string; category: string }
 
@@ -48,42 +47,16 @@ function LivePreview({ slug }: { slug: string }) {
   )
 }
 
-export function CatalogGrid({ cards, categories }: { cards: CatalogCard[]; categories: { id: string; label: string }[] }) {
-  const [category, setCategory] = useState('all')
-
-  const filtered = useMemo(() => (category === 'all' ? cards : cards.filter((c) => c.category === category)), [cards, category])
+export function CatalogGrid({ cards }: { cards: CatalogCard[] }) {
+  const filtered = cards
   // Whole rows only (3 across on desktop), so the grid never ends on a lonely card.
   const count = filtered.length >= 3 ? Math.min(PAGE, filtered.length - (filtered.length % 3)) : filtered.length
   const visible = filtered.slice(0, count)
   const faded = count >= 3
-  const moreHref = category === 'all' ? '/docs' : `/docs/${filtered[0]?.slug ?? ''}`
+  const moreHref = '/docs'
 
   return (
     <>
-      {/* Category filter */}
-      <div className="-mx-4 mb-8 overflow-x-auto px-4 [scrollbar-width:none] sm:mx-0 sm:px-0">
-        <div role="tablist" aria-label="Filter by category" className="flex w-max gap-2 sm:w-auto sm:flex-wrap">
-          {[{ id: 'all', label: 'All' }, ...categories.filter((c) => cards.some((x) => x.category === c.id))].map((c) => (
-            <button
-              key={c.id}
-              role="tab"
-              aria-selected={category === c.id}
-              onClick={() => {
-                setCategory(c.id)
-              }}
-              className={cn(
-                'rounded-full border px-3.5 py-1.5 text-sm whitespace-nowrap transition-colors',
-                category === c.id
-                  ? 'border-primary/40 bg-primary/10 text-foreground'
-                  : 'text-muted-foreground hover:border-foreground/20 hover:text-foreground',
-              )}
-            >
-              {c.label}
-            </button>
-          ))}
-        </div>
-      </div>
-
       <div className="relative">
         <ul className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {visible.map((c) => (

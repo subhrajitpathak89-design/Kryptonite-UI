@@ -2,17 +2,15 @@ import { Reveal } from '@/components/site/reveal'
 import { CatalogGrid, type CatalogCard } from './catalog-grid'
 
 /**
- * The catalog: a short intro, category filters and a grid of cards, each with a
+ * The catalog: a short intro and a grid of cards, each with a
  * live preview, the name and a one-line description. The last row fades out
  * under a "Show more components" button.
  */
 export function CategoriesSection({
   cards,
-  categories,
   total,
 }: {
   cards: CatalogCard[]
-  categories: { id: string; label: string }[]
   total: number
 }) {
   return (
@@ -30,7 +28,7 @@ export function CategoriesSection({
         </p>
       </Reveal>
       <Reveal delay={100} className="mt-8">
-        <CatalogGrid cards={cards} categories={categories} />
+        <CatalogGrid cards={cards} />
       </Reveal>
     </section>
   )

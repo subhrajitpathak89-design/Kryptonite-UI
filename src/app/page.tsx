@@ -171,9 +171,6 @@ export default async function Home() {
         cards={catalog
           .filter((e) => e.category !== 'hooks' && e.category !== 'utilities' && e.examples.some((x) => x.name === 'demo') && !latest.some((l) => l.slug === e.slug))
           .map(({ slug, title, description, category }) => ({ slug, title, description, category }))}
-        categories={groups
-          .filter((g) => g.category !== 'hooks' && g.category !== 'utilities')
-          .map((g) => ({ id: g.category, label: g.label }))}
       />
 
       <WhySection componentCount={componentCount} />

@@ -67,9 +67,8 @@ SOFTWARE.
 
 ## React Bits
 
-`src/components/landing/aurora.tsx` (the Aurora background) and
-`src/components/landing/specular-button.tsx` (the Specular Button) are from React Bits
+`src/components/landing/specular-button.tsx` (the Specular Button) is from React Bits
 (https://github.com/DavidHDev/react-bits) by David Haz, licensed under MIT + Commons Clause.
-They are used only on Kryptonite UI's own landing page. They are **not** part of the
-Kryptonite component library, are not listed in the docs, and must not be redistributed as
-components. See https://github.com/DavidHDev/react-bits/blob/main/LICENSE.md for the full terms.
+It is used only on Kryptonite UI's own landing page. It is **not** part of the
+Kryptonite component library, is not listed in the docs, and must not be redistributed as
+a component. See https://github.com/DavidHDev/react-bits/blob/main/LICENSE.md for the full terms.

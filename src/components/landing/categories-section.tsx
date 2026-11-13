@@ -20,7 +20,7 @@ export function CategoriesSection({ groups, total, sources }: { groups: Group[];
   ]
 
   return (
-    <section aria-labelledby="catalog-heading" className="mx-auto w-full max-w-screen-2xl px-4 sm:px-6 pb-28">
+    <section aria-labelledby="catalog-heading" className="mx-auto w-full max-w-[88rem] px-4 sm:px-6 lg:px-10 pb-28">
       <div className="grid grid-cols-1 gap-10 lg:grid-cols-[minmax(0,5fr)_minmax(0,9fr)] lg:gap-14">
         {/* Intro: sticks while the list scrolls past on large screens */}
         <Reveal className="lg:sticky lg:top-24 lg:self-start">

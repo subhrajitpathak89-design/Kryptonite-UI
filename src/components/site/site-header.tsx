@@ -23,7 +23,7 @@ export async function SiteHeader({ className }: { className?: string; transparen
 
   return (
     <HeaderShell className={className}>
-      <div className="mx-auto flex h-16 w-full max-w-screen-2xl items-center justify-between gap-4 px-4 transition-[height] duration-300 group-data-[scrolled]/header:h-14 sm:px-6">
+      <div className="mx-auto flex h-16 w-full max-w-[88rem] items-center justify-between gap-4 px-4 sm:px-6 lg:px-10 transition-[height] duration-300 group-data-[scrolled]/header:h-14 sm:px-6 lg:px-10">
         <div className="flex items-center gap-3">
           <Link href="/" className="flex shrink-0 items-center gap-2 font-heading text-[17px] font-medium whitespace-nowrap">
             <Image src="/kryptonite-logo.webp" alt="" width={26} height={26} priority />

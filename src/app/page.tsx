@@ -73,7 +73,7 @@ export default async function Home() {
 
       <main className="flex flex-1 flex-col">
 
-      <section aria-labelledby="hero-heading" className="mx-auto w-full max-w-screen-2xl px-4 pt-8 pb-2 sm:px-6 sm:pt-12">
+      <section aria-labelledby="hero-heading" className="mx-auto w-full max-w-[88rem] px-4 pt-8 pb-2 sm:px-6 lg:px-10 sm:pt-12">
         <Link
           href="/community"
           className="animate-in fade-in slide-in-from-bottom-3 duration-700 ease-out fill-mode-both motion-reduce:animate-none inline-flex items-center gap-2 rounded-lg border bg-card/60 py-1 pr-3 pl-1 text-sm text-muted-foreground transition-colors hover:text-foreground"
@@ -122,7 +122,7 @@ export default async function Home() {
         </div>
       </section>
 
-      <section aria-labelledby="featured-heading" className="scroll-enter mx-auto w-full max-w-screen-2xl px-4 sm:px-6 pt-14 pb-24 sm:pt-20">
+      <section aria-labelledby="featured-heading" className="scroll-enter mx-auto w-full max-w-[88rem] px-4 sm:px-6 lg:px-10 pt-14 pb-24 sm:pt-20">
         <div className="mb-5 flex items-end justify-between gap-4">
           <div>
             <h2 id="featured-heading" className="font-heading text-2xl tracking-tight sm:text-3xl">
@@ -192,7 +192,7 @@ export default async function Home() {
         </Reveal>
       </section>
 
-      <section className="mx-auto w-full max-w-screen-2xl px-4 sm:px-6 pb-24">
+      <section className="mx-auto w-full max-w-[88rem] px-4 sm:px-6 lg:px-10 pb-24">
         <Reveal>
           <CommunityCta />
         </Reveal>
@@ -200,7 +200,7 @@ export default async function Home() {
       </main>
 
       <footer className="mt-auto border-t">
-        <div className="mx-auto flex max-w-screen-2xl flex-col gap-2 px-4 sm:px-6 py-8 text-sm text-muted-foreground sm:flex-row sm:justify-between">
+        <div className="mx-auto flex max-w-[88rem] flex-col gap-2 px-4 sm:px-6 lg:px-10 py-8 text-sm text-muted-foreground sm:flex-row sm:justify-between">
           <nav aria-label="Footer" className="flex flex-wrap items-center gap-x-5 gap-y-2">
             <span>Kryptonite UI · MIT licensed</span>
             <Link href="/docs" className="hover:text-foreground">Docs</Link>

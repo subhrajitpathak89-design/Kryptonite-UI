@@ -122,7 +122,7 @@ export default async function Home() {
         </div>
       </section>
 
-      <section aria-labelledby="featured-heading" className="scroll-enter mx-auto w-full max-w-6xl px-4 pt-14 pb-24 sm:pt-20">
+      <section aria-labelledby="featured-heading" className="scroll-enter mx-auto w-full max-w-screen-2xl px-4 sm:px-6 pt-14 pb-24 sm:pt-20">
         <div className="mb-5 flex items-end justify-between gap-4">
           <div>
             <h2 id="featured-heading" className="font-heading text-2xl tracking-tight sm:text-3xl">
@@ -192,7 +192,7 @@ export default async function Home() {
         </Reveal>
       </section>
 
-      <section className="mx-auto w-full max-w-6xl px-4 pb-24">
+      <section className="mx-auto w-full max-w-screen-2xl px-4 sm:px-6 pb-24">
         <Reveal>
           <CommunityCta />
         </Reveal>
@@ -200,7 +200,7 @@ export default async function Home() {
       </main>
 
       <footer className="mt-auto border-t">
-        <div className="mx-auto flex max-w-6xl flex-col gap-2 px-4 py-8 text-sm text-muted-foreground sm:flex-row sm:justify-between">
+        <div className="mx-auto flex max-w-screen-2xl flex-col gap-2 px-4 sm:px-6 py-8 text-sm text-muted-foreground sm:flex-row sm:justify-between">
           <nav aria-label="Footer" className="flex flex-wrap items-center gap-x-5 gap-y-2">
             <span>Kryptonite UI · MIT licensed</span>
             <Link href="/docs" className="hover:text-foreground">Docs</Link>

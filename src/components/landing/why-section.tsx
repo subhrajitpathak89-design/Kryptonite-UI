@@ -153,7 +153,7 @@ function StackVisual() {
 export function WhySection({ componentCount }: { componentCount: number }) {
   const [copy, a11y, states, stack] = FEATURES
   return (
-    <section aria-labelledby="why-heading" className="mx-auto w-full max-w-6xl px-4 pb-24">
+    <section aria-labelledby="why-heading" className="mx-auto w-full max-w-screen-2xl px-4 sm:px-6 pb-24">
       <Reveal className="mb-10 flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
         <div>
           <p className="mb-2 text-sm font-medium text-primary">Why Kryptonite UI</p>

@@ -10,7 +10,6 @@ const SIZES: Record<string, BentoSize> = {
   'ai-loading': 'wide',
   'activity-terrain': 'large',
   'drape-background': 'wide',
-  'aurora-background': 'wide',
   'apple-activity-card': 'tall',
   'liquid-gauge': 'tall',
   'wheel-picker': 'tall',

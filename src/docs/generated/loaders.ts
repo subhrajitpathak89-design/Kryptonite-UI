@@ -2,7 +2,6 @@
 import type { ComponentType } from 'react'
 
 export const loaders: Record<string, () => Promise<{ default: ComponentType<{ name: string }> }>> = {
-  "aurora-background": () => import('./examples/aurora-background'),
   "glow-border-button": () => import('./examples/glow-border-button'),
   "gradient-text": () => import('./examples/gradient-text'),
   "magnetic-button": () => import('./examples/magnetic-button'),

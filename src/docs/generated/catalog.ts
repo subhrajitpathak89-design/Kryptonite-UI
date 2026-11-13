@@ -21,36 +21,6 @@ export const CATEGORY_LABELS: Record<string, string> = {
 
 export const catalog: DocsEntry[] = [
   {
-    "slug": "aurora-background",
-    "title": "Aurora Background",
-    "description": "WebGL light curtains that sway and shimmer behind your hero, with your own colors.",
-    "category": "kryptonite",
-    "source": "kryptonite",
-    "dependencies": [],
-    "requires": [],
-    "files": [
-      "src/components/kryptonite/AuroraBackground.tsx"
-    ],
-    "addedAt": "2026-11-08",
-    "examples": [
-      {
-        "name": "demo",
-        "file": "aurora-background/demo",
-        "title": "Demo"
-      },
-      {
-        "name": "custom-colors",
-        "file": "aurora-background/custom-colors",
-        "title": "Custom Colors"
-      },
-      {
-        "name": "from-below",
-        "file": "aurora-background/from-below",
-        "title": "From Below"
-      }
-    ]
-  },
-  {
     "slug": "glow-border-button",
     "title": "Glow Border Button",
     "description": "A rotating conic-gradient border that orbits the button.",

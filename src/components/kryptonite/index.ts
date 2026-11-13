@@ -1,4 +1,3 @@
-export * from './AuroraBackground'
 export * from './GlowBorderButton'
 export * from './GradientText'
 export * from './MagneticButton'

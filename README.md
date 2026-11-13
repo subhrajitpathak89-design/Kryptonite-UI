@@ -4,7 +4,7 @@ Premium, animated React components, hand-picked from the best open-source UI lib
 
 **[Live site](https://kryptonite-ui.vercel.app)** · **[Docs](https://kryptonite-ui.vercel.app/docs)** · **[Community](https://kryptonite-ui.vercel.app/community)**
 
-![Kryptonite UI home page](docs/screenshots/hero.png)
+![A quick tour of Kryptonite UI](docs/screenshots/demo.gif)
 
 ## What's inside
 

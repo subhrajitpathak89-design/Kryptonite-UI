@@ -52,8 +52,11 @@ export function CatalogGrid({ cards, categories }: { cards: CatalogCard[]; categ
   const [category, setCategory] = useState('all')
 
   const filtered = useMemo(() => (category === 'all' ? cards : cards.filter((c) => c.category === category)), [cards, category])
-  const visible = filtered.slice(0, PAGE)
-  const hasMore = filtered.length > PAGE
+  // Whole rows only (3 across on desktop), so the grid never ends on a lonely card.
+  const count = filtered.length >= 3 ? Math.min(PAGE, filtered.length - (filtered.length % 3)) : filtered.length
+  const visible = filtered.slice(0, count)
+  const faded = count >= 3
+  const moreHref = category === 'all' ? '/docs' : `/docs/${filtered[0]?.slug ?? ''}`
 
   return (
     <>
@@ -100,12 +103,14 @@ export function CatalogGrid({ cards, categories }: { cards: CatalogCard[]; categ
           ))}
         </ul>
 
-        {/* Fade over the last row, with the button riding on it */}
-        {hasMore && (
-          <div className="pointer-events-none absolute inset-x-0 bottom-0 flex h-64 items-end justify-center bg-linear-to-b from-transparent via-background/80 to-background pb-6">
+        {/* Fade the last row into the page: a dark gradient plus a blur that grows toward the bottom */}
+        {faded && (
+          <div className="pointer-events-none absolute inset-x-0 -bottom-px flex h-72 items-end justify-center pb-8">
+            <div className="absolute inset-0 backdrop-blur-[6px] [mask-image:linear-gradient(to_bottom,transparent,black_70%)]" />
+            <div className="absolute inset-0 bg-linear-to-b from-transparent via-background/75 to-background" />
             <Link
-              href={category === 'all' ? '/docs' : `/docs/${filtered[0].slug}`}
-              className="pointer-events-auto inline-flex items-center gap-2 rounded-full border bg-card px-5 py-2.5 text-sm font-medium shadow-lg transition-colors hover:border-primary/40 hover:text-primary"
+              href={moreHref}
+              className="pointer-events-auto relative inline-flex items-center gap-2 rounded-full border bg-card/90 px-5 py-2.5 text-sm font-medium shadow-lg backdrop-blur transition-colors hover:border-primary/40 hover:text-primary"
             >
               Show more components <IconArrowRight className="size-4" />
             </Link>
@@ -113,10 +118,10 @@ export function CatalogGrid({ cards, categories }: { cards: CatalogCard[]; categ
         )}
       </div>
 
-      {!hasMore && (
+      {!faded && (
         <div className="mt-8 flex justify-center">
-          <Link href="/docs" className="inline-flex items-center gap-2 rounded-full border bg-card px-5 py-2.5 text-sm font-medium transition-colors hover:border-primary/40 hover:text-primary">
-            Browse all in the docs <IconArrowRight className="size-4" />
+          <Link href={moreHref} className="inline-flex items-center gap-2 rounded-full border bg-card px-5 py-2.5 text-sm font-medium transition-colors hover:border-primary/40 hover:text-primary">
+            Show more components <IconArrowRight className="size-4" />
           </Link>
         </div>
       )}

@@ -6,8 +6,5 @@
   { "name": "tilt-card", "title": "Tilt Card", "file": "TiltCard", "description": "A card with a 3D perspective tilt and glare driven by the cursor position." },
   { "name": "gradient-text", "title": "Gradient Text", "file": "GradientText", "description": "Text filled with a gradient that flows continuously." },
   { "name": "aurora-background", "title": "Aurora Background", "file": "AuroraBackground", "description": "WebGL light curtains that sway and shimmer behind your hero, with your own colors." },
-  { "name": "marquee", "title": "Marquee", "file": "Marquee", "description": "An infinite horizontal scroller that pauses on hover." },
-  { "name": "silk", "title": "Silk", "file": "Silk", "category": "backgrounds", "description": "Flowing satin folds in WebGL with sheen, cursor push and click ripples." },
-  { "name": "gradient-blinds", "title": "Gradient Blinds", "file": "GradientBlinds", "category": "backgrounds", "description": "Venetian blinds over a gradient, with a cursor spotlight, shine, sway and ripples." },
-  { "name": "gradient-ascii", "title": "Gradient ASCII", "file": "GradientAscii", "category": "backgrounds", "description": "A field of characters lit by a drifting gradient, scrambling under the cursor." }
+  { "name": "marquee", "title": "Marquee", "file": "Marquee", "description": "An infinite horizontal scroller that pauses on hover." }
 ]

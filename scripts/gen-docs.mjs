@@ -69,7 +69,7 @@ for (const k of kryptonite) {
     slug: k.name,
     title: k.title,
     description: k.description,
-    category: k.category ?? 'kryptonite',
+    category: 'kryptonite',
     source: 'kryptonite',
     dependencies: [],
     requires: [],

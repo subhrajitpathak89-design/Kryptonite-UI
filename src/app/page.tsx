@@ -2,7 +2,6 @@ import Link from 'next/link'
 import { cn } from '@/lib/utils'
 import { IconArrowRight, IconBrandGithub, IconBrandLinkedin, IconPlus } from '@tabler/icons-react'
 import { ClientOnly } from '@/components/docs/client-only'
-import { BackgroundsSection } from '@/components/landing/backgrounds-section'
 import { CategoriesSection } from '@/components/landing/categories-section'
 import { CommunityCta } from '@/components/landing/community-cta'
 import { FAQ } from '@/components/landing/home-content'
@@ -176,8 +175,6 @@ export default async function Home() {
           .filter((g) => g.category !== 'hooks' && g.category !== 'utilities')
           .map((g) => ({ id: g.category, label: g.label }))}
       />
-
-      <BackgroundsSection />
 
       <WhySection componentCount={componentCount} />
 

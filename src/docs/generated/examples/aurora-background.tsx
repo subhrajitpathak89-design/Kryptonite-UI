@@ -3,10 +3,12 @@
 import type { ComponentType } from 'react'
 import { AuroraBackgroundDemo } from '@/components/examples/aurora-background/demo'
 import { AuroraBackgroundCustomColors } from '@/components/examples/aurora-background/custom-colors'
+import { AuroraBackgroundFromBelow } from '@/components/examples/aurora-background/from-below'
 
 const examples: Record<string, ComponentType> = {
   "demo": AuroraBackgroundDemo,
   "custom-colors": AuroraBackgroundCustomColors,
+  "from-below": AuroraBackgroundFromBelow,
 }
 
 export default function Preview({ name }: { name: string }) {

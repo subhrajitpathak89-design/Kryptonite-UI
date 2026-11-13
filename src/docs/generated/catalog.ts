@@ -23,7 +23,7 @@ export const catalog: DocsEntry[] = [
   {
     "slug": "aurora-background",
     "title": "Aurora Background",
-    "description": "Slow-drifting blurred color fields for hero sections.",
+    "description": "WebGL light curtains that sway and shimmer behind your hero, with your own colors.",
     "category": "kryptonite",
     "source": "kryptonite",
     "dependencies": [],
@@ -42,6 +42,11 @@ export const catalog: DocsEntry[] = [
         "name": "custom-colors",
         "file": "aurora-background/custom-colors",
         "title": "Custom Colors"
+      },
+      {
+        "name": "from-below",
+        "file": "aurora-background/from-below",
+        "title": "From Below"
       }
     ]
   },

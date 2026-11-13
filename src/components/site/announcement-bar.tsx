@@ -19,21 +19,27 @@ export function AnnouncementBar() {
         ? `${first.title} and ${second.title}`
         : `${first.title}, ${second.title} and ${more} more`
 
+  // Phones get a one-liner: the first name and how many more.
+  const short = entries.length === 1 ? first.title : `${first.title} +${entries.length - 1} more`
+
   return (
     <Link
       href={`/docs/${first.slug}`}
-      className="group relative z-50 flex min-h-10 items-center justify-center gap-2 bg-primary px-4 py-2 text-center text-[13px] text-primary-foreground"
+      className="group relative z-50 flex min-h-8 items-center justify-center gap-1.5 bg-primary px-3 py-1 text-center text-[11px] leading-tight text-primary-foreground sm:min-h-10 sm:gap-2 sm:px-4 sm:py-2 sm:text-[13px]"
     >
-      <IconSparkles className="size-4 shrink-0" aria-hidden />
+      <IconSparkles className="size-3.5 shrink-0 sm:size-4" aria-hidden />
       <span className="min-w-0">
-        <span className="font-semibold">New: {names}</span>
+        <span className="font-semibold">
+          New: <span className="sm:hidden">{short}</span>
+          <span className="hidden sm:inline">{names}</span>
+        </span>
         <span className="hidden sm:inline">
           {' '}
           · {componentCount}+ components you can install with one command
         </span>
       </span>
       <IconArrowUpRight
-        className="size-4 shrink-0 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
+        className="size-3.5 shrink-0 transition-transform sm:size-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
         aria-hidden
       />
     </Link>

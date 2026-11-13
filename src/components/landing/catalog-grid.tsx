@@ -24,15 +24,14 @@ function previewFor(slug: string) {
 /** Loads the live demo only once the card is near the screen. */
 function LivePreview({ slug }: { slug: string }) {
   const ref = useRef<HTMLDivElement>(null)
-  const [visible, setVisible] = useState(false)
+  const [Preview, setPreview] = useState<ComponentType<{ name: string }> | null>(null)
   useEffect(() => {
     const el = ref.current
     if (!el) return
-    const io = new IntersectionObserver(([e]) => e.isIntersecting && (setVisible(true), io.disconnect()), { rootMargin: '300px' })
+    const io = new IntersectionObserver(([e]) => e.isIntersecting && (setPreview(() => previewFor(slug)), io.disconnect()), { rootMargin: '300px' })
     io.observe(el)
     return () => io.disconnect()
-  }, [])
-  const Preview = visible ? previewFor(slug) : null
+  }, [slug])
   const skeleton = <div className="h-10 w-32 animate-pulse rounded-lg bg-muted" />
   return (
     <div ref={ref} className="flex size-full items-center justify-center">
@@ -51,11 +50,10 @@ function LivePreview({ slug }: { slug: string }) {
 
 export function CatalogGrid({ cards, categories }: { cards: CatalogCard[]; categories: { id: string; label: string }[] }) {
   const [category, setCategory] = useState('all')
-  const [shown, setShown] = useState(PAGE)
 
   const filtered = useMemo(() => (category === 'all' ? cards : cards.filter((c) => c.category === category)), [cards, category])
-  const visible = filtered.slice(0, shown)
-  const hasMore = filtered.length > shown
+  const visible = filtered.slice(0, PAGE)
+  const hasMore = filtered.length > PAGE
 
   return (
     <>
@@ -69,7 +67,6 @@ export function CatalogGrid({ cards, categories }: { cards: CatalogCard[]; categ
               aria-selected={category === c.id}
               onClick={() => {
                 setCategory(c.id)
-                setShown(PAGE)
               }}
               className={cn(
                 'rounded-full border px-3.5 py-1.5 text-sm whitespace-nowrap transition-colors',
@@ -106,12 +103,12 @@ export function CatalogGrid({ cards, categories }: { cards: CatalogCard[]; categ
         {/* Fade over the last row, with the button riding on it */}
         {hasMore && (
           <div className="pointer-events-none absolute inset-x-0 bottom-0 flex h-64 items-end justify-center bg-linear-to-b from-transparent via-background/80 to-background pb-6">
-            <button
-              onClick={() => setShown((n) => n + PAGE)}
+            <Link
+              href={category === 'all' ? '/docs' : `/docs/${filtered[0].slug}`}
               className="pointer-events-auto inline-flex items-center gap-2 rounded-full border bg-card px-5 py-2.5 text-sm font-medium shadow-lg transition-colors hover:border-primary/40 hover:text-primary"
             >
               Show more components <IconArrowRight className="size-4" />
-            </button>
+            </Link>
           </div>
         )}
       </div>

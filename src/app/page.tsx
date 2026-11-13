@@ -166,9 +166,14 @@ export default async function Home() {
       </section>
 
       <CategoriesSection
-        groups={groups.map((g) => ({ category: g.category, label: g.label, entries: g.entries.map(({ slug, title }) => ({ slug, title })) }))}
-        total={catalog.length}
-        sources={new Set(catalog.map((e) => e.source).filter((x) => x !== 'kryptonite')).size}
+        total={componentCount}
+        // Everything with a live demo except hooks, helpers and what "Just added" already shows.
+        cards={catalog
+          .filter((e) => e.category !== 'hooks' && e.category !== 'utilities' && e.examples.some((x) => x.name === 'demo') && !latest.some((l) => l.slug === e.slug))
+          .map(({ slug, title, description, category }) => ({ slug, title, description, category }))}
+        categories={groups
+          .filter((g) => g.category !== 'hooks' && g.category !== 'utilities')
+          .map((g) => ({ id: g.category, label: g.label }))}
       />
 
       <WhySection componentCount={componentCount} />

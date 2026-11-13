@@ -5,7 +5,8 @@ import { useState, type ReactNode } from 'react'
 import { IconCheck } from '@tabler/icons-react'
 import { cn } from '@/lib/utils'
 
-// WebGL effect, loaded only in the browser (React Bits Specular Button, site-only).
+// WebGL effects, loaded only in the browser (React Bits Aurora and Specular Button, site-only).
+const Aurora = dynamic(() => import('./aurora'), { ssr: false })
 const SpecularButton = dynamic(() => import('./specular-button'), { ssr: false })
 
 // "Silver" is the exact setup from the design; the others recolor the edge light, base and tint.
@@ -91,6 +92,18 @@ export function HeroShowcase() {
   return (
     // Always dark, in both themes, like a product screenshot.
     <div className="dark relative isolate overflow-hidden rounded-2xl border bg-[#0b0d0c] text-foreground">
+      <div aria-hidden className="pointer-events-none absolute inset-0 -z-10">
+        <Aurora
+          colorStops={[preset.glow, '#0f9f5a', preset.glow]}
+          amplitude={1.1}
+          blend={0.6}
+          speed={0.5}
+          direction="bottom"
+          className="absolute inset-0 opacity-70"
+        />
+        <div className="absolute inset-x-0 top-0 h-1/2 bg-gradient-to-b from-[#0b0d0c] to-transparent" />
+      </div>
+
       <div className="grid grid-cols-1 gap-4 p-4 sm:p-8 md:grid-cols-[minmax(0,1.25fr)_minmax(0,1fr)] md:gap-5 lg:gap-6 lg:p-12">
         <Window title="Hero.tsx" className="hidden sm:block lg:mt-6">
           <Code p={preset} />
